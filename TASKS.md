@@ -49,6 +49,25 @@ the three above weren't in the top lists either.
 - 27316 regroupement familial: URL without `-2` + 301, 8 EN links localised.
 - 27692: URL shortened to /fr/blog/s-installer-en-espagne/ + 301 (paragraphs/links: agent run).
 
+## Content plan from enquiries (forms 2026-09-10 → 10-01, 53 entries)
+
+Details, counts and cannibalisation notes: `data/content-ideas-2026-10.md` (aggregates only, no
+personal data). Upgrades first, new posts last. Each item runs the full chain.
+
+- [ ] **C-1 EN Beckham 892**: application after arrival, foreign income, spouse, changing employer/EOR (4 enquiries, pos 18).
+- [ ] **C-2 FR year of departure**: reposition 2573 (not a 5th FR income-tax post). Link from 25839 (5 enquiries).
+- [ ] **C-3 FR company pillar**: upgrade 1691, merge 3594 into it + 301 (**approval needed**) (5 enquiries).
+- [ ] **C-4 EN DNV 8633**: broaden beyond UK, apply from inside Spain, family (3 enquiries, 25K impr 0.20% CTR).
+- [ ] **C-5 FR bar/restaurant**: new post (planned topic, confirmed).
+- [ ] **C-6 FR 2781**: employer-side section, French employer with a worker in Spain (2 enquiries).
+- [ ] **C-7 EN 20998 (G-8)**: staying past 90 days legally, return after overstay (2 enquiries).
+- [ ] **C-8 EN 17990**: arras + off-plan deposit H2s, linked from 25444.
+- [ ] **C-9 ES** tarjeta familiar ciudadano UE (new, Elena). **C-10 ES** reclamación de cantidades (new, merge 4626 + 301, **approval needed**). **C-11 ES** baja IT larga (new). **C-12 ES** compra de vivienda (new).
+- [ ] **Quick wins**: FR 1207 (EX-18 refusals), FR 4844 (changing gestor, late quarterly returns),
+      EN 26847 (TIE after arrival, switch to self-employment), EN 649/2618 (expired NIE/TIE FAQ),
+      FR 25839 FAQ, EN 20275 FAQ, CTA copy on fees/booking (7 enquiries ask the price).
+- [ ] **Mike**: FR/RU immigration forms (11, 9) and Contact Us forms (1, 3) got 0 entries. Check they're still embedded.
+
 ## Related posts in the wrong language (Link Whisper, wp-admin re-scan)
 
 39 posts: FR 10, ES 7, EN 11, RU 8. Lists: `data/related_posts_{fr,es,en,ru}_audit.csv`
