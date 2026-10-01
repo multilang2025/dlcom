@@ -1,0 +1,46 @@
+# Decisions log (legacy WordPress blog)
+
+Add the date and who decided. Move an item to "Decided" once it's settled.
+
+## Open
+
+- **D-1: Blog freeze vs this work (raised 2026-10-01).** dlvibe records "Don't touch the blog posts
+  yet" (Mike, 2026-09-25). On 2026-10-01 Mike scoped this repo to the WordPress blog (style, bugs,
+  NLP, EEAT, fact checking), and 22 WP posts were edited between 2026-09-24 and 10-01. Assumption:
+  the freeze applies to the rebuild's copy, not to the live WP blog. Mike to confirm.
+- **D-2: FAQ length.** WordPress-era blog rule: 8 to 10 questions as H3. Rebuild rule (2026-09-24):
+  exactly 5. Which applies to WP blog posts?
+- **D-3: Authors and reviewers (EEAT).** Which partner or lawyer signs and reviews which practice
+  area. Can Félix's desk photo (dlvibe `docs/photo-library/felix-delaguia-lecture-code-bureau.jpg`)
+  be used as the author photo? Colegiado numbers to publish?
+- **D-4: Spanish register.** Usted throughout, or nuanced by audience.
+- **D-5: RU conventions.** Banned openers and heading capitalisation, plus a native reviewer.
+- **D-6: EN "two line breaks after every full stop".** Proposal: drop it (formatting quirk).
+- **D-7: Legacy WP vs rebuild.** Which fixes are worth doing on WordPress before migration? Proposal:
+  facts and EEAT first (they carry over to the rebuild's copy), template/schema fixes only if
+  cut-over is more than about 2 months away.
+- **D-8: Expired posts.** News-pegged posts whose subject has passed (e.g. regularisation deadline
+  30 June 2026): update in place, add an "expired" notice, or noindex?
+- **D-9: The four posts whose canonical points elsewhere** (24988, 24989, 13644, 9988). 9988 is an
+  English slug in the ES section, possibly mistagged like 24445 in April.
+
+- **D-10: Year-specific posts with a year in the slug** (calendario-laboral-2026,
+  salaire-minimum-interprofessionnel-2025, 9 others). Options: (a) keep the URL and update the content
+  yearly (the slug looks stale); (b) move to a timeless slug with a 301 (equity kept, one-time
+  risk); (c) a new post per year (splits equity). Proposal: (b) for SMI, and for the calendar decide
+  before the 2027 BOE publication (October).
+
+## Decided
+
+- 2026-09-24 (Mike): "since 1960", never a year count. No free-consultation claim anywhere. Six
+  languages served.
+- 2026-09-23 (Mike): firm emails on `.com`. FR headings in noun form. Images WebP with native alt.
+- 2026-09-22 (Mike): one office (Valencia). Golden Visa removed as an available route.
+- 2026-09-15 (Mike): no em or en dashes. No walls of text. Varied anchors.
+- 2026-05 (Mike): agent writes limited to `post_type=post` (Scope Gate).
+
+- 2026-10-01 (Mike): freeze applies to the rebuild only; the WP blog is in scope (closes D-1).
+- 2026-10-01 (Mike): regularisation posts make no claim about silence/refusal/appeals after the
+  3-month mark; a CTA invites readers to contact the firm for confirmation instead.
+- 2026-10-01 (Mike): featured image of 26678 replaced by a generated documentary-style photo
+  (doctor's consultation, attachment 27910), no text, no logos, no landmarks.

@@ -1,0 +1,37 @@
+date,post_id,lang,change,verified
+2026-10-01,13250,en,"Change 1: Summary box: answer monthly, daily, annual, hourly, effective date and legal basis (WPVibe content/edit on _elementor_data)",Y
+2026-10-01,13250,en,Change 2: Intro: remove banned meta-textual opener 'This guide' (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 3: How the rate was set: precise wording on RDL 16/2025 and the DG Trabajo criterion (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 4: Negotiation figures: replace unverifiable 7.5% / 1.5% proposals (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,"Change 5: Blockquote 1: drop unsourced EU comparison, attribute the 66% figure (WPVibe content/edit on _elementor_data)",Y
+2026-10-01,13250,en,Change 6: H2 re-key + correct article reference (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 7: New H3: minimum wage per hour (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 8: Domestic workers: fix the '€0.29' error (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,"Change 9: Blockquote 2: keep the verified 2.5 million figure, drop unsourced breakdown (WPVibe content/edit on _elementor_data)",Y
+2026-10-01,13250,en,Change 10: Image alt text (currently empty) (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,"Change 11 (absorption reform paragraphs): SKIPPED, on HOLD pending legal check",N
+2026-10-01,13250,en,Change 12: Autónomos: contribution bases and tarifa plana threshold (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 13: Digital Nomad Visa: income threshold on the annual SMI (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 14: IRPF deduction instead of the Ingreso Mínimo Vital claim (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 15: History table: 2021 rate applied only from 1 September (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 16: Common mistakes: turn the disguised list into a real list (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 17: External link: rel nofollow (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 18: CTA: six languages (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,"Change 19: FAQ heading + Q1 re-keyed to 'minimum wage in Spain', hourly added (WPVibe content/edit on _elementor_data)",Y
+2026-10-01,13250,en,Change 20: FAQ: income tax answer (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 21: FAQ: Digital Nomad Visa answer (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 22: FAQ: autónomo answer (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 24: Trailing CTA box (widget nybamvt): off-topic 'tax' copy and two em dashes (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 25: Trailing CTA button label (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 23a: Schema (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 23b: Schema (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 23c: Schema (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 23d: Schema (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 23e: Schema (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 23f: Schema (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,Change 23g: Schema (WPVibe content/edit on _elementor_data),Y
+2026-10-01,13250,en,"Rank Math title ""Minimum wage in Spain 2026: €1,221 a month, hourly rates"" (AISA set_seo)",Y
+2026-10-01,13250,en,"Rank Math description (154 chars, monthly/hourly/domestic rates) (AISA set_seo)",Y
+2026-10-01,13250,en,"Rank Math focus keyword ""minimum wage in Spain, spain minimum wage per hour, SMI 2026"" (AISA set_seo)",Y
+2026-10-01,13250,en,Excerpt: NOT written (every write path fires save_post; brief allowed it only without one),N
+2026-10-01,13250,en,"LiteSpeed purge of post URL; live HTTP 200, final _elementor_data MD5 35ab845603d23c8b7670582e29607c48 = expected",Y
