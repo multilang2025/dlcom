@@ -1,11 +1,11 @@
 id,url,status,langs,wrong_lang_links
-27316,https://delaguialuzon.com/fr/blog/regroupement-familial-espagne/?rp=1,ALL WRONG,{'es': 6},/blog/alquileres-corta-duracion/ /blog/como-obtener-el-numero-de-la-seguridad-social/ /blog/franquicias-en-espana/ /blog/pisos-turisticos-en-valencia/ /blog/salario-minimo-interprofesional/ /blog/asesoramiento-empresa-familiar/
-27692,https://delaguialuzon.com/fr/blog/s-installer-en-espagne/?rp=1,ALL WRONG,{'es': 6},/blog/visa-nomada-digital-en-espana-requisitos/ /blog/impatriados-en-espana/ /blog/exencion-iva-autonomos/ /blog/alquilar-tu-piso-airbnb-en-valencia/ /blog/autenticacion-eidas/ /blog/gestion-laboral-estrategica/
-27322,https://delaguialuzon.com/fr/blog/residence-mariage-citoyen-espagnol/?rp=1,ALL WRONG,{'es': 6},/blog/recordatorio-modelo-720/ /blog/asesoramiento-empresa-familiar/ /blog/visa-nomada-digital-en-espana-requisitos/ /blog/medidas-urgentes-dana-valencia-2024/ /blog/licencia-turistica/ /blog/negocio-online/
-27307,https://delaguialuzon.com/fr/blog/residence-en-espagne-voies-acces/?rp=1,ALL WRONG,{'es': 6},/blog/subvenciones-contratacion-desempleados/ /blog/sentencia-tribunal-supremo-pisos-turisticos/ /blog/gestion-laboral-estrategica/ /blog/derechos-laborales-extranjeros-en-espana/ /blog/calendario-laboral-2026/ /blog/asesoramiento-empresa-familiar/
-27310,https://delaguialuzon.com/fr/blog/divorce-espagne-expatries/?rp=1,ALL WRONG,{'es': 6},/blog/65-aniversario-delaguia-luzon/ /blog/aumento-permiso-conciliacion-familiar/ /blog/como-mudarse-a-espana-desde-latinoamerica/ /blog/alquileres-corta-duracion/ /blog/implantacion-espana/ /blog/asesoramiento-legal/
-27325,https://delaguialuzon.com/fr/blog/calendrier-fiscal-espagnol/?rp=1,ALL WRONG,{'es': 6},/blog/eliminacion-golden-visas-en-espana/ /blog/certificado-digital-en-espana-guia-fnmt-y-clave/ /blog/contratar-asesor-contable/ /blog/ley-12-2023-de-24-de-mayo-por-el-derecho-a-la-vivienda/ /blog/ayudas-autonomos/ /blog/reestructuracion-empresarial/
-26760,https://delaguialuzon.com/fr/blog/comment-se-proteger-face-au-fisc-espagnol/?rp=1,ALL WRONG,{'es': 6},/blog/franquicias-en-espana/ /blog/desconexion-digital/ /blog/responsabilidad-administradores-insolvencia/ /blog/ley-12-2023-de-24-de-mayo-por-el-derecho-a-la-vivienda/ /blog/cumplimiento-normativo/ /blog/optimizacion-fiscal-en-espana/
+27316,https://delaguialuzon.com/fr/blog/regroupement-familial-espagne/?rp=1,OK,{'fr': 6},
+27692,https://delaguialuzon.com/fr/blog/s-installer-en-espagne/?rp=1,OK,{'fr': 6},
+27322,https://delaguialuzon.com/fr/blog/residence-mariage-citoyen-espagnol/?rp=1,OK,{'fr': 6},
+27307,https://delaguialuzon.com/fr/blog/residence-en-espagne-voies-acces/?rp=1,OK,{'fr': 6},
+27310,https://delaguialuzon.com/fr/blog/divorce-espagne-expatries/?rp=1,OK,{'fr': 6},
+27325,https://delaguialuzon.com/fr/blog/calendrier-fiscal-espagnol/?rp=1,OK,{'fr': 6},
+26760,https://delaguialuzon.com/fr/blog/comment-se-proteger-face-au-fisc-espagnol/?rp=1,OK,{'fr': 6},
 26678,https://delaguialuzon.com/fr/blog/assurance-sante-privee-espagne-expatries/?rp=1,OK,{'fr': 6},
 25840,https://delaguialuzon.com/fr/blog/cotisations-autonomos-2026-baremes-reta/?rp=1,OK,{'fr': 6},
 26023,https://delaguialuzon.com/fr/blog/renouvellement-titre-sejour-non-lucratif/?rp=1,OK,{'fr': 6},
@@ -13,14 +13,14 @@ id,url,status,langs,wrong_lang_links
 16694,https://delaguialuzon.com/fr/blog/conge-parental-en-espagne/?rp=1,OK,{'fr': 6},
 25663,https://delaguialuzon.com/fr/blog/visa-nomade-digital-espagne/?rp=1,OK,{'fr': 6},
 25653,https://delaguialuzon.com/fr/blog/reforme-itp-communaute-valencienne/?rp=1,OK,{'fr': 6},
-24989,https://delaguialuzon.com/fr/blog/hebergements-touristiques-valence/?rp=1,MIXED,"{'fr': 2, 'es': 4}",/blog/sentencia-tribunal-supremo-pisos-turisticos/ /blog/iva-apartamentos-turisticos/ /blog/alquileres-corta-duracion/ /blog/regularizacion-extraordinaria/
+24989,https://delaguialuzon.com/fr/blog/hebergements-touristiques-valence/?rp=1,OK,{'fr': 6},
 16140,https://delaguialuzon.com/fr/blog/succession-internationale-espagne/?rp=1,OK,{'fr': 6},
 24773,https://delaguialuzon.com/fr/blog/aides-aux-travailleurs-independants/?rp=1,OK,{'fr': 6},
 888,https://delaguialuzon.com/fr/blog/loi-beckham-regime-fiscal/?rp=1,OK,{'fr': 6},
 2678,https://delaguialuzon.com/fr/blog/tout-savoir-sur-le-modelo-720/?rp=1,OK,{'fr': 6},
 2186,https://delaguialuzon.com/fr/blog/reduction-dimpots-autonomos/?rp=1,OK,{'fr': 6},
 4580,https://delaguialuzon.com/fr/blog/impots-sur-le-revenu-en-espagne/?rp=1,OK,{'fr': 6},
-21471,https://delaguialuzon.com/fr/blog/regularisation-exceptionnelle-etrangers-espagne/?rp=1,MIXED,"{'fr': 5, 'en': 1}",/en/blog/types-taxes-spain/
+21471,https://delaguialuzon.com/fr/blog/regularisation-exceptionnelle-etrangers-espagne/?rp=1,OK,{'fr': 6},
 3247,https://delaguialuzon.com/fr/blog/acheter-maison-communaute-valencienne/?rp=1,OK,{'fr': 6},
 897,https://delaguialuzon.com/fr/blog/frais-donation-immobilier-espagne/?rp=1,OK,{'fr': 6},
 2573,https://delaguialuzon.com/fr/blog/declarer-impots-espagne/?rp=1,OK,{'fr': 6},
@@ -73,7 +73,7 @@ id,url,status,langs,wrong_lang_links
 1557,https://delaguialuzon.com/fr/blog/restructuration-entreprises-espagne/?rp=1,OK,{'fr': 6},
 2337,https://delaguialuzon.com/fr/blog/deconnexion-numerique-vacances/?rp=1,OK,{'fr': 6},
 4768,https://delaguialuzon.com/fr/blog/loi-12-2023-du-24-mai-pour-le-droit-au-logement/?rp=1,OK,{'fr': 6},
-2505,https://delaguialuzon.com/fr/blog/lutte-contre-fraude-faux-non-residents-espagne/?rp=1,MIXED,"{'fr': 5, 'en': 1}",/en/labour-solicitor-valencia-spain/
+2505,https://delaguialuzon.com/fr/blog/lutte-contre-fraude-faux-non-residents-espagne/?rp=1,OK,{'fr': 6},
 5798,https://delaguialuzon.com/fr/blog/plafond-paiements-espece-espagne/?rp=1,OK,{'fr': 6},
 4371,https://delaguialuzon.com/fr/blog/assujetti-irpf-espagne/?rp=1,OK,{'fr': 6},
 3213,https://delaguialuzon.com/fr/blog/conge-parental-autonomos/?rp=1,OK,{'fr': 6},

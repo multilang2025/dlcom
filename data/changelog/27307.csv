@@ -1,0 +1,10 @@
+date,post_id,lang,change,verified
+2026-10-01,27307,fr,"Merge of duplicate draft 26979, edit 1/8 (WPVibe POST /wpvibe/v1/content/edit on _elementor_data): E3 Table: non-lucrative dependant figure corrected 25% -> 100% IPREM (600 EUR/month), RD 1155/2024 art.62",Y
+2026-10-01,27307,fr,"Merge of duplicate draft 26979, edit 2/8 (WPVibe POST /wpvibe/v1/content/edit on _elementor_data): E1 TL;DR: 2 bullets (EU registration, non-lucrative 2026 threshold)",Y
+2026-10-01,27307,fr,"Merge of duplicate draft 26979, edit 3/8 (WPVibe POST /wpvibe/v1/content/edit on _elementor_data): E2 New H2 sections: EU registration certificate (RD 240/2007 art.7) + francophone non-EU visa obligation (MAEC list)",Y
+2026-10-01,27307,fr,"Merge of duplicate draft 26979, edit 4/8 (WPVibe POST /wpvibe/v1/content/edit on _elementor_data): E4 Non-lucrative: 400%/100% IPREM rule + IPREM 2026 = 600 EUR (BOE RD 1155/2024 art.62, Ley 31/2022 DA 90, SEPE 2026)",Y
+2026-10-01,27307,fr,"Merge of duplicate draft 26979, edit 5/8 (WPVibe POST /wpvibe/v1/content/edit on _elementor_data): E5 Entrepreneur: company creation vs residence permit + FR internal link",Y
+2026-10-01,27307,fr,"Merge of duplicate draft 26979, edit 6/8 (WPVibe POST /wpvibe/v1/content/edit on _elementor_data): E6 Tax: France-Spain treaty art.4 tie-breaker (BOE-A-1997-12729) + FR internal link",Y
+2026-10-01,27307,fr,"Merge of duplicate draft 26979, edit 7/8 (WPVibe POST /wpvibe/v1/content/edit on _elementor_data): E7 FAQ: non-lucrative income answer corrected (100% IPREM per dependant)",Y
+2026-10-01,27307,fr,"Merge of duplicate draft 26979, edit 8/8 (WPVibe POST /wpvibe/v1/content/edit on _elementor_data): E8 FAQ: new question on French/EU citizens",Y
+2026-10-01,27307,fr,"Verification: SQL MD5 30b6877e14ad8338b185e10dc829fd71 = local simulation, JSON_VALID=1, len 26802->34124; wp litespeed-purge url; live HTTP 200, all 8 additions present, 0 /en/ or /ru/ links",Y

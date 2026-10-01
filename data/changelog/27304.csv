@@ -1,0 +1,2 @@
+date,post_id,lang,change,verified
+2026-10-01,27304,fr,"Duplicate draft of 26642 (non-lucrative visa). Verified unique content merged into 26642. WPML trid 3372 has no siblings. Moved to trash via REST DELETE /wp/v2/posts/27304 (not forced, reversible); slug now visa-espagnol-non-lucratif__trashed",Y

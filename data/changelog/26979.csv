@@ -1,0 +1,2 @@
+date,post_id,lang,change,verified
+2026-10-01,26979,fr,"Duplicate draft of 27307 (same focus keyword). Useful verified content merged into 27307. WPML trid 3301 has no siblings. Moved to trash via REST DELETE /wp/v2/posts/26979 (not forced, reversible); slug now residence-en-espagne__trashed",Y

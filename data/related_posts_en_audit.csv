@@ -30,7 +30,7 @@ id,url,status,langs,wrong_lang_links
 26526,https://delaguialuzon.com/en/blog/spain-withholding-tax-dividends/?rp=1,OK,{'en': 6},
 26125,https://delaguialuzon.com/en/blog/pareja-de-hecho-spain-foreigners/?rp=1,OK,{'en': 6},
 25587,https://delaguialuzon.com/en/blog/power-of-attorney-spain/?rp=1,OK,{'en': 6},
-26740,https://delaguialuzon.com/en/blog/how-to-protect-yourself-against-hacienda/?rp=1,ALL WRONG,{'es': 6},/blog/sindrome-van-gaal-ley-beckham-2026/ /blog/herencias-internacionales/ /blog/proteccion-datos-empresas/ /blog/teletrabajo-internacional/ /blog/control-fraude-falsos-no-residentes/ /blog/inspeccion-de-trabajo/
+26740,https://delaguialuzon.com/en/blog/how-to-protect-yourself-against-hacienda/?rp=1,OK,{'en': 6},
 25580,https://delaguialuzon.com/en/blog/private-health-insurance-spain-expats/?rp=1,OK,{'en': 6},
 26401,https://delaguialuzon.com/en/blog/children-born-spain-to-foreign-parents/?rp=1,OK,{'en': 6},
 26130,https://delaguialuzon.com/en/blog/family-reunification-visa-in-spain/?rp=1,OK,{'en': 6},
@@ -47,7 +47,7 @@ id,url,status,langs,wrong_lang_links
 25592,https://delaguialuzon.com/en/blog/moving-to-spain-scandinavian-expats/?rp=1,OK,{'en': 6},
 25590,https://delaguialuzon.com/en/blog/spanish-school-system-expat-children/?rp=1,OK,{'en': 6},
 25491,https://delaguialuzon.com/en/blog/bringing-pets-to-spain/?rp=1,OK,{'en': 6},
-25444,https://delaguialuzon.com/en/blog/conveyancing-spain/?rp=1,ALL WRONG,{'es': 6},/blog/negocio-online/ /blog/decreto-viviendas-turisticas-cv/ /blog/herencias-internacionales/ /blog/alquiler-infravivienda-valencia/ /blog/planificacion-fiscal/ /blog/reestructuracion-empresarial/
+25444,https://delaguialuzon.com/en/blog/conveyancing-spain/?rp=1,OK,{'en': 6},
 25415,https://delaguialuzon.com/en/blog/valencia-suburbs-for-expats/?rp=1,OK,{'en': 6},
 25381,https://delaguialuzon.com/en/blog/tourist-visa-spain/?rp=1,OK,{'en': 6},
 25512,https://delaguialuzon.com/en/blog/expats-in-spain/?rp=1,OK,{'en': 6},
@@ -57,7 +57,7 @@ id,url,status,langs,wrong_lang_links
 25245,https://delaguialuzon.com/en/blog/empadronamiento-spain/?rp=1,OK,{'en': 6},
 25233,https://delaguialuzon.com/en/blog/writing-spanish-will/?rp=1,OK,{'en': 6},
 25207,https://delaguialuzon.com/en/blog/ees-etias-uk-nationals-spain/?rp=1,OK,{'en': 6},
-25069,https://delaguialuzon.com/en/blog/apostille-sworn-translation-spain/?rp=1,MIXED,"{'en': 5, 'es': 1}",/derecho-fiscal-y-contabilidad/
+25069,https://delaguialuzon.com/en/blog/apostille-sworn-translation-spain/?rp=1,OK,{'en': 6},
 25071,https://delaguialuzon.com/en/blog/spanish-bank-account-non-residents-uk/?rp=1,OK,{'en': 6},
 23650,https://delaguialuzon.com/en/blog/real-estate-in-valencia/?rp=1,OK,{'en': 6},
 24988,https://delaguialuzon.com/en/blog/valencia-tourist-accommodation/?rp=1,OK,{'en': 6},
@@ -66,11 +66,11 @@ id,url,status,langs,wrong_lang_links
 23645,https://delaguialuzon.com/en/blog/moving-to-valencia/?rp=1,OK,{'en': 6},
 10247,https://delaguialuzon.com/en/blog/british-expats-brexit/?rp=1,OK,{'en': 6},
 17990,https://delaguialuzon.com/en/blog/buying-property-spain/?rp=1,OK,{'en': 6},
-24445,https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/?rp=1,MIXED,"{'es': 1, 'en': 5}",/blog/invertir-en-espana/
+24445,https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/?rp=1,OK,{'en': 6},
 892,https://delaguialuzon.com/en/blog/beckham-law-spanish-tax-regime/?rp=1,OK,{'en': 6},
 15116,https://delaguialuzon.com/en/blog/modelo-720-spain/?rp=1,OK,{'en': 6},
 23647,https://delaguialuzon.com/en/blog/valencia-cost-of-living/?rp=1,OK,{'en': 6},
-21452,https://delaguialuzon.com/en/blog/extraordinary-regularisation-foreigners-spain/?rp=1,MIXED,"{'fr': 2, 'en': 4}",/fr/droit-des-etrangers/ /fr/droit-de-succession/
+21452,https://delaguialuzon.com/en/blog/extraordinary-regularisation-foreigners-spain/?rp=1,OK,{'en': 6},
 22851,https://delaguialuzon.com/en/blog/uk-pension-contributions-in-spain/?rp=1,OK,{'en': 6},
 22687,https://delaguialuzon.com/en/blog/vat-exemption-spain/?rp=1,OK,{'en': 6},
 22612,https://delaguialuzon.com/en/blog/tax-structuring-between-ireland-spain/?rp=1,OK,{'en': 6},
@@ -82,8 +82,8 @@ id,url,status,langs,wrong_lang_links
 21840,https://delaguialuzon.com/en/blog/divorce-spain-for-expats/?rp=1,OK,{'en': 6},
 17261,https://delaguialuzon.com/en/blog/spain-corporate-tax/?rp=1,OK,{'en': 6},
 20556,https://delaguialuzon.com/en/blog/reduce-your-tax-burden-in-spain/?rp=1,OK,{'en': 6},
-21606,https://delaguialuzon.com/en/blog/spanish-tax-for-australians/?rp=1,MIXED,"{'es': 1, 'en': 5}",/blog/establishing-a-holding-company-in-spain-tax-optimization-or-risk-of-scrutiny-what-international-investors-need-to-know/
-21544,https://delaguialuzon.com/en/blog/spain-digital-nomad-visa-w2/?rp=1,ALL WRONG,"{'es': 2, 'fr': 3, 'ru': 1}",/blog/teletrabajo-internacional/ /blog/optimizacion-fiscal-en-espana/ /fr/blog/louer-a-valence/ /fr/blog/ouvrir-un-compte-en-banque-en-espagne/ /fr/blog/regularisation-exceptionnelle-etrangers-espagne/ /ru/blog/%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%D1%8B-%D0%B2-%D0%B8%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8/
+21606,https://delaguialuzon.com/en/blog/spanish-tax-for-australians/?rp=1,OK,{'en': 6},
+21544,https://delaguialuzon.com/en/blog/spain-digital-nomad-visa-w2/?rp=1,OK,{'en': 6},
 8633,https://delaguialuzon.com/en/blog/apply-digital-nomad-visa-spain/?rp=1,OK,{'en': 6},
 20998,https://delaguialuzon.com/en/blog/overstaying-visa-spain/?rp=1,OK,{'en': 6},
 20417,https://delaguialuzon.com/en/blog/declare-uk-income-in-spain/?rp=1,OK,{'en': 5},
@@ -119,7 +119,7 @@ id,url,status,langs,wrong_lang_links
 11830,https://delaguialuzon.com/en/blog/cryptocurrency-spain/?rp=1,OK,{'en': 6},
 11090,https://delaguialuzon.com/en/blog/support-measures-people-affected-2024-dana/?rp=1,OK,{'en': 6},
 10659,https://delaguialuzon.com/en/blog/new-requirements-tourist-rentals-valencian-community/?rp=1,OK,{'en': 6},
-11136,https://delaguialuzon.com/en/blog/urgent-measures-dana-valencia-2024/?rp=1,MIXED,"{'en': 4, 'fr': 2}",/fr/blog/engager-comptable-valencia/ /fr/blog/tout-savoir-sur-le-modelo-720/
+11136,https://delaguialuzon.com/en/blog/urgent-measures-dana-valencia-2024/?rp=1,OK,{'en': 6},
 10351,https://delaguialuzon.com/en/blog/eidas-authentication/?rp=1,OK,{'en': 6},
 9995,https://delaguialuzon.com/en/blog/establish-holding-company-in-spain/?rp=1,OK,{'en': 6},
 8357,https://delaguialuzon.com/en/blog/startup-financing-strategies/?rp=1,OK,{'en': 6},
@@ -138,11 +138,11 @@ id,url,status,langs,wrong_lang_links
 2263,https://delaguialuzon.com/en/blog/right-to-digital-disconnection-and-holidays/?rp=1,OK,{'en': 6},
 4632,https://delaguialuzon.com/en/blog/new-upwards-of-mileage-kilometric-allowances/?rp=1,OK,{'en': 6},
 5146,https://delaguialuzon.com/en/blog/social-security-developments-for-cross-border-teleworkers/?rp=1,OK,{'en': 6},
-4734,https://delaguialuzon.com/en/blog/housing-rights-spain/?rp=1,MIXED,"{'fr': 3, 'en': 3}",/fr/blog/louer-a-valence/ /fr/cabinet-avocats-alicante/ /fr/contact/
+4734,https://delaguialuzon.com/en/blog/housing-rights-spain/?rp=1,OK,{'en': 6},
 2175,https://delaguialuzon.com/en/blog/fraud-by-false-non-residents/?rp=1,OK,{'en': 6},
 2376,https://delaguialuzon.com/en/blog/setting-up-a-business-in-spain/?rp=1,OK,{'en': 6},
-1664,https://delaguialuzon.com/en/blog/create-limited-company-in-spain/?rp=1,MIXED,"{'en': 5, 'es': 1}",/blog/establishing-a-holding-company-in-spain-tax-optimization-or-risk-of-scrutiny-what-international-investors-need-to-know/
-4854,https://delaguialuzon.com/en/blog/find-good-accountant-spain/?rp=1,MIXED,"{'fr': 5, 'en': 1}",/fr/politique-de-confidentialite/ /fr/blog/reglement-eidas/ /fr/merci/ /fr/reseau-de-franchise/ /fr/blog/creer-une-startup-en-espagne/
+1664,https://delaguialuzon.com/en/blog/create-limited-company-in-spain/?rp=1,OK,{'en': 6},
+4854,https://delaguialuzon.com/en/blog/find-good-accountant-spain/?rp=1,OK,{'en': 6},
 3260,https://delaguialuzon.com/en/blog/types-taxes-spain/?rp=1,OK,{'en': 6},
 5083,https://delaguialuzon.com/en/blog/everything-know-capital-gains-tax-property-spain/?rp=1,OK,{'en': 6},
 2618,https://delaguialuzon.com/en/blog/why-how-obtain-nie-in-spain/?rp=1,OK,{'en': 6},
