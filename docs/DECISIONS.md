@@ -44,3 +44,8 @@ Add the date and who decided. Move an item to "Decided" once it's settled.
   3-month mark; a CTA invites readers to contact the firm for confirmation instead.
 - 2026-10-01 (Mike): featured image of 26678 replaced by a generated documentary-style photo
   (doctor's consultation, attachment 27910), no text, no logos, no landmarks.
+- 2026-10-01 (Mike): D-10 for FR SMI: 13243 moved to /fr/blog/smi-espagne/ (Permalink Manager),
+  301 from /fr/blog/salaire-minimum-interprofessionnel-2025/ (Rank Math), internal links in 8655 and
+  13923 updated. Same method used for 27316 (-2 removed) and 27692 (/fr/blog/s-installer-en-espagne/).
+- 2026-10-01 (Mike): duplicate drafts merged: 26979 into 27307 (then trashed), 27304 into 26642 (27304
+  trashed, 26642 kept as draft with featured image 28012).
