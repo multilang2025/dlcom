@@ -17,7 +17,8 @@ Non-negotiable blog rules (Mike, 2026-10-01), on top of the style guide:
   a post.
 - **Unsure = CTA**: never state an interpretation the source doesn't support. Say what the source
   says, then invite the reader to contact the firm (+34 963 74 16 57,
-  felix.delaguia@delaguialuzon.com) to confirm their case.
+  felix.delaguia@delaguialuzon.com) to confirm their case. **RU posts use the Russian-speaking agent
+  instead**: Olesia Davidova, o.davidova@delaguialuzon.com, +34 96 352 32 91 (Mike, 2026-10-02).
 - **Aérer**: one idea per paragraph, 3 to 4 sentences max. Disguised lists become real lists. No
   em/en dashes, no emojis.
 - **Same-language links only**: every internal link goes to the same locale. If no equivalent

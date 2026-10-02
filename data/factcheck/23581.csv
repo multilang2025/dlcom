@@ -41,3 +41,5 @@
 23581,ru,FAQPage schema Q5: residence and work for 1-2 years,WRONG,One year initial validity,https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-8284,2026-10-01,
 23581,ru,Excerpt contains an em dash,UPDATE,Rewrite without dash (style rule),,2026-10-01,
 23581,ru,Body uses lowercase 'вас/ваш' addressing the reader (4x),UPDATE,Capitalised «Вы/Ваш» per RU guide,,2026-10-01,
+23581,ru,"""Okolo 79,6 % / 83,2 %"" (approximation wording on exact figures)",UPDATE,"79,6 % arraigo extraordinario, 20,4 % protection applicants, 83,2 % online (exact, La Moncloa 2 Jul 2026)",https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/inclusion/paginas/2026/020726-balance-regularizacion-extraordinaria.aspx,2026-10-02,none (wording only)
+23581,ru,"Ministry named ""Ministerstvo vklyucheniya""",UPDATE,"Ministerio de Inclusion, Seguridad Social y Migraciones = Ministerstvo inklyuzii (RU term aligned across posts)",,2026-10-02,none

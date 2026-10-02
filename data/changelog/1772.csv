@@ -1,0 +1,5 @@
+date,post_id,lang,change,verified
+2026-10-02,1772,ru,"_elementor_data restructured via elementor/save-page: kept all 58 original container/widget ids, added TL;DR widget 0ad3fa3e, CTA widget 6300e0fb, closing widget 51374061; facts updated (47%, savings 19-30%, Ley 28/2022 conditions, family, 183-day first year, renunciation/exclusion); 25 Q&A H3 kept",Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,1772,ru,Title (H1) and excerpt via REST; Rank Math title/description,Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,1772,ru,"rank_math_schema_FAQPage (7 FAQ-section Q) and Article (headline, dateModified, brand) [wp post meta update --force]",Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,1772,ru,"3 content/edit on _elementor_data: CTA, closing and Q2 answer contact = Olesia Davidova",Y (SQL MD5 readback + live curl after LiteSpeed purge)

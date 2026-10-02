@@ -1,0 +1,5 @@
+post_id,lang,claim,verdict,evidence,source_url,checked,siblings,action
+14634,ru,Interview quotes,OK,Interviewee statements; compared with ES original 11921 for translation accuracy,https://delaguialuzon.com/blog/entrevista-gonzalo-gomez-luzon/,2026-10-02,,meaning kept; obvious translation errors fixed (see staging note)
+14634,ru,2015 merger with the Delaguia firm,OK,Stated in the ES original interview question,https://delaguialuzon.com/blog/entrevista-gonzalo-gomez-luzon/,2026-10-02,,kept
+14634,ru,"Founder Gonzalo Gomez, labour inspector; Graduado Social; 8 years on the Junta de Gobierno del Colegio de Graduados Sociales de Valencia",UPDATE,"RU had ""inspector on labour questions"", ""specialist in labour law"", ""Valencian college of labour-law specialists""; ES original wording used",https://delaguialuzon.com/blog/entrevista-gonzalo-gomez-luzon/,2026-10-02,,translation fixed
+14634,ru,Canonical (D-9),OK,"14634 has no rank_math_canonical_url; live canonical = self URL. FR 13644 has rank_math_robots noindex,nofollow and prints no canonical",,2026-10-02,FR 13644,reported only

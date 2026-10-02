@@ -1,0 +1,6 @@
+post_id,lang,claim,verdict,evidence,source_url,checked,siblings,action
+11993,ru,Firm celebrates 65th anniversary in 2025,OK,News event itself (house exception); founded 1960 (house fact),,2026-10-02,"EN 11988, FR 11969 (FR body has Delaguia & Luzon x4)",kept; added founded in 1960
+11993,ru,Three generations of staff,WRONG,ES original: despacho de tercera generacion = third-generation family firm,https://delaguialuzon.com/blog/65-aniversario-delaguia-luzon/,2026-10-02,,corrected (translation)
+11993,ru,Values: conscientious attitude to work,UPDATE,ES original: la pasion por nuestro trabajo,https://delaguialuzon.com/blog/65-aniversario-delaguia-luzon/,2026-10-02,,corrected (translation)
+11993,ru,Excerpt: international alliance Hans & Associes,UNVERIFIABLE,Not in body nor ES original; not checked,,2026-10-02,,excerpt rewritten without it; flagged
+11993,ru,Signature Kollektiv Delaguia &amp; Luzon; Rank Math title and description with &,WRONG,House brand rule,,2026-10-02,,fixed

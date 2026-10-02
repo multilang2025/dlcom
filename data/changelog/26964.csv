@@ -1,0 +1,5 @@
+date,post_id,lang,change,verified
+2026-10-02,26964,ru,_elementor_data (widget 34a540cc) replaced via elementor/save-page: misplaced Ukraine-residence body (295 EUR offer) replaced by native RU Van Gaal / tax-residence article; rollback in data/staging/rollback/26964-elementor_data-before-ru-pass.json,Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,26964,ru,"Title fixed (removed '(DUPLICAR)', added missing opening guillemet) and excerpt written via REST",Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,26964,ru,Rank Math title/description/focus keyword replaced (were Ukraine residence),Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,26964,ru,2 content/edit on _elementor_data: CTA and closing contact = Olesia Davidova,Y (SQL MD5 readback + live curl after LiteSpeed purge)

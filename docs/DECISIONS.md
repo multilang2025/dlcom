@@ -52,5 +52,10 @@ Add the date and who decided. Move an item to "Decided" once it's settled.
   post_content. Method: `_elementor_edit_mode` set to empty via `/wpvibe/v1/content/edit` (meta), not
   raw SQL (WPVibe approval links expire in minutes; Mike asked to avoid them). `_elementor_data` kept as
   rollback. Nobody should open these posts with "Edit with Elementor": it would reload the old version.
+- 2026-10-02 (Mike): RU blog CTAs name the firm's Russian-speaking agent, Olesia Davidova
+  (o.davidova@delaguialuzon.com, +34 96 352 32 91), as on the RU service pages, never Félix. Applied
+  to all 28 RU posts the same day (content/edit replace_all on the rendered body).
+- 2026-10-02 (Mike): RU pass (freshness, naturalness, format, CTA) on all 28 RU posts. Dashes: rephrased
+  everywhere (0 kept), so the master no-dash rule holds for RU without a D-5 exception so far.
 - 2026-10-01 (Mike): duplicate drafts merged: 26979 into 27307 (then trashed), 27304 into 26642 (27304
   trashed, 26642 kept as draft with featured image 28012).

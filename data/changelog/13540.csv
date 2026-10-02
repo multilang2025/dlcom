@@ -1,0 +1,6 @@
+date,post_id,lang,change,verified
+2026-10-02,13540,ru,"_elementor_data rewritten via elementor/save-page (same container/widget ids): TL;DR, Reg. 650/2012 quote, ISD resident/non-resident corrected, Valencia bonificaciones, CTA, 5 FAQ H3 mirroring schema count",Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,13540,ru,content/edit: TL;DR H2 'Наследство в Испании: главное' (keyword),Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,13540,ru,Title (H1) and excerpt via REST; Rank Math title/description,Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,13540,ru,"rank_math_schema_FAQPage (5 Q) and rank_math_schema_Article (headline, dateModified, brand 'Delaguía y Luzón') [wp post meta update --force]",Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,13540,ru,2 content/edit on _elementor_data: CTA and closing contact = Olesia Davidova,Y (SQL MD5 readback + live curl after LiteSpeed purge)

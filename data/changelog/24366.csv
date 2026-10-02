@@ -1,0 +1,6 @@
+date,post_id,lang,change,verified
+2026-10-02,24366,ru,"post_content full rewrite via PUT /wp/v2/posts (TL;DR, inline sources, 2M minimum from 31/12/2026, ITSGF, examples recomputed, Russia/Ukraine sections re-sourced, CTA before FAQ, 7 FAQ H3, closing line, no 'Заключение'/'Связанные ресурсы', no '65 лет'); title and excerpt updated",Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,24366,ru,8 content/edit: class wp-block-list on lists (block validation),Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,24366,ru,Rank Math title/description/focus keyword updated (56/140 chars),Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,24366,ru,rank_math_schema_FAQPage mainEntity = 7 visible FAQs; rank_math_schema_Article headline/description/dateModified/keywords [wp post meta update --format=json --force],Y (SQL MD5 readback + live curl after LiteSpeed purge)
+2026-10-02,24366,ru,"2 content/edit: CTA and closing line contact = Olesia Davidova (o.davidova@, +34 96 352 32 91) per Mike correction",Y (SQL MD5 readback + live curl after LiteSpeed purge)

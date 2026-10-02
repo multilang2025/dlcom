@@ -64,6 +64,8 @@ RU on hold. Anything that needs a URL change / 301 is parked in "Later: needs a 
       cinq ans", 34 188 € (DNV threshold). Verify or replace with a CTA.
 - [ ] **Re-check after the Congress vote (late Oct 2026)** on RDL 26/2026 and 27/2026: FR 2823, 12930,
       10629 (rental renewals, temporary leases, VAT on stays of 30 nights or less from 1 Dec 2026).
+      RU (2026-10-02 pass): 1824 (renewal, 2 % cap, temporary leases, IRPF 23.2), 15904 (VAT from 1 Dec 2026),
+      1135 and 12942 (VAT and IBI mentions). Vote due about 29 Oct 2026.
 - [ ] **Siblings of the 11 switched FR posts** probably carry the facts fixed in FR (Golden Visa scope,
       quarterly Modelo 210, registry, VAT speculation, AEAT eIDAS claim): EN 2869, 12852, 10659, 10351,
       11830, 8398 · ES 12947, 10615, 10318, 11788, 7717 · RU 12942, 10376. Elena (ES), Maral + Mike (EN).
@@ -84,7 +86,40 @@ RU on hold. Anything that needs a URL change / 301 is parked in "Later: needs a 
 - [ ] **Forbidden sources** (T-13): FR 3013 (garrigues.com), FR 4413 (jacheteenespagne.com).
 - [ ] **"Years of experience" → "since 1960"** (T-14): EN 25362, 20432, 20394, 20439 · ES 25946, 26290,
       26306, 25908, 25881, 20515 · FR 20558.
-- [ ] **RU calque check** «ненасыщенный» across the 28 RU posts (T-15).
+- [ ] **Re-check monthly from Nov 2026 (RU pass 2026-10-02)**: BOE for (a) the Hacienda ministerial order
+      that starts the RD 238/2026 e-invoice clock (RU 8407, FR 8402) and (b) the DAC8 transposition law
+      and the Modelo 175 order (RU 9220, 11848; FR 8615, 11817). Update the "на 2 октября 2026 года" lines.
+- [ ] **URGENT, Mike (wp-admin): WPML copies `_elementor_edit_mode` across translations** (found
+      2026-10-02). Saving any post in a trid copies the field from the trid source to every translation.
+      Both directions hurt: (a) RU 9220 (source FR 8615, switched) fell to its stale post_content and was
+      restored to `builder` twice; (b) RU saves of 8407, 10376, 11848, 12942 copied `builder` from their
+      ES/EN sources onto **FR 8402, 10335, 11817, 12930**, which went back to their old Elementor versions
+      until reset to empty at about 17:10. Any save of a sibling will do it again. Fix: WPML → Settings →
+      Custom Fields Translation → `_elementor_edit_mode` → "Don't translate". Until then, after any save
+      of a sibling of the 12 switched FR posts (13243 + the 11), re-check the FR mode and reset it.
+- [ ] **Follow-ups from the RU pass (2026-10-02)**, details in `data/staging/<id>-ru-pass.md`:
+      Link Whisper re-scan for RU (404s `/ru/blog/program-permanent-hiring-qualified-young-people/`,
+      `/ru/blog/программа-постоянного-трудоустройст/`, `/ru/blog/продление-ненасыщенного-вида-на-жите/`;
+      a 301 `/ru/blog/subsidies-indefinite-hiring-unemployed/`; self-links on 7869, 8364) · WPML: RU 8364
+      alone in trid 1328 while ES 7708 / EN 8357 / FR 8361 sit in trid 1310 · RU 26964 was a published
+      duplicate carrying the Ukraine residence offer (295 €): body replaced, decide if the offer gets its own
+      post (rollback in revision 26965) · stale Rank Math FAQ/Article schemas on most RU posts (not output
+      while the module is off) · 13794 lost its Elementor FAQ JSON-LD (JSON staged) · RU contact page and
+      site LegalService schema still use "&" · /ru/налоговые-услуги/ 301s to a non-RU URL (page, Mike).
+      Félix/Sonia: DNV threshold 2 442 € vs 2 849 € (200 % SMI basis), 183-day counting, Beckham + Valencian
+      wealth-tax minimum, MiCA "payments-only" company, registry numbers after the STS, RDL 27/2026
+      transitional regime, Russia DTT status.
+- [ ] **Siblings flagged by the RU pass** (owners: Elena ES, Maral + Mike EN, Mike FR): EN 892 / FR 888
+      (Beckham 45 % → 47 %), EN 13538 / FR 13539 (inheritance region, "treaty"), EN 3452 / FR 3455 (Golden Visa
+      "only real estate"), EN 649 / FR 1207 (NIE "valid 3 months", EX-19), EN 25993 / FR 26023 (STS
+      "731/2023"), EN 13919 / FR 13923, EN 991 / FR 1130, EN 15852 / FR 15895 (VAT claims), FR 13762
+      ("Madrid case"), FR 1819, EN 8126 / 8130 / 24772, FR 7837 / 7911 / 24773 / 11969, ES 26737 / EN 26740 /
+      FR 26760 ("65 años"), EN 1563 ("Part 1"), ES 10318 / EN 10351 (eIDAS plan stated as fact).
+- [ ] **Re-check on 16 Oct 2026 (RU pass 2026-10-02)**: LABORA ECOVUL 2026 and ECOGJU 2026 close on
+      15 Oct 2026. Rewrite RU 7869, 7928 and the LABORA section of RU 24774 as "closed" and point to the 2027
+      calls once published in DOGV. Siblings still on the 2024 calls (11.113 €): EN 8126, 8130 · FR 7837,
+      7911 (FR 7911 also says "15 juin" and 22 000 €) · ES 7816, 7885. Tarifa plana 2026 amount: same open
+      point as FR 8655 (Félix/Sonia); RU 24774 carries a CTA instead of a figure.
 
 ## 5. Agents, GSC-driven upgrades (FR + EN first)
 
@@ -139,6 +174,9 @@ Details and cannibalisation notes: `data/content-ideas-2026-10.md`. Upgrades fir
 - 2026-10-02: 11 FR posts (11817, 8655, 12930, 8615, 8402, 2687, 18814, 2823, 7335, 10335, 10629)
   switched from old Elementor versions to cleaned, fact-checked 2026 rewrites (TL;DR, inline sources,
   brand/1960/Valencia, FR links); live QA passed. Logs in `data/changelog`, `data/factcheck`, `data/staging`.
+- 2026-10-02: RU pass on all 28 RU posts (freshness, naturalness, format, CTA; calque «ненасыщенный»
+  removed, T-15 closed). Live QA: 28/28 TL;DR, 1 H1, 0 dashes/emojis/"&", RU-only links and related
+  posts. CTAs use Olesia Davidova (Mike). Logs in `data/factcheck`, `data/changelog`, `data/staging`.
 - Drafts: 26979 and 27304 trashed; 26642 merged, fact-checked, featured image.
 - Related posts: 35 posts fixed; all locales now 100% same-language (9988 fixed by its WPML re-tag).
 - Repos: rules + agents in `dlcom`; `dlvibe` PR #95 (not merged). Slack handoff sent to Elena and Maral.
