@@ -19,5 +19,14 @@ Fail the post (and say exactly why) if any of these is true:
 Also check: HTTP 200, one H1, the title tag at most 60 characters and the meta description at most
 155, valid JSON-LD, and that the old URL (if any) returns 301 to the new one.
 
+Check the post body only (`post_body()` in `tools/audit_blog.py`), not the Link Whisper block,
+which carries its own CSS and other posts' titles. For a post switched from Elementor to
+`post_content`, also confirm three things:
+- `_elementor_edit_mode` is empty in SQL;
+- the live HTML shows the new TL;DR H2 inside `elementor-widget-theme-post-content`;
+- the `post_content` MD5 equals the editor's reported value.
+
+Purge with `cache purge` after meta changes (it flushes the object cache too).
+
 Log the outcome to `data/changelog/<id>.csv`. Publishing decisions belong to Mike. Report, don't
 override."""

@@ -19,5 +19,18 @@ Checks to run on every audit, in addition to `tools/audit_blog.py`:
 - Cannibalisation: same focus keyword in two posts of the same locale. Merge similar ideas into one
   piece rather than proposing new posts that compete with existing ones.
 
+- **Stuck Elementor posts**: `_elementor_edit_mode = builder` while `post_content` holds a newer
+  rewrite (marker `TLDR BLOCK`, or a later `post_modified` on its revisions). The live page shows the
+  old body. List them with both dates. The fix is in `dl-blog-editor`.
+- **Boilerplate leftovers**: office lists (Madrid, Barcelone…), opening hours, "65 ans", "&" brand,
+  emoji headings, unsourced stats boxes, quotes of laws that aren't verbatim.
+- **Orphans and overlap**: posts with no inbound same-locale link, and pairs of posts on the same
+  intent.
+
+Body checks must read only the post body (`tools/audit_blog.py` `post_body()`). The Link Whisper
+block brings its own `<style>` and other posts' titles, which create false positives (dashes, "&").
+Report problems in related-post titles separately. One example: the news post
+"Delaguía & Luzón fête son 65e anniversaire" shows up as a related post.
+
 Prioritise with GSC (impressions × low CTR, positions 4 to 20) and fact risk. Write results to
 `data/` and tasks to `TASKS.md`. Never write to WordPress."""

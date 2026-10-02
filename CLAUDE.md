@@ -68,6 +68,9 @@ its own docs (PR #95).
 - **Verify every write** by reading it back: SQL on `dlg_postmeta` / `dlg_posts`, then a live
   `curl` of the URL after a LiteSpeed purge. Never trust a write tool's JSON response alone. An old
   connector bug returned data from other sites.
+- **No expiring approval links.** Write through `content/edit`, REST or Rank Math endpoints rather than
+  raw SQL or protected WP-CLI deletes, whose WPVibe approval links expire within minutes (Mike,
+  2026-10-02). See `docs/07-EDIT-AND-PUBLISH-PROCESS.md`.
 - **Someone else may be editing.** Posts are being modified daily (2026-09-24 → 2026-10-01: 22
   posts). Re-read a post right before editing it, and never overwrite a newer `post_modified`.
 

@@ -25,9 +25,16 @@ the replacement, and the reason (rule or fact-check row). Mike approves a batch 
 | FAQ / Article schema per post | Rank Math schema meta (`rank_math_schema_*`). Test on one post, because the WPVibe semicolon filter blocked this before |
 | Post title (H1), excerpt | `PUT /wp/v2/posts/<id>` with `title` / `excerpt` only |
 | Slug | **Only with Mike's approval** + Rank Math redirect 301 old→new + entry in DECISIONS.md |
+| Full rewrite of a non-Elementor body | `PUT /wp/v2/posts/<id>` with `content`, then SQL MD5 readback (may return 500 and still commit) |
+| Switch an Elementor post to its `post_content` rewrite | Clean `post_content` first, then `content/edit` on meta `_elementor_edit_mode` `"builder"` → `""`. `_elementor_data` stays as rollback. `cache purge`. Never reopen with "Edit with Elementor" |
 
-Never: raw SQL writes to `_elementor_data`, `post_content` edits on Elementor posts, edits to
-template 4476, menus, pages, or WPML/Rank Math settings.
+Never: raw SQL writes to `_elementor_data`, `post_content` edits on Elementor posts (except to
+prepare a switch, as above), edits to template 4476, menus, pages, or WPML/Rank Math settings.
+
+**No expiring approval links (Mike, 2026-10-02).** Raw mutating SQL and protected WP-CLI deletes
+generate WPVibe approval links that expire within minutes. Prefer `content/edit`, REST and Rank Math
+endpoints, with the approval given in chat. When raw SQL is unavoidable (Rank Math redirection rows),
+say so first and send the link only when Mike is ready.
 
 ## 3. Verify (mandatory)
 
