@@ -1,0 +1,85 @@
+{
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Qu'est-ce que le règlement eIDAS 2.0 ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "C'est le règlement (UE) 2024/1183 du 11 avril 2024, entré en vigueur le 20 mai 2024. Il modifie le règlement (UE) 910/2014 sur l'identification électronique et les services de confiance. Sa principale innovation est le portefeuille européen d'identité numérique (EUDI Wallet), que chaque État membre doit proposer."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quand le portefeuille européen d'identité numérique sera-t-il disponible ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Chaque État membre doit en proposer au moins un dans les 24 mois suivant l'entrée en vigueur des actes d'exécution, intervenue le 24 décembre 2024, soit d'ici fin décembre 2026. Les entreprises privées tenues à une authentification forte devront l'accepter au plus tard fin décembre 2027."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Mon identité numérique française sera-t-elle reconnue en Espagne ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Le règlement prévoit que les services publics en ligne qui exigent une identification électronique acceptent les portefeuilles fournis par les autres États membres. Les entreprises privées tenues à une authentification forte devront aussi les accepter d'ici fin 2027, à la demande de l'utilisateur. Pour savoir si une démarche précise est concernée, contactez-nous."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Le portefeuille remplace-t-il le NIE ou le padrón ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Non. Le portefeuille simplifie l'identification et la signature électronique, mais ne supprime pas les obligations de fond. L'obtention du NIE, l'inscription au padrón municipal et l'homologation des diplômes restent des procédures distinctes. L'Agencia Tributaria exige d'ailleurs un identifiant espagnol pour l'accès eIDAS."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quelle est la valeur juridique d'une signature électronique qualifiée ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Selon l'article 25 du règlement eIDAS, elle a un effet juridique équivalent à celui d'une signature manuscrite, et elle est reconnue dans tous les États membres. Certains actes exigent toutefois une forme particulière : en Espagne, une vente immobilière doit être passée par escritura pública devant notaire pour être inscrite au Registro de la Propiedad. Pour vérifier un acte précis, contactez le cabinet."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Pourra-t-on ouvrir un compte bancaire espagnol avec le portefeuille ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Les banques font partie des établissements tenus d'accepter le portefeuille, à la demande du client, au plus tard fin décembre 2027, lorsqu'elles doivent appliquer une authentification forte. D'ici là, l'ouverture de compte suit les procédures actuelles : NIE, justificatifs et parfois présence physique."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Le portefeuille est-il obligatoire pour les citoyens ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Non. L'article 5 bis, paragraphe 15, du règlement prévoit que son utilisation est volontaire. L'accès aux services publics et privés ne peut pas être refusé à une personne qui ne l'utilise pas, et les autres moyens d'identification, comme Cl@ve en Espagne, restent utilisables."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quelles données le portefeuille peut-il contenir ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Les données d'identification personnelle et des attestations électroniques d'attributs, par exemple un diplôme, une qualification professionnelle ou un permis de conduire, selon ce que chaque État et chaque émetteur mettent à disposition. L'utilisateur décide quelles informations il partage et avec qui."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Mes données sont-elles protégées dans le portefeuille ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Le règlement impose un niveau de garantie élevé et le respect du RGPD. Le fournisseur du portefeuille ne peut pas collecter d'informations sur son utilisation au-delà de ce qui est nécessaire au service. Les prestataires de services de confiance qualifiés sont soumis à une supervision nationale."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Comment une entreprise espagnole doit-elle se préparer ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Une entreprise qui doit appliquer une authentification forte, notamment dans la banque, l'énergie, les transports, la santé, les télécoms ou l'éducation, devra accepter le portefeuille au plus tard fin décembre 2027. Les micro et petites entreprises sont exclues de cette obligation. Pour évaluer si votre entreprise est concernée, contactez-nous au +34 963 74 16 57 ou à felix.delaguia@delaguialuzon.com."
+   }
+  }
+ ]
+}

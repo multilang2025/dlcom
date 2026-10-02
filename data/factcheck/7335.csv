@@ -1,0 +1,21 @@
+﻿post_id,lang,claim,verdict,correct_value,source_url,checked_on,propagated_to,applied
+7335,fr,TL;DR/intro: Regulation (EU) 2020/1503 applicable since 10 November 2021,OK,Art 51,https://www.boe.es/buscar/doc.php?id=DOUE-L-2020-81532,2026-10-02,none (no trid siblings),kept
+7335,fr,TL;DR: Regulation 'transposed' in Spain by Ley 18/2022,UPDATE,A regulation is not transposed; Ley 18/2022 arts 14-15 replaced Ley 5/2015 Title V with effect 10/11/2022 to align Spanish law,https://www.boe.es/buscar/act.php?id=BOE-A-2015-4607,2026-10-02,none,reworded
+7335,fr,TL;DR: PSFP status with CNMV; public register,OK,CNMV PSFP register online,https://www.cnmv.es/portal/consultas/servicios-financiacion-participativa/listado-proveedores,2026-10-02,none,"kept, linked"
+7335,fr,"TL;DR + FAQ: European passport, operate in the 27 without new authorisation",UPDATE,Art 18: cross-border provision after notification to the home authority listing the Member States,https://www.boe.es/buscar/doc.php?id=DOUE-L-2020-81532,2026-10-02,none,reworded
+7335,fr,"TL;DR + box + FAQ: warning and test beyond EUR 1,000 or 5 % of net worth",UPDATE,"Art 21.7: investment above the HIGHER of EUR 1,000 or 5 % of net worth -> risk warning, express consent, proof of understanding",https://www.boe.es/buscar/doc.php?id=DOUE-L-2020-81532,2026-10-02,none,corrected
+7335,fr,Box: knowledge test + 4-day reflection period,OK,"Art 21 (entry test, loss simulation); art 22.3: 4 calendar days",https://www.boe.es/buscar/doc.php?id=DOUE-L-2020-81532,2026-10-02,none,"kept, precised"
+7335,fr,Box: sophisticated investors have no cap,UPDATE,ECSP sets no investment cap for anyone,https://www.boe.es/buscar/doc.php?id=DOUE-L-2020-81532,2026-10-02,none,removed
+7335,fr,TL;DR + FAQ: 27 platforms in the CNMV register in 2026,UNVERIFIABLE,Count changes over time; link to register instead,https://www.cnmv.es/portal/consultas/servicios-financiacion-participativa/listado-proveedores,2026-10-02,none,number removed
+7335,fr,"TL;DR + intro + FAQ: ticket from EUR 500; most invest EUR 500-3,000",UNVERIFIABLE,Platform-specific; regulation sets no minimum,,2026-10-02,none,removed
+7335,fr,Intro + box: volume +20 % in 2025; USD 1.07 trillion by 2028 (Facts Factors),UNVERIFIABLE,Non-approved sources,,2026-10-02,none,removed
+7335,fr,Cards + FAQ: crowdlending 8-12 % gross; lock-in 12-36 months,UNVERIFIABLE,Platform marketing figures,,2026-10-02,none,removed; KIIS and art 25 bulletin board instead
+7335,fr,"Trends box (tokenisation, AI, hybrid financing)",UNVERIFIABLE,No source,,2026-10-02,none,removed
+7335,fr,Blockquote: art 1 quoted in French,UNVERIFIED wording,EUR-Lex FR not fetchable (bot challenge); replaced by verified Spanish OJ text of art 1.1,https://www.boe.es/buscar/doc.php?id=DOUE-L-2020-81532,2026-10-02,none,replaced
+7335,fr,"New: scope limited to offers <= EUR 5,000,000 per project owner over 12 months",OK,Art 1.2.c,https://www.boe.es/buscar/doc.php?id=DOUE-L-2020-81532,2026-10-02,none,added
+7335,fr,New: ESMA register of all crowdfunding service providers,OK,Art 14,https://www.boe.es/buscar/doc.php?id=DOUE-L-2020-81532,2026-10-02,none,added
+7335,fr,"Table/FAQ: IRPF savings base 19 % up to 6,000, then 21, 23, 27, 30 % above 300,000",OK,"LIRPF arts 66 and 76 (9.5+9.5 ... 15+15), from 2025 (Ley 7/2024)",https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764#a76,2026-10-02,none,"kept, linked"
+7335,fr,Table/FAQ: non-resident EU taxed 19 % on interest and gains,WRONG,"TRLIRNR art 14.1.c: interest and movable-asset gains of EU/EEA residents exempt, EXCEPT gains on shares of entities whose assets are mainly Spanish real estate (or >= 25 % holdings)",https://www.boe.es/buscar/act.php?id=BOE-A-2004-4527#a14,2026-10-02,none,corrected
+7335,fr,Table/FAQ: non-resident non-EU taxed 24 % on interest and gains,WRONG,"TRLIRNR art 25.1.f: 19 % on interest, dividends and capital gains",https://www.boe.es/buscar/act.php?id=BOE-A-2004-4527#a25,2026-10-02,none,corrected
+7335,fr,Text: platform usually applies withholding,UNVERIFIABLE,Treaty/withholding mechanics depend on case,,2026-10-02,none,removed + CTA
+7335,fr,"House rules: 'Delaguia & Luzon', '65 ans', fake offices, emojis, TL;DR as <p>, FAQ after CTA, h4 FAQ",WRONG (house rules),Fixed,,2026-10-02,,fixed

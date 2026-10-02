@@ -1,0 +1,85 @@
+{
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Faut-il un permis de travail pour un Français en Espagne ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Non. Les Français relèvent du régime des citoyens de l'Union (Real Decreto 240/2007). Pour un séjour de plus de trois mois, ils demandent un certificado de registro (formulaire EX-18) dans les trois mois suivant leur entrée en Espagne, et ce certificat mentionne leur NIE. Aucun visa ni autorisation de travail n'est requis."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Combien paie un autónomo par mois en 2026 ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sur la base minimale de sa tranche, entre 205,88 € et 607,35 € par mois, MEI compris, selon ses revenus nets (Orden PJC/297/2026). Les nouveaux inscrits peuvent demander une cotisation réduite pendant 12 mois (article 38 ter de la LETA), dont le montant est fixé par la loi de finances. Pour le montant applicable à votre date d'inscription, contactez-nous au +34 963 74 16 57."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Un Suisse peut-il travailler librement en Espagne ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui. En vertu de l'accord UE-Suisse sur la libre circulation des personnes du 21 juin 1999, le Real Decreto 240/2007 s'applique aux Suisses comme aux citoyens de l'Union. Ils demandent donc un certificado de registro, et non un TIE. En cas de détachement, le formulaire A1 permet de rester affilié au régime suisse."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quelle est l'indemnité en cas de licenciement injustifié ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "L'article 56 du Estatuto de los Trabajadores prévoit 33 jours de salaire par année d'ancienneté, dans la limite de 24 mensualités. Pour un contrat antérieur au 12 février 2012, l'ancienneté acquise avant cette date est comptée à 45 jours par an. Le Tribunal Supremo a confirmé que le juge ne peut pas accorder plus que ce barème légal."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Peut-on cumuler salariat et activité d'autónomo ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui, c'est la pluriactividad : la personne cotise au régime général pour son emploi salarié et au RETA pour son activité indépendante. En 2026, elle peut obtenir le remboursement de 50 % de l'excédent de ses cotisations pour contingences communes au-delà de 17 323,68 € (Real Decreto-ley 3/2026). Pour un ressortissant hors UE, l'article 73.5 du RD 1155/2024 autorise l'activité indépendante tant que le salariat reste l'activité principale."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "La loi Beckham s'applique-t-elle à un indépendant ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Pas à un autónomo classique. L'article 93 de la loi IRPF vise notamment les salariés déplacés, les titulaires du visa de télétravail international, les administrateurs, les entrepreneurs dont l'activité est reconnue comme innovante et certains professionnels hautement qualifiés au service de start-up ou d'activités de recherche. L'éligibilité dépend de conditions précises : pour vérifier votre cas, contactez-nous au +34 963 74 16 57 ou à felix.delaguia@delaguialuzon.com."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quelle est la durée maximale du temps de travail en Espagne ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "L'article 34 du Estatuto de los Trabajadores fixe 40 heures hebdomadaires de travail effectif, en moyenne sur l'année. Les conventions collectives peuvent prévoir moins, et le registre horaire est obligatoire. Le projet de loi qui ramenait la durée à 37,5 heures a été rejeté par le Congrès le 10 septembre 2025."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Comment éviter la double imposition entre la France et l'Espagne ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "La convention fiscale franco-espagnole signée à Madrid le 10 octobre 1995 répartit le droit d'imposer chaque catégorie de revenus et prévoit l'élimination de la double imposition. Des revenus de source française (loyers, plus-values immobilières) peuvent rester imposables en France. Pour l'analyse de votre situation, contactez le cabinet. Notre guide de la fiscalité espagnole avant l'expatriation approfondit le sujet."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quelle différence entre NIE et TIE ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Le NIE est un numéro d'identification attribué à l'étranger qui a des démarches à accomplir en Espagne (achat immobilier, compte bancaire, emploi, création d'entreprise). Le TIE est une carte biométrique délivrée aux résidents hors UE (Canadiens, Marocains, Algériens, Tunisiens). Les citoyens de l'UE, de l'EEE et les Suisses reçoivent un certificado de registro, pas un TIE."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quelles aides existent pour un nouvel autónomo ou pour l'embauche d'un jeune diplômé ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Le nouvel autónomo peut demander la cotisation réduite de l'article 38 ter de la LETA et, selon sa région, une aide régionale à la cotisation. Pour l'embauche de jeunes qualifiés, la Communauté valencienne a mis en place des programmes d'aide : voir notre article sur les aides à l'embauche de jeunes qualifiés. Les programmes changent chaque année : contactez-nous pour vérifier ceux qui sont ouverts."
+   }
+  }
+ ]
+}

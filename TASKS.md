@@ -62,10 +62,20 @@ RU on hold. Anything that needs a URL change / 301 is parked in "Later: needs a 
 
 - [ ] **27307 unsourced figures** still in the text: the 90-day entry window, "renouvelable jusqu'à
       cinq ans", 34 188 € (DNV threshold). Verify or replace with a CTA.
-- [ ] **11 FR posts still show the old Elementor version** while a 2026 rewrite sits unused in
-      post_content: 11817, 8655, 12930, 8615, 8402, 2687, 18814, 2823, 7335, 10335, 10629. Per post:
-      decide which version is newer, clean the rewrite (emojis, "&", "65 ans", fake offices, unverified
-      claims, inline sources, TL;DR), then switch rendering (remove `_elementor_edit_mode`) as for 13243.
+- [ ] **Re-check after the Congress vote (late Oct 2026)** on RDL 26/2026 and 27/2026: FR 2823, 12930,
+      10629 (rental renewals, temporary leases, VAT on stays of 30 nights or less from 1 Dec 2026).
+- [ ] **Siblings of the 11 switched FR posts** probably carry the facts fixed in FR (Golden Visa scope,
+      quarterly Modelo 210, registry, VAT speculation, AEAT eIDAS claim): EN 2869, 12852, 10659, 10351,
+      11830, 8398 · ES 12947, 10615, 10318, 11788, 7717 · RU 12942, 10376. Elena (ES), Maral + Mike (EN).
+- [ ] **Follow-ups from the 11 FR rewrites** (details in `data/staging/<id>-rewrite.md`):
+      10629 H1 still says "NRA" (title proposed) · 18814 orphan (link from 1691, 10023, 2297, 17410) and
+      competes with 1557 (merge = 301, see section 3) · 7335 few inbound links (3013, 2519, 25839) ·
+      focus keywords are verb phrases on 8402, 8655, 12930 · FAQ schema JSON for 8655/10335 ready in
+      staging, apply when the Rank Math schema module is back · 2678 body still has "Delaguía & Luzón" ·
+      24989 canonical 404 + "&", "depuis 1994", emojis · 15720 [n] markers + Références list.
+- [ ] **Link Whisper related posts** show the news post "Delaguía & Luzón fête son 65e anniversaire"
+      (and event posts like "CDRC – Paris 2025") as related posts on topical articles. Rename that
+      post's title to the house brand or exclude news/events from related posts (Link Whisper settings: Mike).
 - [ ] **EN SMI 13250**: excerpt not written (needs a REST save); FAQ answer on offsetting carries the same
       claim as HOLD change 11; propagate verified SMI fixes to ES 25913.
 - [ ] **Golden Visa mentions** (T-10): EN 26128, 23650, 21656, 23645, 10247, 17990, 20439, 18119, 12852,
@@ -126,6 +136,9 @@ Details and cannibalisation notes: `data/content-ideas-2026-10.md`. Upgrades fir
 - 27307: merged with draft 26979, cleanup pass (TL;DR, FAQ, sources, FR focus, title tag "6 voies"),
   fact-check fixes (Golden Visa transitional rule, legal processing maximums, driving licence rule,
   TIE obligation + fine, TIE exemption for Ley 14/2013 art. 75.4 visas).
+- 2026-10-02: 11 FR posts (11817, 8655, 12930, 8615, 8402, 2687, 18814, 2823, 7335, 10335, 10629)
+  switched from old Elementor versions to cleaned, fact-checked 2026 rewrites (TL;DR, inline sources,
+  brand/1960/Valencia, FR links); live QA passed. Logs in `data/changelog`, `data/factcheck`, `data/staging`.
 - Drafts: 26979 and 27304 trashed; 26642 merged, fact-checked, featured image.
 - Related posts: 35 posts fixed; all locales now 100% same-language (9988 fixed by its WPML re-tag).
 - Repos: rules + agents in `dlcom`; `dlvibe` PR #95 (not merged). Slack handoff sent to Elena and Maral.

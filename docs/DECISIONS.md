@@ -47,5 +47,10 @@ Add the date and who decided. Move an item to "Decided" once it's settled.
 - 2026-10-01 (Mike): D-10 for FR SMI: 13243 moved to /fr/blog/smi-espagne/ (Permalink Manager),
   301 from /fr/blog/salaire-minimum-interprofessionnel-2025/ (Rank Math), internal links in 8655 and
   13923 updated. Same method used for 27316 (-2 removed) and 27692 (/fr/blog/s-installer-en-espagne/).
+- 2026-10-02 (Mike): the 11 FR posts stuck on old Elementor versions (11817, 8655, 12930, 8615, 8402,
+  2687, 18814, 2823, 7335, 10335, 10629) switched to their cleaned, fact-checked 2026 rewrites in
+  post_content. Method: `_elementor_edit_mode` set to empty via `/wpvibe/v1/content/edit` (meta), not
+  raw SQL (WPVibe approval links expire in minutes; Mike asked to avoid them). `_elementor_data` kept as
+  rollback. Nobody should open these posts with "Edit with Elementor": it would reload the old version.
 - 2026-10-01 (Mike): duplicate drafts merged: 26979 into 27307 (then trashed), 27304 into 26642 (27304
   trashed, 26642 kept as draft with featured image 28012).

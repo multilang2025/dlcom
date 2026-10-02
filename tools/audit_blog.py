@@ -54,7 +54,7 @@ def post_body(html):
     if marker < 0:
         # Non-Elementor post (block/classic content) rendered by the template's post-content widget
         m = re.search(r'<div[^>]*class="[^"]*elementor-widget-theme-post-content', html)
-        marker = m.start() + 1 if m else -1
+        marker = m.start() + len("<div") if m else -1  # rfind below needs the whole "<div" before marker
     if marker < 0:
         return ""
     start = html.rfind("<div", 0, marker)
