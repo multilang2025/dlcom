@@ -132,6 +132,15 @@ RU on hold. Anything that needs a URL change / 301 is parked in "Later: needs a 
       calls once published in DOGV. Siblings still on the 2024 calls (11.113 €): EN 8126, 8130 · FR 7837,
       7911 (FR 7911 also says "15 juin" and 22 000 €) · ES 7816, 7885. Tarifa plana 2026 amount: same open
       point as FR 8655 (Félix/Sonia); RU 24774 carries a CTA instead of a figure.
+- [ ] **Re-check monthly from Nov 2026 (FR 25840 fact check, 2026-10-06, `data/staging/25840-factcheck.md`)**:
+      (a) BOE for a Ley de Presupuestos 2026/2027 or a decree-law fixing the cuota reducida amount from 2026
+      (art. 38 ter LETA, DT 5a RDL 13/2022); until then the 80 € is stated for 2023 to 2025 only (FR 25840,
+      8655, EN 2564, RU 24774); non-linked posts that still say "80 € in force in 2026": ES 27855, ES 24717,
+      FR 24773, EN 25362; (b) the bill derived from RDL 3/2026 (Congress, urgent procedure) for amendments to
+      art. 3.4 (autónomo tables); (c) the 2027 contribution order (MEI 1,00 % in 2027, LGSS DT 43a) and 2027
+      tables; (d) the Valencian "cuota cero" announced on 28/09/2026 (2 years, 4 for young people): wait for
+      DOGV text before any statement; (e) TRRETA 2026 call (sede.gva.es id_proc 18856). Also ES 27855 carries
+      the same errors as FR 25840 (15 tramos "200 a ~590 €", 88,56 €, cuota cero in Valencia): needs its own pass.
 
 ## 5. Agents, GSC-driven upgrades (FR + EN first)
 
@@ -189,8 +198,8 @@ Details and cannibalisation notes: `data/content-ideas-2026-10.md`. Upgrades fir
       read-back was blocked) · stored schema still stale on FR 888 and 2678 ("&" brand, old FAQ, "Modelo 030") and
       "price 60 EUR" on EN 27052 and 25207 · site-wide LegalService JSON-LD still "Delaguía & Luzón" with the
       Logo-65 image · EN 27052 Rank Math title has "&" · do not reopen 27052 and 25207 in Elementor (stale mirrors).
-      Agents/Mike: FR 15895 needs a full rewrite like FR 10629 (emojis, "plus de 65 ans", unsourced stat boxes, 21 %
-      VAT, Swiss residents are 24 % not 19 %, quarterly Modelo 210) · EN 991 "no-obligation consultation" wording
+      Agents/Mike: FR 15895 DONE 2026-10-06 (full rewrite in the Elementor widgets, see data/staging/15895-rewrite.md; its
+      Rank Math schema is still stale) · EN 991 "no-obligation consultation" wording
       and "&" brand · FR 13762 unsourced "320 000 logements" box · EN 25444 (quarterly non-resident filing,
       "Royal Legislative Decree 1/2004" cited as the Land Law) · EN 2869 title typo "Porperty" and banned
       "Navigating the complexities" · EN 1815 fines "from 6,000 €" (minor fines go up to 10,000 €) and the
