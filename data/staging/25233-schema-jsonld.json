@@ -1,0 +1,181 @@
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://delaguialuzon.com/#organization",
+      "name": "Delaguía y Luzón",
+      "url": "https://delaguialuzon.com/",
+      "email": "felix.delaguia@delaguialuzon.com",
+      "telephone": "+34 963 74 16 57",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avinguda Regne de València, 6, 1º - 2º",
+        "postalCode": "46005",
+        "addressLocality": "Valencia",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://delaguialuzon.com/#website",
+      "url": "https://delaguialuzon.com/",
+      "name": "Delaguía y Luzón",
+      "publisher": {
+        "@id": "https://delaguialuzon.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://delaguialuzon.com/en/blog/writing-spanish-will/#webpage",
+      "url": "https://delaguialuzon.com/en/blog/writing-spanish-will/",
+      "name": "How to write a Spanish will for UK nationals",
+      "description": "Guide to writing a Spanish will for UK nationals with property or assets in Spain, including open notarial wills, Article 22 elections, inheritance tax and coordination with UK wills.",
+      "isPartOf": {
+        "@id": "https://delaguialuzon.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://delaguialuzon.com/en/blog/writing-spanish-will/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://delaguialuzon.com/en/blog/writing-spanish-will/#primaryimage"
+      },
+      "inLanguage": "en",
+      "datePublished": "2026-05-15",
+      "dateModified": "2026-10-06"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://delaguialuzon.com/en/blog/writing-spanish-will/#primaryimage",
+      "url": "https://delaguialuzon.com/wp-content/uploads/2026/05/spanish-will.jpg",
+      "width": 795,
+      "height": 447,
+      "caption": "Spanish will"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://delaguialuzon.com/en/blog/writing-spanish-will/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delaguialuzon.com/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://delaguialuzon.com/en/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to write a Spanish will for UK nationals",
+          "item": "https://delaguialuzon.com/en/blog/writing-spanish-will/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://delaguialuzon.com/en/blog/writing-spanish-will/#article",
+      "headline": "How to write a Spanish will for UK nationals",
+      "description": "A practical guide for UK nationals on writing a Spanish will, choosing applicable succession law, avoiding forced heirship, understanding inheritance tax and coordinating Spanish and UK wills.",
+      "image": {
+        "@id": "https://delaguialuzon.com/en/blog/writing-spanish-will/#primaryimage"
+      },
+      "author": {
+        "@type": "Organization",
+        "@id": "https://delaguialuzon.com/#organization",
+        "name": "Delaguía y Luzón"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://delaguialuzon.com/#organization",
+        "name": "Delaguía y Luzón"
+      },
+      "datePublished": "2026-05-15",
+      "dateModified": "2026-10-06",
+      "mainEntityOfPage": {
+        "@id": "https://delaguialuzon.com/en/blog/writing-spanish-will/#webpage"
+      },
+      "inLanguage": "en",
+      "about": [
+        "Spanish will",
+        "UK nationals in Spain",
+        "Spanish inheritance law",
+        "EU Regulation 650/2012",
+        "Spanish succession planning"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://delaguialuzon.com/en/blog/writing-spanish-will/#service",
+      "name": "Spanish Will Legal Consultation",
+      "description": "Legal consultation for UK nationals and foreign residents who need a Spanish will, inheritance planning, Article 22 choice of law advice and coordination with UK wills.",
+      "provider": {
+        "@id": "https://delaguialuzon.com/#organization"
+      },
+      "serviceType": "Inheritance law consultation",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Spain"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delaguialuzon.com/en/blog/writing-spanish-will/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need a Spanish will if I already have an English will?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not strictly, but a Spanish will is usually advisable. A Spanish will is drafted for Spanish procedures and allows you to make an express Article 22 election, so that the law of your nationality governs the succession."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I write a Spanish will from the UK without travelling to Spain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Spanish notarial will is normally granted in person before a Spanish notary. If you cannot travel to Spain, ask us which options exist. A power of attorney is not an acceptable substitute, because a will is a personal act that cannot be delegated. Most clients sign their Spanish will during a routine visit to their Spanish property."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Article 22 election apply to my UK assets too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An election in your Spanish will applies to your succession as a whole, and Spanish notaries and courts follow it. The UK does not apply Regulation 650/2012 and will determine succession to UK-situated assets under its own conflict-of-laws rules, so ask a UK solicitor how they apply to your UK assets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my heirs find the will after I die?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Spanish notary reports the existence of every will to the Registro General de Actos de Última Voluntad, and heirs can request a certificate of last wills from the Ministry of Justice once fifteen working days have passed since the date of death."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need witnesses when signing a Spanish will?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Witnesses are not generally required for an open notarial will. Under article 697 of the Civil Code, two witnesses must attend if the testator declares that they cannot sign, or if the testator or the notary asks for them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a married couple make a joint Spanish will?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Article 669 of the Civil Code does not allow two or more people to make a will jointly or in the same instrument, so each spouse must grant a separate Spanish will, although the two wills can be signed at the same notarial appointment and drafted to mirror each other on the substantive provisions."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -171,20 +171,43 @@ Details and cannibalisation notes: `data/content-ideas-2026-10.md`. Upgrades fir
       upgrades live on EN 15116 (Modelo 720 + 721), 10247, 20394, 27449, 892, 25233, 24445, 22409, 2564, and the
       Rank Math keyword/title of 2175; drafts 28177 (N-1 non-resident tax), 28176 (N-2 UK inheritance tax),
       28172 (N-3 US-Spain treaty). Before publishing a draft: Félix/Sonia review of the points in its staging
-      note (N-2 and N-3), then `dl-qa-publisher`, a featured image (realistic, Mike), FAQ schema when the
+      note (N-2 and N-3), then `dl-qa-publisher`, FAQ schema when the
       module is back, a `curl -I` on the Permalink Manager URL, and `python tools/related_posts_audit.py en`.
       Add inbound links on publication: N-1 from 27052, 24445, 18877, 20275; N-2 from 10247, 25233, 13538, 20275;
       N-3 from 20275, 22034, 26126, 21544, 892, 15116; and from 27449, 892, 10247, 20275, 22034 to 15116.
-- [ ] **EN posts with errors found by this work (not edited)**: 27052 says non-EU sellers pay 24 % on the gain,
-      the law is 19 % for every non-resident (fix before N-1 goes live) · 25207 says the ETIAS fee is 7 €, the
-      European Commission lists 20 € since 17 July 2025 · 22409 excerpt is 325 characters (limit 255) · 15116 H1
-      (suggested: "Modelo 720 Spain: foreign assets declaration and Modelo 721") · stored Rank Math schema with
-      wrong slugs or "price 60 EUR" on 25233, 24445, 892, 20394 (24445 also has `PASTE_IMAGE_URL_HERE`) ·
-      FR 888 meta description "loi Beckham de 2004" · FR 2678 and ES 4564 probably still carry the old
-      Modelo 720 penalties and no Modelo 721.
-- [ ] **Draft clash**: "PLAN" drafts 28169 (UK inheritance tax), 28170 (income tax return for Americans),
-      28171 (non-resident tax) were created on 2026-10-06 by user 29, tagged ES in WPML although in English.
-      28171 duplicates N-1 and 28169 duplicates N-2. Mike: who is writing them? Trash or merge.
+- [x] 2026-10-06: featured images generated (nano_banana_pro, 16:9, documentary, no text/logos/flags) and set on
+      28177 (attachment 28239), 28176 (28240), 28172 (28241), with native alt text. Handoff sent to Maral on Slack
+      (DM, 2026-10-06). Roles: Maral = English copywriting only; Elena = mostly ES and supervises all languages with
+      Mike; Elena's `PLAN:` drafts 28169, 28170, 28171 are briefs for Maral (keep; Elena trashes them after publication).
+- [x] 2026-10-06 "fix everything" round, live and verified: EN 27052 (24 % to 19 % on gains, deadlines,
+      plusvalía), EN 25207 (ETIAS 20 €, EES dates, unofficial link), EN 22409 excerpt, EN 15116 H1 (URL unchanged),
+      body JSON-LD on EN 25233 and 24445 (slugs, placeholder image, unsourced price), FR 888 (Beckham) and FR 2678
+      (Modelo 720 + 721), and the repealed-decree claims in EN 15852, 991, 2869, 13755, 4734, 1815 and FR 13762,
+      15895. Notes in `data/staging/<id>-fix.md`, `-schema.md`, `-rdl-siblings.md`.
+- [ ] **Still open from that round**:
+      Mike, wp-admin: check Rank Math > Schema on EN 892 and 24445 (the stored schema was rewritten but the
+      read-back was blocked) · stored schema still stale on FR 888 and 2678 ("&" brand, old FAQ, "Modelo 030") and
+      "price 60 EUR" on EN 27052 and 25207 · site-wide LegalService JSON-LD still "Delaguía & Luzón" with the
+      Logo-65 image · EN 27052 Rank Math title has "&" · do not reopen 27052 and 25207 in Elementor (stale mirrors).
+      Agents/Mike: FR 15895 needs a full rewrite like FR 10629 (emojis, "plus de 65 ans", unsourced stat boxes, 21 %
+      VAT, Swiss residents are 24 % not 19 %, quarterly Modelo 210) · EN 991 "no-obligation consultation" wording
+      and "&" brand · FR 13762 unsourced "320 000 logements" box · EN 25444 (quarterly non-resident filing,
+      "Royal Legislative Decree 1/2004" cited as the Land Law) · EN 2869 title typo "Porperty" and banned
+      "Navigating the complexities" · EN 1815 fines "from 6,000 €" (minor fines go up to 10,000 €) and the
+      Valencia moratorium date · EN 13755 two overlapping FAQ blocks (after D-2).
+      Elena (ES): 15812, 907, 4757, 13730 likely carry the same VAT/ViDA, "2 services", IAE 861.1, registry and
+      repealed-decree claims.
+      STS 1025/2025 and 642/2026 could not be verified and were removed from EN 13755; bring them back only after
+      someone reads the full text on CENDOJ.
+- [ ] **Re-check 7 and 8 Oct 2026**: press (Infobae 5 Oct) says the Government plans to re-approve the housing
+      decrees on 7 Oct. If new decree-laws appear in the BOE, the pages corrected today need another pass: FR 2823,
+      10629, 12930, 15895 · EN 15852, 991, 2869, 1815, 4734, 13755 · RU 1824, 12942, 15904.
+- [ ] **WPVibe quota**: the account showed 405 of 500 calls used in the rolling 24 hours during today's batch.
+      Check https://mcp.wpvibe.ai/account before the next large batch (AISA `update_post` and `flush_caches`
+      are a fallback for post-modified bumps and cache purges).
+- [x] **Draft clash resolved**: the "PLAN" drafts 28169, 28170, 28171 are Elena's briefs for the writer (Maral).
+      Keep them until the articles are published, then Elena trashes them. 28170 (Spanish income tax return for
+      Americans, Modelo 100) is the brief for the next EN draft.
 - [ ] **For Félix/Sonia from this work**: UK State Pension art. 17 or 18(2) (the ruling V1380-25 cited by the
       first checker could not be found in the DGT database, so only V2460-21 is cited) · UK 25 % lump sum, SIPPs,
       ISA income · 401(k)/IRA and US Social Security benefits · treaty benefits for Beckham holders ·

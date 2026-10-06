@@ -1,0 +1,10 @@
+# EN 25444 conveyancing-spain: RDL 26/27 sibling check (2026-10-06)
+
+Nothing to change for the decrees. `_elementor_data` MD5 3ece50581b6cf4032641eea5f2aaccee, post_modified 2026-06-17 12:18:01 (unchanged). WPML trid 2973 (no translations). Live 200.
+
+"Decree" hits are "Royal Legislative Decree 1/2004" (the post cites it for the Land Law, whose current text is Real Decreto Legislativo 7/2015; RDLeg 1/2004 is the Cadastre text) and "Land Registry". No RDL 26/27, IRAV, VAT or registry-of-rentals text.
+Adjacent findings for Mike/Maral (not edited, outside this task): "Rental income must be declared quarterly" for non-residents is outdated (AEAT note on Orden HAC/623/2026: annual grouping, 1 to 20 April for income accrued in 2026); the legal basis cited for the Land Law; unsourced figures (6 to 12 weeks, reservation EUR 1,000 to 6,000, registry fees). The UK-specific tax sentences (3 % withholding, Modelo 720, 24 % IRNR) belong to the UK/US upgrade work.
+
+## Common context (2026-10-06)
+Congress did not validate Real Decreto-ley 26/2026 (BOE 30 Sep) nor 27/2026 (BOE 1 Oct) and repealed both on 2 Oct 2026 (BOE-A-2026-20526 and BOE-A-2026-20527). RDL 8/2026 was repealed in April 2026. The consolidated LAU, LIRPF, LIVA and TRLRHL (updated 2 Oct 2026) show the pre-decree wording. Spanish press (Infobae, 5 Oct 2026) says the Government plans to approve the housing decrees again (Council of Ministers of 7 Oct); nothing is law unless validated, so re-check the BOE on 7 and 8 Oct (see TASKS.md re-check item).
+Write path: POST /wpvibe/v1/content/edit on meta `_elementor_data` (snippet replace, no raw SQL, no approval links). post_modified bumped with AISA update_post (no field change), which copied the empty edit mode onto EN 2869 (restored). Facts: data/factcheck/<id>.csv (rows dated 2026-10-06). Log: data/changelog/<id>.csv. Exact stored body: not exported (Elementor JSON, 11 to 54 kB); the readback MD5 is given below and rollback is the Elementor revision of the previous save.

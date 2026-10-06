@@ -28,7 +28,9 @@ same-language links and related posts, short URLs with 301s, no pasted HTML/CSS,
 featured images, no cannibalisation. The rebuild repo `multilang2025/dlvibe` mirrors these in
 its own docs (PR #95).
 
-**Team split (2026-10-01):** Mike FR and EN, Elena ES, Maral EN with Mike. RU on hold.
+**Team split (2026-10-01, clarified 2026-10-06):** Mike FR and EN, approves publishing. Elena: mostly ES, and
+supervises all languages with Mike (her `PLAN:` drafts are briefs for the writer). Maral: English copywriting only,
+from Mike's plans, drafts or her own ideas (not a fact-checker: legal points go to Mike, Félix and Sonia). RU on hold.
 
 ## Site facts
 

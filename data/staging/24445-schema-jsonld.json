@@ -1,0 +1,197 @@
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://delaguialuzon.com/#organization",
+      "name": "Delaguía y Luzón",
+      "url": "https://delaguialuzon.com/",
+      "email": "felix.delaguia@delaguialuzon.com",
+      "telephone": "+34 963 74 16 57",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avinguda Regne de València, 6, 1º - 2º",
+        "postalCode": "46005",
+        "addressLocality": "Valencia",
+        "addressCountry": "ES"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://delaguialuzon.com/#website",
+      "url": "https://delaguialuzon.com/",
+      "name": "Delaguía y Luzón",
+      "publisher": {
+        "@id": "https://delaguialuzon.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/#webpage",
+      "url": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/",
+      "name": "How to buy a house in Valencia as a non-resident",
+      "description": "Legal guide to buying a house in Valencia as a non-resident, including NIE requirements, taxes, due diligence, mortgages, purchase contracts and legal risks.",
+      "isPartOf": {
+        "@id": "https://delaguialuzon.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/#primaryimage"
+      },
+      "inLanguage": "en",
+      "datePublished": "2026-04-28",
+      "dateModified": "2026-10-06"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/#primaryimage",
+      "url": "https://delaguialuzon.com/wp-content/uploads/2026/04/Buying-a-House-in-Valencia-as-a-Non-Resident.webp",
+      "width": 795,
+      "height": 530,
+      "caption": "Buying a house in Valencia as a non-resident"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delaguialuzon.com/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://delaguialuzon.com/en/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to buy a house in Valencia as a non-resident",
+          "item": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/#article",
+      "headline": "How to buy a house in Valencia as a non-resident",
+      "description": "A practical legal guide for foreign buyers purchasing property in Valencia, including NIE applications, bank accounts, mortgages, due diligence, taxes and remote purchases by power of attorney.",
+      "image": {
+        "@id": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/#primaryimage"
+      },
+      "author": {
+        "@type": "Organization",
+        "@id": "https://delaguialuzon.com/#organization",
+        "name": "Delaguía y Luzón"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://delaguialuzon.com/#organization",
+        "name": "Delaguía y Luzón"
+      },
+      "datePublished": "2026-04-28",
+      "dateModified": "2026-10-06",
+      "mainEntityOfPage": {
+        "@id": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/#webpage"
+      },
+      "inLanguage": "en",
+      "about": [
+        "Buying property in Valencia",
+        "Non-resident property purchase in Spain",
+        "Spanish property law",
+        "NIE number",
+        "Valencia conveyancing"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/#service",
+      "name": "Property Purchase Legal Consultation in Valencia",
+      "description": "Legal consultation for non-residents buying property in Valencia, including NIE applications, due diligence, conveyancing, tax checks, power of attorney and post-completion support.",
+      "provider": {
+        "@id": "https://delaguialuzon.com/#organization"
+      },
+      "serviceType": "Property law consultation",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Valencia"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delaguialuzon.com/en/blog/buy-house-valencia-non-resident/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need to live in Spain to buy a house in Valencia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Non-residents can buy property in Valencia without becoming Spanish residents. You will need an NIE number and must comply with Spanish tax and anti-money-laundering requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does buying a property in Valencia take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The time depends on the due diligence, the date the notary can offer and, if there is a mortgage, the bank’s approval and valuation. Your lawyer can set a timetable once the legal checks start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I buy a property in Valencia remotely?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. With a power of attorney, your Spanish lawyer can handle the NIE application, contract signing, notary completion and post-completion formalities on your behalf."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What taxes do non-residents pay when buying in Valencia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For resale properties, buyers usually pay ITP transfer tax. For new builds, buyers usually pay VAT and stamp duty. Non-resident owners may also need to file Modelo 210 every year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a Spanish bank account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is not always legally mandatory, but it is strongly recommended for paying taxes, utilities, community fees and annual property-related costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Modelo 210?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modelo 210 is the Spanish non-resident income tax return. Non-resident property owners must file it whether the property is rented out or kept for personal use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a UK citizen buy property in Valencia after Brexit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. UK citizens can still buy property in Spain after Brexit. The purchase process is broadly the same, although residence and immigration rights are separate matters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I die without a Spanish will?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your home country’s succession law may apply, but the process can become slower and more complex. A Spanish will covering your Spanish assets is usually recommended. Our inheritance law team can assist with this."
+          }
+        }
+      ]
+    }
+  ]
+}

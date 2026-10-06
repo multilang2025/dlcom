@@ -79,3 +79,18 @@ bottom reference list to inline links if present, and add the 3 most useful link
 Per post: what changed (or the draft's id, URL slug, title, word count), facts verified or CTA'd, open points
 for Félix/Sonia, links to add on publication, final MD5 + `post_modified`, WPML sibling check result, live
 verified yes/no (upgrades), and anything you could not do.
+
+## Addendum 2026-10-06 (second round: fixes)
+- Extra house rules from Elena's EN briefs (28169 to 28171): no "By + gerund" sentence openings ("By filing...");
+  CTA in a grey #f5f5f5 box with email and phone; UK English. (Elena's briefs put FAQ at H4: our rule stays H3.)
+- WPML trap, both directions: saving a post copies `_elementor_edit_mode` across its translation group. Posts whose
+  mode is EMPTY render from `post_content` (switched FR posts: 2687, 2823, 7335, 8402, 8615, 8655, 10335, 10629,
+  11817, 12930, 18814, 13243). Saving one of their translations (for example EN 2869, translation of FR 2823) can set
+  the translation to EMPTY too, which makes it show its stale `post_content`; saving an FR post can do the same to
+  its translations. After EVERY save, read `_elementor_edit_mode` of the whole trid; restore a flipped
+  `builder` post with `run_wp_cli "post meta update <id> _elementor_edit_mode builder --force"` (no approval
+  link) and an EMPTY one with `content/edit` on the meta (`builder` to ``). Then `cache purge` and curl.
+  Never leave a post flipped.
+- Today is 2026-10-06. Congress repealed RDL 26/2026 and 27/2026 on 2 Oct 2026 (BOE-A-2026-20526 and -20527):
+  nothing in them is law. RDL 8/2026 was repealed in April 2026.
+- Roles (Mike, 2026-10-06): Elena mostly does ES and supervises all languages with Mike; her `PLAN:` drafts (28169, 28170, 28171) are briefs for the writer. Maral writes English copy only, from Mike's plans, drafts or her own ideas. She is not a fact-checker: write staging notes so a copywriter can tell what she may change and what must go to Mike, Félix and Sonia.
