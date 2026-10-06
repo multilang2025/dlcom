@@ -64,7 +64,7 @@ suggestions already have a close EN post. Merging them into the plan avoids cann
   now LGT art. 198 (20 € per datum, minimum 300 €, maximum 20 000 €). DGT V0890-24: rights in a UK pension plan
   are not reportable on Modelo 720 before a contingency occurs. **Modelo 721 appears nowhere on the EN blog.**
 - **UK pensions: partly unverified.** Private pensions: art. 17 UK-Spain treaty (taxed only in the residence
-  State). **UK State Pension:** DGT V2460-21 and V1380-25 apply art. 18(2) (taxed only in the UK, exempt with
+  State). **UK State Pension:** DGT V2460-21 applies art. 18(2) (taxed only in the UK, exempt with
   progression in Spain for a British national resident in Spain). **Unverified, do not state as fact:** the
   Spanish treatment of the UK 25 % tax-free lump sum, of SIPPs, and of ISA income (no AEAT or DGT statement).
 - **Keyword clash:** move "non-resident income tax in spain" off 2175 before publishing N-1.

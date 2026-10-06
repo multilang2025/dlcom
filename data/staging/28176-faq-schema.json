@@ -1,0 +1,61 @@
+{
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Does moving to Spain end UK inheritance tax on my estate?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not on its own. The long-term UK resident status continues for 3 to 10 tax years after you leave, and UK-situated property generally stays within the charge whatever your residence."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there an inheritance tax treaty between the UK and Spain?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. HMRC's list of inheritance tax conventions does not name Spain. HMRC allows unilateral relief for tax charged by the other country on assets sited there."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Will my children in Spain pay Spanish tax on what they inherit from me in the UK?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "If they are habitually resident in Spain, article 6 of Ley 29/1987 taxes them on what they inherit wherever it is located. UK inheritance tax may also apply to the estate. Contact us to confirm how the two interact for your family."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does the Valencian 99% bonus apply to British heirs?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The bonus is written for relatives in groups I and II, and non-resident heirs may apply a Community's own rules. Whether it applies to a given British heir depends on where the deceased lived, where the assets are and what is declared. Contact us to confirm your case."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When is the Spanish inheritance tax return due?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Within six months of the date of death, with an extension of six months available if it is requested within the first five months."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does choosing English law for my Spanish will change the tax?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Regulation 650/2012 decides which law governs the succession, and article 1(1) excludes revenue matters."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need a will in Spain and in the UK?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A Spanish will for Spanish assets is usually easier for heirs to use in Spain, as our article on writing a Spanish will explains. Draft the wills so that neither revokes the other, with your UK adviser reviewing the UK one."
+   }
+  }
+ ]
+}

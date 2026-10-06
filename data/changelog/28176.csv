@@ -1,0 +1,3 @@
+date,post_id,lang,change,verified
+2026-10-06,28176,en,"Created EN draft ""UK inheritance tax in Spain: what changes when you move"" via POST /wp/v2/posts?lang=en (status draft, author 5, categories Tax Law and Living in Spain, slug uk-inheritance-tax-in-spain); post_content MD5 8611e78140de2237e095737247ae14c5","Y (SQL readback, MD5 equal to staged HTML; WPML en, own trid 3489, no siblings)"
+2026-10-06,28176,en,"Rank Math title, description, focus keyword set via /rankmath/v1/updateMeta",Y (SQL readback)

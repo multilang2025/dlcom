@@ -61,11 +61,20 @@ RU on hold. Anything that needs a URL change / 301 is parked in "Later: needs a 
 ## 4. Agents, P1 (facts and broken rendering)
 
 - [ ] **27307 unsourced figures** still in the text: the 90-day entry window, "renouvelable jusqu'à
-      cinq ans", 34 188 € (DNV threshold). Verify or replace with a CTA.
-- [ ] **Re-check after the Congress vote (late Oct 2026)** on RDL 26/2026 and 27/2026: FR 2823, 12930,
-      10629 (rental renewals, temporary leases, VAT on stays of 30 nights or less from 1 Dec 2026).
-      RU (2026-10-02 pass): 1824 (renewal, 2 % cap, temporary leases, IRPF 23.2), 15904 (VAT from 1 Dec 2026),
-      1135 and 12942 (VAT and IBI mentions). Vote due about 29 Oct 2026.
+      cinq ans", 34 188 € (DNV threshold). Verify or replace with a CTA. RU 24295 research (2026-10-02): the
+      law says 200 % of the SMI, the consulates publish 2 442 €/month for 2026, and 2 849 € / 34 188 € is on no
+      official source (the visa lasts at most 1 year, then a 3-year permit renewed in 2-year periods).
+- [ ] **Re-check FR 2823, 10629, 12930 for new housing decree-laws (from 2026-10-07).** The press (Infobae
+      2026-10-05, El Correo Gallego 2026-10-06) says the Government will re-submit decrees like RDL 26/2026
+      and 27/2026 to the Consejo de Ministros on 6 Oct, to be validated by the Diputación Permanente (the Cortes
+      were dissolved by RD 806/2026, BOE 2026-10-06, elections 29 Nov). The BOE of 6 Oct has none. The three
+      FR posts say so in one sentence ("Cette page sera mise à jour…" on 2823). If a new RDL is published, rewrite
+      the same passages again. Owner: Mike.
+- [ ] **RDL 26/2026 and 27/2026 were repealed by Congress on 2 Oct 2026** (BOE-A-2026-20526 and
+      BOE-A-2026-20527). FR 2823, 10629, 12930 and RU 1824, 12942, 15904 were corrected on 2026-10-06 (old LAU,
+      LIVA, IRPF and IBI rules apply again). Still to check, owners Mike/Maral/Elena: sibling posts that may
+      state the VAT rule for stays of 30 nights or less or other decree measures: EN 15852, 991, 25415, 2869,
+      ES 15812, FR 15895. Leases signed or extended on 1 or 2 Oct 2026: left as a CTA (Félix/Sonia).
 - [ ] **Siblings of the 11 switched FR posts** probably carry the facts fixed in FR (Golden Visa scope,
       quarterly Modelo 210, registry, VAT speculation, AEAT eIDAS claim): EN 2869, 12852, 10659, 10351,
       11830, 8398 · ES 12947, 10615, 10318, 11788, 7717 · RU 12942, 10376. Elena (ES), Maral + Mike (EN).
@@ -97,6 +106,9 @@ RU on hold. Anything that needs a URL change / 301 is parked in "Later: needs a 
       until reset to empty at about 17:10. Any save of a sibling will do it again. Fix: WPML → Settings →
       Custom Fields Translation → `_elementor_edit_mode` → "Don't translate". Until then, after any save
       of a sibling of the 12 switched FR posts (13243 + the 11), re-check the FR mode and reset it.
+      It happened again on 2026-10-06: FR 10629 (old Elementor body live for about 3 minutes), FR 12930 (twice)
+      and FR 8402 flipped to `builder`; EN 2869 flipped to empty twice. All reset and checked. Saving an FR post
+      with an empty mode also pushes "empty" onto its EN/ES translations: check them after every save.
 - [ ] **Follow-ups from the RU pass (2026-10-02)**, details in `data/staging/<id>-ru-pass.md`:
       Link Whisper re-scan for RU (404s `/ru/blog/program-permanent-hiring-qualified-young-people/`,
       `/ru/blog/программа-постоянного-трудоустройст/`, `/ru/blog/продление-ненасыщенного-вида-на-жите/`;
@@ -155,6 +167,33 @@ Details and cannibalisation notes: `data/content-ideas-2026-10.md`. Upgrades fir
       1 Jan 2027 the new Modelo 210 expenses annex applies and the first April filings are 1 to 20 April 2027
       (Orden HAC/623/2026) · HMRC IHTM47 and legislation.gov.uk s.6A at publication of N-2, N-3, N-4, N-9 ·
       DGT database for a ruling on the UK State Pension and UK lump sums before N-4.
+- [ ] **UK/US work done 2026-10-06** (`data/staging/uk-us-brief.md`, notes `data/staging/<id>-uk-us.md`):
+      upgrades live on EN 15116 (Modelo 720 + 721), 10247, 20394, 27449, 892, 25233, 24445, 22409, 2564, and the
+      Rank Math keyword/title of 2175; drafts 28177 (N-1 non-resident tax), 28176 (N-2 UK inheritance tax),
+      28172 (N-3 US-Spain treaty). Before publishing a draft: Félix/Sonia review of the points in its staging
+      note (N-2 and N-3), then `dl-qa-publisher`, a featured image (realistic, Mike), FAQ schema when the
+      module is back, a `curl -I` on the Permalink Manager URL, and `python tools/related_posts_audit.py en`.
+      Add inbound links on publication: N-1 from 27052, 24445, 18877, 20275; N-2 from 10247, 25233, 13538, 20275;
+      N-3 from 20275, 22034, 26126, 21544, 892, 15116; and from 27449, 892, 10247, 20275, 22034 to 15116.
+- [ ] **EN posts with errors found by this work (not edited)**: 27052 says non-EU sellers pay 24 % on the gain,
+      the law is 19 % for every non-resident (fix before N-1 goes live) · 25207 says the ETIAS fee is 7 €, the
+      European Commission lists 20 € since 17 July 2025 · 22409 excerpt is 325 characters (limit 255) · 15116 H1
+      (suggested: "Modelo 720 Spain: foreign assets declaration and Modelo 721") · stored Rank Math schema with
+      wrong slugs or "price 60 EUR" on 25233, 24445, 892, 20394 (24445 also has `PASTE_IMAGE_URL_HERE`) ·
+      FR 888 meta description "loi Beckham de 2004" · FR 2678 and ES 4564 probably still carry the old
+      Modelo 720 penalties and no Modelo 721.
+- [ ] **Draft clash**: "PLAN" drafts 28169 (UK inheritance tax), 28170 (income tax return for Americans),
+      28171 (non-resident tax) were created on 2026-10-06 by user 29, tagged ES in WPML although in English.
+      28171 duplicates N-1 and 28169 duplicates N-2. Mike: who is writing them? Trash or merge.
+- [ ] **For Félix/Sonia from this work**: UK State Pension art. 17 or 18(2) (the ruling V1380-25 cited by the
+      first checker could not be found in the DGT database, so only V2460-21 is cited) · UK 25 % lump sum, SIPPs,
+      ISA income · 401(k)/IRA and US Social Security benefits · treaty benefits for Beckham holders ·
+      Modelo 720 for Beckham family members · Valencian succession bonus for non-resident heirs and UK IHT
+      credit · imputed income 2026 (1.1 % or 2 %, repealed with RDL 26/2026) · whether a non-resident can combine
+      regional wealth-tax rules with the 700 000 € minimum · non-lucrative visa renewal amount (art. 62(2)).
+- [ ] **Re-check monthly from Nov 2026**: the final order creating Modelo 721 (a draft of 10 March 2026 exists)
+      and DAC8 transposition · AEAT 2027 filing-window page (Dec 2026) · any DGT or AEAT ruling on ISAs, SIPPs and
+      401(k)/IRA.
 - [ ] Quick wins: FR 1207 (EX-18 refusals), FR 4844, EN 26847, EN 649/2618, FR 25839 FAQ, EN 20275 FAQ,
       CTA copy on fees/booking (7 enquiries ask the price).
 

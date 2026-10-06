@@ -281,7 +281,7 @@ Verified facts:
   resident and national there. AEAT: in Spain such a pension is exempt with progression (it counts for the rate on
   other income) unless the pensioner is a Spanish national, in which case only Spain taxes it. Art. 18(3) sends
   pensions for services in a State's economic activity back to art. 17.
-- CORRECTION on the UK State Pension. DGT binding rulings V2460-21 (29 Sep 2021) and V1380-25 treated a UK state
+- CORRECTION on the UK State Pension. DGT binding ruling V2460-21 (29 Sep 2021) treated a UK state
   pension as a public pension under art. 18.2, "de acuerdo con los escasos datos aportados": paid out of funds created
   for services to the UK Government. Result: a British national resident in Spain is taxable only in the UK and the
   pension is exempt with progression in Spain; a Spanish national is taxable only in Spain. Do NOT write that the
@@ -341,7 +341,7 @@ UNVERIFIED, do not draft as fact:
 1. UK 25 % lump sum and SIPPs: what do the firm's clients' files show about Hacienda's treatment? Which wording
    may we publish?
 2. ISAs: may the post say Spain taxes ISA income as ordinary savings income? On what basis?
-3. UK State Pension: DGT V2460-21 and V1380-25 apply art. 18.2 on thin facts. Does the firm follow that reading, or
+3. UK State Pension: DGT V2460-21 applies art. 18.2 on thin facts. Does the firm follow that reading, or
    art. 17 (Spain only)? The answer changes the advice for British nationals.
 4. Non-resident wealth tax: can a UK or US non-resident combine regional rules (DA 4ª) with the 700 000 € minimum, or
    is the Valencian 2 M€ ever available? The AEAT manual reads 700 000 € only.
@@ -368,3 +368,5 @@ UNVERIFIED, do not draft as fact:
 - SSA pages block automated fetching (HTTP 403); they were read in a browser session. EUR-Lex also needs a browser.
 - IRS and Treasury treaty PDFs are scanned images; the BOE texts replace them.
 - AISA `fact_check` was not used.
+
+> Correction 2026-10-06: V1380-25 could not be found in the DGT database on 2026-10-06 (searched by number and by text): do not cite it until a copy is located.
