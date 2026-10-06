@@ -199,6 +199,19 @@ Details and cannibalisation notes: `data/content-ideas-2026-10.md`. Upgrades fir
       repealed-decree claims.
       STS 1025/2025 and 642/2026 could not be verified and were removed from EN 13755; bring them back only after
       someone reads the full text on CENDOJ.
+- [ ] **Related lists with broken items (found 2026-10-06 on FR 25839)**: 31 posts (FR 13, ES 17, EN 1) show an item
+      without an image: a deleted post id (25668 on FR 25839, saved by Link Whisper in June with a URL now owned by the
+      page itself), legal or office-landing pages (`/fr/mentions-legales/`, `/despacho-abogados-...`, `/en/thanks/`) and
+      posts with no featured image. `python tools/related_posts_audit.py` now also flags self-links and image-less
+      items; `python tools/related_posts_repair.py` keeps the good items and replaces only the broken ones
+      (`data/related_posts_repair.csv`, three UPDATE statements in `data/related_posts_repair.batch.sql.txt`). Needs one
+      WPVibe approval per statement (raw SQL on the Link Whisper table). Also: give featured images to the FR/ES posts
+      that have none (`impot-successions-espagne`, `droits-de-succession-en-espagne`,
+      `nouvelles-revisions-aux-indemnites-kilometriques`, ...) and keep Link Whisper from listing pages (its settings).
+- [x] 2026-10-06: FR 25840 list indentation fixed (WordPress auto-paragraph filter had inserted `<p>` tags into the
+      pasted `<style>`, so the browser dropped the list rules). Stylesheet now scoped to `.article-wrapper`; a full
+      rewrite into inline-styled HTML like FR 10629 is still the clean long-term fix. Same pasted-CSS pattern: 27692,
+      24609, 20515, 25653, 5190, 23647, 21606, 25966, 25993 (check each for broken list/heading styles).
 - [ ] **Re-check 7 and 8 Oct 2026**: press (Infobae 5 Oct) says the Government plans to re-approve the housing
       decrees on 7 Oct. If new decree-laws appear in the BOE, the pages corrected today need another pass: FR 2823,
       10629, 12930, 15895 · EN 15852, 991, 2869, 1815, 4734, 13755 · RU 1824, 12942, 15904.
