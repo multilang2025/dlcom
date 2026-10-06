@@ -30,6 +30,11 @@ Add the date and who decided. Move an item to "Decided" once it's settled.
   risk); (c) a new post per year (splits equity). Proposal: (b) for SMI, and for the calendar decide
   before the 2027 BOE publication (October).
 
+- **D-11: Scope of UK and US tax content (raised 2026-10-06).** Proposal: new UK/US-audience posts cover
+  Spanish law and the Valencian angle, say so at the top, and send US or UK filing questions to the
+  reader's home-country adviser (compliance, and it serves IFAs and foreign firms). Existing EN posts 20275
+  and 22034 already comment on US or UK tax: keep them as they are, or add the same scope note? Mike to decide.
+
 ## Decided
 
 - 2026-09-24 (Mike): "since 1960", never a year count. No free-consultation claim anywhere. Six

@@ -141,6 +141,20 @@ Details and cannibalisation notes: `data/content-ideas-2026-10.md`. Upgrades fir
 - [ ] C-8 EN 17990 arras / off-plan · C-9, C-11, C-12 ES new posts (Elena)
 - [ ] FR topic list: new "Acheter un terrain en Espagne", new "Vendre un bien immobilier en Espagne",
       NIE from France as a section in 2396, finish Modelo 210 draft 25665 with "comment payer".
+- [ ] **UK and US audience plan (2026-10-06)**: `data/content-ideas-uk-us-2026-10.md`. Upgrades first:
+      U-1 rebuild EN 15116 Modelo 720 (+ Modelo 721, which no EN post mentions), U-2 refresh 10247, U-3 US
+      section in 892, U-4 25233, U-5 UK retirees in 20394, U-6 American buyers in 24445, U-7 Valencian wealth
+      tax section in 22409 (2 M€ from 2026), U-8 move the "non-resident income tax" focus keyword off 2175,
+      U-9 2564, U-10 soften the unsourced ISA claim in 27449 (CTA). Then new drafts: N-1 non-resident tax / Modelo 210, N-2 UK inheritance tax (long-term
+      residence), N-3 US-Spain treaty, N-4 taxation of UK pensions, N-5 Valencian wealth tax, N-6 401(k)/IRA
+      (specialist review), N-7 selling or renting the UK home, N-8 US Social Security, N-9 estate planning
+      for Americans. Owners: Mike + Maral. Reconnect Search Console first to re-rank on demand.
+      Legal checks done 2026-10-06 (`data/staging/uk-us-legal-checks.md`). N-2, N-4 and N-6 wait for
+      Félix/Sonia (UK State Pension art. 17 or 18(2), UK lump sum, SIPPs, ISA income, 401(k)/IRA).
+- [ ] **Re-checks for the UK/US posts**: ITSGF for tax year 2026 before N-5 (monthly from Nov 2026) · on
+      1 Jan 2027 the new Modelo 210 expenses annex applies and the first April filings are 1 to 20 April 2027
+      (Orden HAC/623/2026) · HMRC IHTM47 and legislation.gov.uk s.6A at publication of N-2, N-3, N-4, N-9 ·
+      DGT database for a ruling on the UK State Pension and UK lump sums before N-4.
 - [ ] Quick wins: FR 1207 (EX-18 refusals), FR 4844, EN 26847, EN 649/2618, FR 25839 FAQ, EN 20275 FAQ,
       CTA copy on fees/booking (7 enquiries ask the price).
 
