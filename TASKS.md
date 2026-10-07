@@ -95,8 +95,7 @@ RU on hold. Anything that needs a URL change / 301 is parked in "Later: needs a 
 - [ ] **Forbidden sources** (T-13): FR 3013 (garrigues.com), FR 4413 (jacheteenespagne.com).
 - [ ] **"Years of experience" → "since 1960"** (T-14): EN 25362, 20432, 20394, 20439 · ES 25946, 26290,
       26306, 25908, 25881, 20515 · FR 20558.
-- [ ] **Re-check monthly from Nov 2026 (RU pass 2026-10-02)**: BOE for (a) the Hacienda ministerial order
-      that starts the RD 238/2026 e-invoice clock (RU 8407, FR 8402) and (b) the DAC8 transposition law
+- [ ] **Re-check monthly from Nov 2026 (RU pass 2026-10-02)**: BOE for (a) (a, DONE 2026-10-07: Orden HAC/1028/2026, in force 6 Oct 2026) and (b) the DAC8 transposition law
       and the Modelo 175 order (RU 9220, 11848; FR 8615, 11817). Update the "на 2 октября 2026 года" lines.
 - [ ] **URGENT, Mike (wp-admin): WPML copies `_elementor_edit_mode` across translations** (found
       2026-10-02). Saving any post in a trid copies the field from the trid source to every translation.
@@ -221,6 +220,29 @@ Details and cannibalisation notes: `data/content-ideas-2026-10.md`. Upgrades fir
       pasted `<style>`, so the browser dropped the list rules). Stylesheet now scoped to `.article-wrapper`; a full
       rewrite into inline-styled HTML like FR 10629 is still the clean long-term fix. Same pasted-CSS pattern: 27692,
       24609, 20515, 25653, 5190, 23647, 21606, 25966, 25993 (check each for broken list/heading styles).
+- [ ] **BLOCKER 2026-10-07: WPVibe and AISA cannot reach the site** (Cloudflare 521 from WPVibe, "connection refused"
+      from AISA, since about 14:36 UTC). The site itself loads normally from Mike's machine, so the origin or its
+      firewall is probably refusing the connectors' IP ranges (heavy traffic today: crawls, 40-50 KB SQL calls, 100+
+      writes). Mike: check the host firewall / WAF / rate limit and allowlist WPVibe (static-IP relay) and AISA, or
+      contact WPVibe support with the hostname. Until then nothing can be written.
+- [ ] **Verifactu update staged, NOT applied** (facts and exact old-to-new edits in `data/staging/verifactu-update-2026-10.md`
+      and `data/staging/{8402,28307,8407,8175,15895}-verifactu.json`). Finding: on 5 Oct 2026 Hacienda's press note
+      announced postponing the pending RD 1007/2023 obligations to October 2028 (alignment with e-invoicing for businesses
+      up to 8 M€), but **no legal text is published yet**: the dates in force on 7 Oct are still 1 Jan 2027 (corporate tax
+      filers) and 1 Jul 2027 (others). E-invoicing: Orden HAC/1028/2026 (BOE 5 Oct, in force 6 Oct 2026) starts the RD 238/2026
+      clocks: 12 months (turnover above 8 M€) and 24 months (others), so about Oct 2027 and Oct 2028 (computed). Apply when
+      the connectors work: FR 8402 (post_content; WPML trap with RU 8407, ES 7717, EN 8398), FR 15895, RU 8407, RU 8175, ES
+      28307. ES 28307 (created 2026-10-06 by user 29) was built around 2026/2027 dates: Elena to review its other
+      problems (Excel claim, fines per ejercicio, unsourced 10 000 € fine, Facturae 3.2.2 vs UBL, tú/usted mix).
+- [ ] **Verifactu re-checks**: from 2026-10-08 and weekly (after the Consejo de Ministros) for the instrument that carries the
+      2028 date (Cortes dissolved: a decree-law would go through the Diputación Permanente); then change "announced" to the
+      legal wording in FR 8402, 15895, RU 8407, 8175, ES 28307. 6 Oct 2027 and 6 Oct 2028: confirm e-invoicing start dates.
+      Check the Rank Math FAQ schema of RU 8407 and 8175 for old Verifactu dates.
+- [ ] **New housing decree-laws published 7 Oct 2026**: RDL 28/2026 and 29/2026 (BOE 7 Oct). Re-read them and re-check the
+      pages corrected on 6 Oct (FR 2823, 10629, 12930, 15895 · EN 15852, 991, 2869, 1815, 4734, 13755 · RU 1824, 12942, 15904).
+- [ ] **Related-posts repair (31 posts)**: EN 13755 applied 2026-10-07 (approval op_5859cf3d89b945f2). FR (13 posts) and ES
+      (17 posts) statements still to submit (`data/related_posts_repair.batch.sql.txt`); needs the connectors back.
+      FR 25839's dead first item (post 25668) is fixed in that FR statement.
 - [ ] **Re-check 7 and 8 Oct 2026**: press (Infobae 5 Oct) says the Government plans to re-approve the housing
       decrees on 7 Oct. If new decree-laws appear in the BOE, the pages corrected today need another pass: FR 2823,
       10629, 12930, 15895 · EN 15852, 991, 2869, 1815, 4734, 13755 · RU 1824, 12942, 15904.

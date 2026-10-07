@@ -1,0 +1,49 @@
+{
+ "post_id": 8402,
+ "status": "STAGED, NOT WRITTEN (connectors returned Cloudflare 521 on 2026-10-07)",
+ "replacements": [
+  {
+   "id": "tldr",
+   "old": "<li>Verifactu impose des logiciels de facturation conformes au Real Decreto 1007/2023 à partir du 1er janvier 2027 pour les sociétés soumises à l'impôt sur les sociétés et du 1er juillet 2027 pour les autres entreprises, dont les autónomos.</li><li>La facture électronique obligatoire entre entreprises, prévue par le Real Decreto 238/2026, s'appliquera 12 mois après l'entrée en vigueur d'un arrêté ministériel pour les entreprises de plus de 8 millions d'euros de chiffre d'affaires, et 24 mois après pour les autres.</li>",
+   "new": "<li>Le BOE fixe l'application de Verifactu (logiciels de facturation conformes au Real Decreto 1007/2023) au 1er janvier 2027 pour les sociétés soumises à l'impôt sur les sociétés et au 1er juillet 2027 pour les autres entreprises, dont les autónomos (état au 7 octobre 2026).</li><li>Le ministère des Finances a annoncé le 5 octobre 2026, dans une note d'information, un report à octobre 2028 des obligations Verifactu encore en attente ; au 7 octobre 2026, ce report n'est pas publié au BOE et les dates de 2027 restent celles de la loi.</li><li>La facture électronique obligatoire entre entreprises (Real Decreto 238/2026) s'applique 12 mois après l'entrée en vigueur de l'arrêté ministériel, le 6 octobre 2026, soit en octobre 2027 pour les entreprises dont le volume d'opérations de l'année précédente dépasse 8 millions d'euros, et 24 mois après, soit en octobre 2028, pour les autres.</li>"
+  },
+  {
+   "id": "h3",
+   "old": "Verifactu en 2027, facture électronique ensuite&nbsp;: un calendrier chargé pour les entreprises",
+   "new": "Verifactu et facture électronique&nbsp;: un calendrier qui se déplace jusqu'en 2028"
+  },
+  {
+   "id": "callout_title",
+   "old": "Repères 2026&nbsp;: le calendrier Verifactu",
+   "new": "Repères au 7 octobre 2026&nbsp;: le calendrier Verifactu"
+  },
+  {
+   "id": "callout",
+   "old": "les autres contribuables concernés avant le <strong>1er juillet 2027</strong>.</p></blockquote>",
+   "new": "les autres contribuables concernés avant le <strong>1er juillet 2027</strong>.</p><p style='margin:10px 0 0 0;line-height:1.7;'>Le 5 octobre 2026, le ministère des Finances a annoncé, dans une <a href='https://www.hacienda.gob.es/sgt/gabsehacienda/nota-informativa-verifactu.pdf' target='_blank' rel='nofollow noopener'>note d'information</a>, qu'il prévoit de reporter à <strong>octobre 2028</strong> les obligations encore en attente du Real Decreto 1007/2023, pour les faire coïncider avec la facture électronique des entrepreneurs et professionnels dont la facturation annuelle ne dépasse pas 8 millions d'euros. Il ne s'agit pas d'un texte publié&nbsp;: au 7 octobre 2026, le BOE n'a pas modifié ces échéances, et la <a href='https://sede.agenciatributaria.gob.es/Sede/iva/sistemas-informaticos-facturacion-verifactu.html' target='_blank' rel='nofollow noopener'>page de l'AEAT sur Verifactu</a> renvoie à cette note. Selon la même note, les exigences d'intégrité, de conservation, d'accessibilité, de lisibilité, de traçabilité et d'inaltérabilité restent en termes substantiellement équivalents. Pour savoir quelle échéance s'applique à votre entreprise, contactez le cabinet au +34&nbsp;963 74 16 57 ou à felix.delaguia@delaguialuzon.com.</p></blockquote>"
+  },
+  {
+   "id": "einv",
+   "old": "<p>Le calendrier dépend d'un arrêté ministériel (<em>orden ministerial</em>) du ministère des Finances sur la solution publique de facturation électronique. L'obligation s'appliquera 12 mois après l'entrée en vigueur de cet arrêté pour les entreprises dont le chiffre d'affaires de l'année précédente dépasse 8 millions d'euros, et 24 mois après pour les autres. Tant que cet arrêté n'est pas publié au BOE, aucune date ferme ne peut être annoncée. Pour connaître l'échéance applicable à votre entreprise, contactez le cabinet au +34&nbsp;963 74 16 57 ou à felix.delaguia@delaguialuzon.com.</p>",
+   "new": "<p>L'arrêté ministériel (<em>orden ministerial</em>) prévu par le décret est publié&nbsp;: l'<a href='https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20587' target='_blank' rel='nofollow noopener'>Orden HAC/1028/2026 du 2 octobre 2026</a>, sur la solution publique de facturation électronique, a paru au BOE le 5 octobre 2026 et est entrée en vigueur le 6 octobre 2026. Cette entrée en vigueur déclenche les délais du Real Decreto 238/2026.</p><p>L'obligation s'applique donc 12 mois plus tard, soit en octobre 2027, aux entreprises dont le volume d'opérations de l'année précédente dépasse 8 millions d'euros, et 24 mois plus tard, soit en octobre 2028, à toutes les autres. Ces échéances résultent d'un calcul à partir du 6 octobre 2026&nbsp;: le texte ne fixe pas de date au jour près. Pour connaître l'échéance applicable à votre entreprise, contactez le cabinet au +34&nbsp;963 74 16 57 ou à felix.delaguia@delaguialuzon.com.</p>"
+  },
+  {
+   "id": "autonomo",
+   "old": "L'autónomo qui facture avec un logiciel reste soumis à Verifactu à partir du 1er juillet 2027.",
+   "new": "L'autónomo qui facture avec un logiciel reste concerné par Verifactu&nbsp;: l'échéance légale est le 1er juillet 2027, avec un report à octobre 2028 annoncé mais non publié au 7 octobre 2026."
+  },
+  {
+   "id": "faq1",
+   "old": "Les échéances sont le 1er janvier 2027 pour les sociétés soumises à l'impôt sur les sociétés et le 1er juillet 2027 pour les autres, depuis le Real Decreto-ley 15/2025.</p>",
+   "new": "Les échéances inscrites au BOE sont le 1er janvier 2027 pour les sociétés soumises à l'impôt sur les sociétés et le 1er juillet 2027 pour les autres, depuis le Real Decreto-ley 15/2025. Le ministère des Finances a annoncé le 5 octobre 2026 un report à octobre 2028, dont le texte n'est pas encore publié.</p>"
+  },
+  {
+   "id": "faq2",
+   "old": "Le Real Decreto 238/2026, publié au BOE le 31 mars 2026, fixe un délai de 12 mois après l'entrée en vigueur d'un arrêté ministériel pour les entreprises de plus de 8 millions d'euros de chiffre d'affaires, et de 24 mois pour les autres. La date exacte dépend de la publication de cet arrêté. Contactez le cabinet au +34&nbsp;963 74 16 57 pour connaître l'échéance applicable à votre entreprise.",
+   "new": "Le Real Decreto 238/2026 fixe un délai de 12 mois après l'entrée en vigueur de l'arrêté ministériel pour les entreprises dont le volume d'opérations de l'année précédente dépasse 8 millions d'euros, et de 24 mois pour les autres. L'arrêté (Orden HAC/1028/2026) est entré en vigueur le 6 octobre 2026, ce qui donne octobre 2027 et octobre 2028. Contactez le cabinet au +34&nbsp;963 74 16 57 pour connaître l'échéance applicable à votre entreprise."
+  }
+ ],
+ "target": "post_content (content/edit target_type=post field=post_content), apostrophes plain, &nbsp; literal",
+ "excerpt_new": "Verifactu : échéance légale au 1er janvier 2027, report à octobre 2028 annoncé le 5 octobre 2026. Facture électronique B2B (Real Decreto 238/2026), obligations comptables, SII et Registro Mercantil : le rôle d'un comptable qualifié à Valence.",
+ "excerpt_via": "content/edit field=post_excerpt or PUT /wp/v2/posts/8402 excerpt only"
+}

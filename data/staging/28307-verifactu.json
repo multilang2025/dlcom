@@ -1,0 +1,47 @@
+{
+ "post_id": 28307,
+ "status": "STAGED, NOT WRITTEN (connectors returned Cloudflare 521 on 2026-10-07)",
+ "replacements": [
+  {
+   "id": "tldr",
+   "old": "<li>Las <strong style=\"color: #708473;\">sanciones</strong> alcanzan los 50.000 € por programa no adaptado a Verifactu, más multas específicas por la factura electrónica.</li></ul></div>",
+   "new": "<li>Las <strong style=\"color: #708473;\">sanciones</strong> alcanzan los 50.000 € por programa no adaptado a Verifactu, más multas específicas por la factura electrónica.</li><li><strong style=\"color: #708473;\">Fechas vigentes:</strong> el BOE fija Verifactu para el 1 de enero de 2027 (contribuyentes del Impuesto sobre Sociedades) y el 1 de julio de 2027 (resto de obligados), según el <a href=\"https://www.boe.es/buscar/doc.php?id=BOE-A-2025-24446\" target=\"_blank\" rel=\"nofollow noopener\">Real Decreto-ley 15/2025</a> (a 7 de octubre de 2026).</li><li><strong style=\"color: #708473;\">Aplazamiento anunciado:</strong> el 5 de octubre de 2026 el Ministerio de Hacienda anunció en una <a href=\"https://www.hacienda.gob.es/sgt/gabsehacienda/nota-informativa-verifactu.pdf\" target=\"_blank\" rel=\"nofollow noopener\">nota informativa</a> que prevé aplazar a octubre de 2028 las obligaciones pendientes del Real Decreto 1007/2023; el texto jurídico aún no está publicado.</li><li><strong style=\"color: #708473;\">Factura electrónica B2B:</strong> la <a href=\"https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20587\" target=\"_blank\" rel=\"nofollow noopener\">Orden HAC/1028/2026</a> entró en vigor el 6 de octubre de 2026, de modo que la obligación del <a href=\"https://www.boe.es/buscar/act.php?id=BOE-A-2026-7295\" target=\"_blank\" rel=\"nofollow noopener\">Real Decreto 238/2026</a> se aplica a los 12 meses (octubre de 2027) para quienes superaron 8 millones de euros de volumen de operaciones y a los 24 meses (octubre de 2028) para el resto.</li></ul></div>"
+  },
+  {
+   "id": "intro",
+   "old": "los pasos prácticos para adaptarse en 2026.</p>",
+   "new": "los pasos prácticos para adaptarse.</p>"
+  },
+  {
+   "id": "cal_h2",
+   "old": "Calendario de entrada en vigor 2026-2027</h2>",
+   "new": "Calendario de Verifactu y de la factura electrónica B2B</h2>"
+  },
+  {
+   "id": "cal",
+   "old": "<ul><li><strong>1 de enero de 2026</strong>: obligación efectiva para contribuyentes del Impuesto sobre Sociedades.</li><li><strong>1 de julio de 2026</strong>: obligación efectiva para el resto de obligados (autónomos y profesionales en IRPF).</li><li>Los fabricantes de software ya debían ofrecer soluciones adaptadas desde el <strong>29 de julio de 2025</strong>.</li></ul><h3>Factura electrónica B2B (Ley Crea y Crece)</h3><ul><li>Pendiente del desarrollo reglamentario definitivo, con calendario escalonado por volumen de facturación:<ul><li>Empresas con facturación &gt; <strong>8 millones €</strong>: en el plazo de 1 año desde la aprobación del reglamento.</li><li>Resto de empresas y autónomos: en el plazo de 2 años.</li></ul></li><li>Previsión realista: obligatoriedad plena entre <strong>2026 y 2027</strong> según perfil.</li></ul>",
+   "new": "<ul><li><strong>1 de enero de 2027</strong>: fecha que fija hoy el BOE para los contribuyentes del Impuesto sobre Sociedades (<a href=\"https://www.boe.es/buscar/doc.php?id=BOE-A-2025-24446\" target=\"_blank\" rel=\"nofollow noopener\">Real Decreto-ley 15/2025</a>, que modificó la disposición final cuarta del <a href=\"https://www.boe.es/buscar/act.php?id=BOE-A-2023-24840\" target=\"_blank\" rel=\"nofollow noopener\">Real Decreto 1007/2023</a>).</li><li><strong>1 de julio de 2027</strong>: fecha que fija hoy el BOE para el resto de obligados (autónomos y profesionales en IRPF).</li><li><strong>Octubre de 2028</strong> (aplazamiento anunciado): el 5 de octubre de 2026 el Ministerio de Hacienda comunicó en una <a href=\"https://www.hacienda.gob.es/sgt/gabsehacienda/nota-informativa-verifactu.pdf\" target=\"_blank\" rel=\"nofollow noopener\">nota informativa</a> que prevé aplazar a esa fecha las obligaciones pendientes del Real Decreto 1007/2023, para hacerlas coincidir con la factura electrónica de empresarios y profesionales cuya facturación anual no supere los 8 millones de euros.</li><li>Los fabricantes de software ya debían ofrecer soluciones adaptadas desde el <strong>29 de julio de 2025</strong>.</li></ul><p>A 7 de octubre de 2026 no se ha publicado ninguna norma que modifique las fechas del BOE, que siguen siendo las legalmente aplicables. Para saber qué plazo corresponde a su caso, puede consultar con el despacho: felix.delaguia@delaguialuzon.com o +34 963 74 16 57.</p><h3>Factura electrónica B2B (Ley Crea y Crece)</h3><p>El <a href=\"https://www.boe.es/buscar/act.php?id=BOE-A-2026-7295\" target=\"_blank\" rel=\"nofollow noopener\">Real Decreto 238/2026</a> desarrolla la obligación. La <a href=\"https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20587\" target=\"_blank\" rel=\"nofollow noopener\">Orden HAC/1028/2026</a>, publicada en el BOE el 5 de octubre de 2026, entró en vigor el 6 de octubre de 2026 y con ella empiezan a correr los plazos del real decreto:</p><ul><li><strong>A los 12 meses (octubre de 2027)</strong>: empresarios y profesionales cuyo volumen de operaciones superó 8 millones de euros en el año natural anterior.</li><li><strong>A los 24 meses (octubre de 2028)</strong>: el resto de empresarios y profesionales.</li></ul><p>Son fechas calculadas a partir del 6 de octubre de 2026: el BOE no indica el día exacto.</p>"
+  },
+  {
+   "id": "exp",
+   "old": "Si tu software actual no cumple todos estos puntos, estás expuesto a sanción incluso si llevas tu contabilidad al día.",
+   "new": "Si su software actual no cumple estos puntos, conviene revisarlo antes de que llegue la fecha de aplicación."
+  },
+  {
+   "id": "prov",
+   "old": "para no cambiar de proveedor dentro de un año.",
+   "new": "para no tener que cambiar de proveedor cuando llegue la obligación."
+  },
+  {
+   "id": "faq_pdf",
+   "old": "obligará, cuando entre en vigor, a formato estructurado entre empresas.",
+   "new": "obligará, cuando se aplique (octubre de 2027 u octubre de 2028 según el volumen de operaciones), a formato estructurado entre empresas."
+  },
+  {
+   "id": "faq_sanc",
+   "old": "<summary><strong>¿Qué sanciones son las más probables en los primeros controles?</strong></summary><p>Hacienda ha anunciado un enfoque inicial centrado en comprobar la tenencia de software conforme más que en errores puntuales. La multa fija de 50.000 € por tener software no adaptado será la señal de alerta más repetida en 2026.</p>",
+   "new": "<summary><strong>¿Qué sanciones prevé la ley por software no conforme?</strong></summary><p>El <a href=\"https://www.boe.es/buscar/act.php?id=BOE-A-2003-23186\" target=\"_blank\" rel=\"nofollow noopener\">artículo 201 bis de la Ley General Tributaria</a> tipifica como infracción grave la fabricación, producción, comercialización y tenencia de sistemas informáticos de facturación que no cumplan la normativa, con multas fijas por ejercicio. Cómo se aplicará en la práctica y desde qué fecha conviene confirmarlo con el despacho: felix.delaguia@delaguialuzon.com o +34 963 74 16 57.</p>"
+  }
+ ],
+ "target": "_elementor_data text-editor widget(s) via elementor/save-page or content/edit (exact old text taken from the rendered HTML: confirm with content/search first)"
+}

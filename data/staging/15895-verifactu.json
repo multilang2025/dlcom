@@ -1,0 +1,12 @@
+{
+ "post_id": 15895,
+ "status": "STAGED, NOT WRITTEN",
+ "target": "_elementor_data (JSON-escaped, quotes as \\\")",
+ "replacements": [
+  {
+   "id": "p45",
+   "old": "L'AEAT signale aussi une communication du ministère des Finances du 5 octobre 2026 sur une prévision de nouvelle prolongation&nbsp;: vérifiez la date applicable à votre cas avant d'agir.",
+   "new": "Le 5 octobre 2026, le ministère des Finances a annoncé, dans une <a href=\"https://www.hacienda.gob.es/sgt/gabsehacienda/nota-informativa-verifactu.pdf\" target=\"_blank\" rel=\"nofollow noopener\">note d'information</a>, un report à octobre 2028 des obligations Verifactu encore en attente. Au 7 octobre 2026, ce report n'est pas publié au BOE&nbsp;: contactez le cabinet au +34&nbsp;963 74 16 57 pour confirmer la date applicable à votre cas."
+  }
+ ]
+}
