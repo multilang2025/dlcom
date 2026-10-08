@@ -19,7 +19,8 @@ personales de consultas de formularios.
 | `topic_article_map.csv` | por subtema e idioma: artículos publicados cuyo título lo trata (búsqueda por título y slug) |
 | `leads_stats.json`, `report_data.json` | cifras agregadas del informe |
 | `manual_form10_coding.json` | codificación manual (sin datos personales) del formulario de inmigración EN (33 entradas), cuyo texto se leyó a mano |
-| `informe-leads.html` | informe ES/FR |
+| `informe-leads.html` | informe ES/FR (artefacto) |
+| `informe-leads-es.pptx`, `informe-leads-fr.pptx` | el mismo informe en PowerPoint (22 diapositivas, gráficos y tablas editables), uno por idioma |
 
 ## Columnas de los CSV
 
@@ -57,3 +58,4 @@ Un subtema pertenece a una hoja; una solicitud puede tener varios.
    `LEFT(valor, 8)`; no pedir nombre ni correo. Recorrido: `SUBSTRING(description, LOCATE('"user_journey"', description))`.
 2. `python -X utf8 tools/leads_analysis.py <raw.pkl>` (la pickle con `(rows, journeys)` queda fuera del repositorio).
 3. `python -X utf8 tools/leads_report_data.py` y `python -X utf8 tools/leads_report_build.py`.
+4. PowerPoint: `node tools/leads_report_text.js data/leads/informe-leads.html > texts.json` y `python -X utf8 tools/leads_report_pptx.py texts.json` (requiere `pip install python-pptx`).
