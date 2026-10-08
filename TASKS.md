@@ -220,11 +220,23 @@ Details and cannibalisation notes: `data/content-ideas-2026-10.md`. Upgrades fir
       pasted `<style>`, so the browser dropped the list rules). Stylesheet now scoped to `.article-wrapper`; a full
       rewrite into inline-styled HTML like FR 10629 is still the clean long-term fix. Same pasted-CSS pattern: 27692,
       24609, 20515, 25653, 5190, 23647, 21606, 25966, 25993 (check each for broken list/heading styles).
-- [ ] **BLOCKER 2026-10-07: WPVibe and AISA cannot reach the site** (Cloudflare 521 from WPVibe, "connection refused"
+- [x] **RESOLVED 2026-10-08 (was a BLOCKER on 2026-10-07): WPVibe and AISA could not reach the site**. On 2026-10-08 AISA `db_query` and WPVibe
+      `site_info` (authenticated read verified) work again. The staged Verifactu edits and the FR/ES related-list statements can now be
+      applied. Original note: ( (Cloudflare 521 from WPVibe, "connection refused"
       from AISA, since about 14:36 UTC). The site itself loads normally from Mike's machine, so the origin or its
       firewall is probably refusing the connectors' IP ranges (heavy traffic today: crawls, 40-50 KB SQL calls, 100+
       writes). Mike: check the host firewall / WAF / rate limit and allowlist WPVibe (static-IP relay) and AISA, or
-      contact WPVibe support with the hostname. Until then nothing can be written.
+      contact WPVibe support with the hostname. Until then nothing can be written.)
+- [ ] **Form leads analysis (2026-10-08)**: report, CSVs and method in `data/leads/` (README there); bilingual ES/FR artifact
+      https://claude.ai/artifact/SiUp9zwhQr9DZHP55h4Fe4. Follow-ups, owner Mike unless stated:
+      (1) decide whether to authorise reading the message text of the EN general (343), RU (65) and FR immigration (20) forms; the
+      environment's PII classifier blocked it and it needs a permission rule for AISA `db_query` in Claude Code settings;
+      (2) review the proposed leaves (Herencias y testamentos, Familia) and the split of EXT-4 with Félix and Sonia, and the 4-step form
+      questions (artifact section "Formulario en 4 pasos");
+      (3) Elena/Maral: write the blog gaps (table "Blog" in the artifact: purchase of property and NIE in ES; nationality, irregular
+      stay, refusals and appeals in FR; padrón and family reunification in ES and FR);
+      (4) ask the form owner for structured country-of-residence and nationality fields (today both are inferred);
+      (5) 16 enquiries came from ChatGPT links and 27 from Google Ads: confirm the tracking is intentional before relying on it.
 - [ ] **Verifactu update staged, NOT applied** (facts and exact old-to-new edits in `data/staging/verifactu-update-2026-10.md`
       and `data/staging/{8402,28307,8407,8175,15895}-verifactu.json`). Finding: on 5 Oct 2026 Hacienda's press note
       announced postponing the pending RD 1007/2023 obligations to October 2028 (alignment with e-invoicing for businesses

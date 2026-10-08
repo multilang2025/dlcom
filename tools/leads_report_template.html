@@ -1,0 +1,536 @@
+<title>Mapa de solicitudes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,650&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout concept: a working report for the partners. One column of sections, each opens with a plain-language finding,
+   then the evidence (bars and tables drawn from the data), then the decision it supports. Language colours are fixed
+   for the whole page: ES vermilion, FR blue, EN green, RU mauve (Okabe-Ito based). */
+:root {
+  --bg: #f4f6f8; --surface: #ffffff; --ink: #14202e; --muted: #556575; --line: #d7dee5; --line-soft: #e8edf1;
+  --accent: #0b5c7a; --accent-soft: #e1eff4; --warn: #a24a07; --warn-soft: #fbeedd; --good: #1b7048; --good-soft: #e0f1e8;
+  --c-es: #c9531a; --c-fr: #1f63b5; --c-en: #0f8a67; --c-ru: #9a4a8c; --bar: #8aa5b8; --bar-soft: #cbd9e3;
+  --font-display: "Literata", Georgia, "Times New Roman", serif;
+  --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1822; --surface: #17232f; --ink: #e6edf3; --muted: #9fb0c0; --line: #2b3b4a; --line-soft: #223140;
+    --accent: #6cc3e3; --accent-soft: #19313e; --warn: #f0a560; --warn-soft: #3a2a18; --good: #5fcf98; --good-soft: #17352a;
+    --c-es: #ff8f55; --c-fr: #6aa9f0; --c-en: #3fcaa0; --c-ru: #d78fc9; --bar: #5f87a0; --bar-soft: #2a4153; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1822; --surface: #17232f; --ink: #e6edf3; --muted: #9fb0c0; --line: #2b3b4a; --line-soft: #223140;
+  --accent: #6cc3e3; --accent-soft: #19313e; --warn: #f0a560; --warn-soft: #3a2a18; --good: #5fcf98; --good-soft: #17352a;
+  --c-es: #ff8f55; --c-fr: #6aa9f0; --c-en: #3fcaa0; --c-ru: #d78fc9; --bar: #5f87a0; --bar-soft: #2a4153; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; padding-inline: 16px; padding-block: 0 56px; }
+.wrap { max-width: 1060px; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 650; text-wrap: balance; line-height: 1.2; margin: 0; }
+h1 { font-size: clamp(26px, 4.4vw, 38px); }
+h2 { font-size: clamp(21px, 3vw, 26px); }
+h3 { font-size: 17px; }
+p { margin: 0; max-width: 72ch; }
+a { color: var(--accent); }
+.num { font-variant-numeric: tabular-nums; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+header.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 14px; position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 5; border-bottom: 1px solid var(--line-soft); flex-wrap: wrap; }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.lang button { font: inherit; font-weight: 600; font-size: 13px; padding: 6px 14px; border: 0; background: var(--surface); color: var(--muted); cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--accent); color: var(--bg); }
+.lang button:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+nav.toc { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; }
+nav.toc a { text-decoration: none; color: var(--muted); }
+nav.toc a:hover { color: var(--accent); }
+.hero { padding-block: 34px 10px; display: grid; gap: 14px; }
+.hero p.lead { font-size: 17px; color: var(--ink); }
+.kpis { display: flex; flex-wrap: wrap; gap: 10px; margin-block: 18px 4px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; min-width: 150px; flex: 1 1 150px; }
+.kpi b { display: block; font-family: var(--font-display); font-size: 26px; font-weight: 650; line-height: 1.1; }
+.kpi span { font-size: 12.5px; color: var(--muted); }
+section { padding-block: 34px 6px; display: grid; gap: 16px; scroll-margin-top: 70px; }
+section > .intro { color: var(--muted); }
+.find { display: grid; gap: 10px; counter-reset: f; }
+.find li { list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 4px; }
+.find li strong { font-weight: 600; }
+.find { padding: 0; margin: 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.grid.two { grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); }
+.note { font-size: 13px; color: var(--muted); max-width: 80ch; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
+.tag.warn { background: var(--warn-soft); color: var(--warn); }
+.tag.good { background: var(--good-soft); color: var(--good); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12px; padding: 2px 8px; border-radius: 6px; border: 1px solid var(--line); color: var(--ink); background: var(--surface); }
+.chip i { font-style: normal; color: var(--muted); margin-left: 4px; }
+.bars { display: grid; gap: 5px; }
+.bar { display: grid; grid-template-columns: minmax(90px, 40%) 1fr auto; gap: 8px; align-items: center; font-size: 13px; }
+.bar .l { min-width: 0; overflow-wrap: anywhere; }
+.bar .t { height: 9px; background: var(--line-soft); border-radius: 5px; overflow: hidden; }
+.bar .t i { display: block; height: 100%; background: var(--bar); border-radius: 5px; }
+.bar .v { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 12.5px; min-width: 48px; text-align: right; }
+.bar.es .t i { background: var(--c-es); } .bar.fr .t i { background: var(--c-fr); } .bar.en .t i { background: var(--c-en); } .bar.ru .t i { background: var(--c-ru); }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; background: var(--k); vertical-align: -1px; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 7px 9px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; white-space: nowrap; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.area td { background: var(--accent-soft); font-weight: 600; }
+tr.prop td:first-child { box-shadow: inset 3px 0 0 var(--warn); }
+.mini { display: flex; height: 8px; border-radius: 4px; overflow: hidden; min-width: 90px; background: var(--line-soft); }
+.mini i { display: block; height: 100%; }
+.flow { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); counter-reset: s; }
+.step { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 8px; align-content: start; }
+.step .k { font-family: var(--font-display); font-size: 13px; color: var(--accent); font-weight: 650; }
+.step ul { margin: 0; padding-left: 18px; font-size: 13.5px; display: grid; gap: 3px; }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+details + details { margin-top: 8px; }
+summary { cursor: pointer; font-weight: 600; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+details .body { display: grid; gap: 10px; padding-top: 10px; }
+details ol, details ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; font-size: 14px; }
+.sg a { display: block; font-size: 13.5px; }
+.recs { counter-reset: r; display: grid; gap: 8px; padding: 0; margin: 0; }
+.recs li { list-style: none; background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 8px; padding: 10px 14px; display: grid; gap: 2px; }
+.files code { font-size: 12.5px; background: var(--line-soft); padding: 1px 6px; border-radius: 4px; }
+.spark { display: inline-flex; gap: 2px; align-items: flex-end; height: 22px; }
+.spark i { width: 10px; background: var(--bar); border-radius: 2px 2px 0 0; display: block; }
+svg text { fill: var(--muted); font-family: var(--font-body); font-size: 11px; }
+svg .ax { stroke: var(--line); stroke-width: 1; }
+svg .es { fill: var(--c-es); } svg .fr { fill: var(--c-fr); } svg .en { fill: var(--c-en); } svg .ru { fill: var(--c-ru); }
+@media (max-width: 560px) { .bar { grid-template-columns: minmax(80px, 46%) 1fr auto; } }
+@media (prefers-reduced-motion: no-preference) { .bar .t i { transition: width .4s ease; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <nav class="toc" id="toc" aria-label="sections"></nav>
+    <div class="lang" role="group" aria-label="Idioma / Langue">
+      <button type="button" id="b-es" aria-pressed="true">ES</button>
+      <button type="button" id="b-fr" aria-pressed="false">FR</button>
+    </div>
+  </header>
+  <main id="app"></main>
+</div>
+
+<script>
+const D = __DATA__;
+const LANGS = ["es", "en", "fr", "ru"];
+const LNAME = { es: { es: "Formulario ES", fr: "Formulaire ES" }, en: { es: "Formulario EN", fr: "Formulaire EN" }, fr: { es: "Formulario FR", fr: "Formulaire FR" }, ru: { es: "Formulario RU", fr: "Formulaire RU" } };
+let lang = "es";
+const nf = () => new Intl.NumberFormat(lang === "fr" ? "fr-FR" : "es-ES");
+const fmt = n => nf().format(n);
+const pc = (a, b) => b ? Math.round(100 * a / b) : 0;
+const pct = (a, b) => pc(a, b) + (lang === "fr" ? " %" : " %");
+const sum = a => a.reduce((x, y) => x + y, 0);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const tagL = c => (D.tags[c] ? D.tags[c][lang] : c);
+const leafL = c => (D.leaves[c] ? D.leaves[c][lang] : c);
+const areaL = c => (D.areas[c] ? D.areas[c][lang] : c);
+const ctry = k => (D.country_names[k] ? D.country_names[k][lang] : (k === "US/CA" ? (lang === "fr" ? "États-Unis / Canada (+1)" : "EE. UU. / Canadá (+1)") : k === "RU/KZ" ? (lang === "fr" ? "Russie / Kazakhstan (+7)" : "Rusia / Kazajistán (+7)") : k));
+const dateL = s => new Date(s + "T12:00:00").toLocaleDateString(lang === "fr" ? "fr-FR" : "es-ES", { day: "numeric", month: "long", year: "numeric" });
+const TEXT_N = l => D.meta.text_by_lang[l] || 0;
+const TXT_ALL = sum(["es", "en", "fr"].map(TEXT_N));
+
+function bars(items, cls, max) {
+  const m = max || Math.max(1, ...items.map(i => i[1]));
+  return '<div class="bars">' + items.map(i => `<div class="bar ${cls || ""}"><span class="l">${esc(i[0])}</span><span class="t"><i style="width:${Math.max(2, 100 * i[1] / m)}%"></i></span><span class="v">${i[2] !== undefined ? i[2] : fmt(i[1])}</span></div>`).join("") + "</div>";
+}
+function stackBar(parts) { // parts: [[value, cssVar]]
+  const t = sum(parts.map(p => p[0])) || 1;
+  return '<div class="mini">' + parts.map(p => `<i style="width:${100 * p[0] / t}%;background:var(${p[1]})"></i>`).join("") + "</div>";
+}
+
+/* ---------------- derived numbers ---------------- */
+const K = {};
+(function () {
+  const m = D.multi;
+  K.multi = sum(["es", "en", "fr"].map(l => m[l].n));
+  K.multiPct = pc(K.multi, TXT_ALL);
+  K.other = D.other_reclassified.total;
+  K.otherLegal = pc(K.other - (D.other_reclassified.by_area.OTR || 0), K.other);
+  const entries = Object.entries(D.tag_overall).filter(([c]) => !c.startsWith("x_") && !["ext_general", "fis_general", "inm_general"].includes(c)).sort((a, b) => b[1] - a[1]);
+  K.rank = {};
+  entries.forEach(([c], i) => K.rank[c] = i + 1);
+  K.herencia = D.tag_overall.suc_herencia; K.herenciaPct = pc(K.herencia, D.meta.coverage.text_analysed);
+  K.familia = D.tag_overall.suc_familia;
+  K.ext = D.leaf_stats["EXT-4"].n; K.extPct = pc(K.ext, D.meta.coverage.text_analysed);
+  K.frAbroad = pc(D.country_split.fr.other, D.country_split.fr.with_country);
+  K.esSpain = pc(D.country_split.es.spain, D.country_split.es.with_country);
+  K.enSpain = pc(D.country_split.en.spain, D.country_split.en.with_country);
+  K.blog = pc(D.journey.with_blog, D.journey.n); K.frBlog = pc(D.journey.by_lang.fr.blog, D.journey.by_lang.fr.n);
+  K.bc = l => pc(D.blog_candidate[l].n, D.blog_candidate[l].of);
+  K.fl = (l, k) => pc(D.flags[l][k], TEXT_N(l));
+  K.natPct = pc(sum(["es", "en", "fr"].map(l => D.nat_n[l])), TXT_ALL);
+  K.chat = sum(LANGS.map(l => D.traffic[l].chatgpt || 0)); K.ads = sum(LANGS.map(l => D.traffic[l].google_ads || 0));
+  K.labPeople = D.leaf_stats["LAB-1"].n; K.labCo = sum(["LAB-2", "LAB-3", "LAB-4"].map(k => D.leaf_stats[k] ? D.leaf_stats[k].n : 0));
+})();
+
+/* ---------------- i18n ---------------- */
+const X = {
+  es: {
+    title: "Qué nos piden por el formulario web",
+    eyebrow: "Delaguía y Luzón · Análisis de formularios web",
+    lead: () => `${fmt(D.meta.total)} solicitudes entre el ${dateL(D.meta.first)} y el ${dateL(D.meta.last)}, en 9 formularios y 4 idiomas. El informe las clasifica por especialidad, país, nacionalidad y subtema, para diseñar un formulario de 4 pasos que haga las preguntas correctas y proponga artículos del blog cuando alguien solo busca información.`,
+    toc: [["esencial", "Lo esencial"], ["volumen", "Volumen"], ["tipo", "Tipo de lead"], ["origen", "Origen"], ["areas", "Áreas"], ["idiomas", "Por idioma"], ["arbol", "Árbol de especialidades"], ["combos", "Temas combinados"], ["form", "Formulario en 4 pasos"], ["blog", "Blog"], ["recom", "Recomendaciones"], ["metodo", "Método y límites"]],
+    kpi: [["solicitudes recibidas"], ["con mensaje analizado"], ["tocan 2 o más subtemas"], ["solo piden información"], ["leyeron un artículo antes de escribir"]],
+    h_esencial: "Lo esencial",
+    find: () => [
+      [`Un ${K.multiPct} % de las solicitudes mezcla temas`, `Se trata de combinaciones como NIE y creación de empresa, renta y convenio de doble imposición, o herencia y notaría. Con un desplegable de una sola categoría, la persona elige una y las demás se pierden. El formulario debe aceptar varias etiquetas y guardarlas.`],
+      [`«Otro(s)» esconde demanda real`, `De ${fmt(K.other)} solicitudes marcadas «Otro(s)» en los formularios generales ES y FR, un ${K.otherLegal} % trata de un tema jurídico claro, sobre todo extranjería, creación de empresa y fiscalidad.`],
+      [`Herencias y testamentos: n.º ${K.rank.suc_herencia} de los temas, sin hoja propia`, `${fmt(K.herencia)} solicitudes (${K.herenciaPct} % de las analizadas) hablan de herencia. La web solo la cubre dentro de «Sucesiones y planificación patrimonial», bajo Fiscalidad. Divorcio, custodia y adopción (${fmt(K.familia)}) tampoco tienen lugar en el árbol.`],
+      [`Extranjería pesa un ${K.extPct} % y su única hoja es demasiado grande`, `«Residencia, nacionalidad, reagrupación» reúne NIE y TIE, nómada digital, no lucrativa, trabajo, estudios, arraigo, recursos y regularización. Proponemos cinco rutas de formulario y de página (ver árbol).`],
+      [`Cada idioma tiene su público`, `ES: residentes con asuntos del día a día (inmuebles, notaría, herencia, despidos, Hacienda); un ${K.esSpain} % de quienes indican país vive en España. FR: un ${K.frAbroad} % vive fuera de España y prepara el salto (NIE, crear empresa, comprar, emprendedor). EN: visados de teletrabajo y residencia, y fiscalidad del recién llegado. RU: pocos, casi todos extranjería e impuestos.`],
+      [`Hay margen para informar antes de vender`, `Solo piden información el ${K.bc("fr")} % de las solicitudes FR y el ${K.bc("es")} % de las ES. Un ${K.blog} % de quienes tienen recorrido registrado leyó un artículo del blog antes de escribir (${K.frBlog} % en FR). En los subtemas más pedidos hay muy pocos artículos en el idioma de quien escribe (ver Blog).`],
+      [`Plazos y presupuestos aparecen en el primer mensaje`, `Citan urgencia o plazo el ${K.fl("es", "u")} % de las solicitudes ES y el ${K.fl("fr", "u")} % de las FR; piden honorarios el ${K.fl("es", "p")} % y el ${K.fl("fr", "p")} %. El paso 4 debe recoger la fecha límite.`],
+    ],
+    h_volumen: "Volumen y evolución por idioma",
+    i_volumen: () => {
+      const q = D.quarters; const g = (l, k) => q[l][k] || 0;
+      return `Las solicitudes en español crecen (de ${g("es", "2025-Q1")} en el primer trimestre de 2025 a ${g("es", "2026-Q3")} en el tercero de 2026) y las inglesas casi se duplican (de ${g("en", "2025-Q1")} a ${g("en", "2026-Q3")}). Las francesas bajan desde el máximo del primer trimestre de 2025 (${g("fr", "2025-Q1")}; ${g("fr", "2026-Q3")} en el tercero de 2026). El ruso se mantiene en unas ${Math.round(sum(Object.values(q.ru)) / Object.keys(q.ru).length)} al trimestre. El último trimestre de 2026 está incompleto.`;
+    },
+    h_tipo: "Tipo de lead",
+    i_tipo: "Particular o empresa, y qué pide en el primer mensaje. Los porcentajes del bloque de intención se calculan solo sobre los mensajes analizados (ES, FR y el formulario de inmigración EN).",
+    client: "Particular · Empresa", nature: "Intención del primer mensaje", natK: { urgente: "Urgente o con plazo", presupuesto: "Pide presupuesto", cita: "Pide cita o llamada", informacion: "Pregunta o pide información", otro: "Otros", caso_detallado: "Caso detallado", ajeno: "Ajeno (comercial, empleo)", cliente_actual: "Cliente actual" },
+    flagsT: "Mencionan en el texto", fP: "honorarios o presupuesto", fA: "cita o llamada", fU: "urgencia o plazo", fI: "una pregunta o petición de información",
+    medLen: "Mensaje mediano", chars: "caracteres",
+    h_origen: "País de origen y nacionalidad",
+    i_origen: () => `Ningún formulario pregunta el país ni la nacionalidad. El país sale del prefijo telefónico (solo se conserva el código del país), del desplegable «Ubicación» de los formularios de extranjería y del país de residencia cuando el texto lo dice. La nacionalidad solo se registra si la persona la declara (por ejemplo «soy venezolano»): ocurre en el ${K.natPct} % de los mensajes analizados, así que las cifras de nacionalidad son un suelo, no el total.`,
+    ctryT: "Países de los leads", natT: "Nacionalidades declaradas", inSpain: "viven en España", outSpain: "fuera de España", unknown: "sin dato", famNat: "Nacionalidad de familiares mencionados",
+    cNote: "+1 y +7 son prefijos compartidos (EE. UU./Canadá, Rusia/Kazajistán).",
+    traffic: () => `Canal visible en la dirección de la página: ${K.chat} solicitudes llegaron con parámetros de ChatGPT y ${K.ads} de anuncios de Google; el resto no deja rastro en la dirección.`,
+    h_areas: "Las seis áreas: lo que dice el desplegable frente a lo que dice el texto",
+    i_areas: () => `Reclasificar por el contenido del mensaje mueve las cifras. En los formularios generales ES y FR, «Otro(s)» agrupa ${fmt(K.other)} solicitudes; un ${K.otherLegal} % tiene tema jurídico (extranjería ${D.other_reclassified.by_area.EXT}, mercantil ${D.other_reclassified.by_area.MER}, fiscal ${D.other_reclassified.by_area.FIS}, sucesiones ${D.other_reclassified.by_area.SUC}, inmobiliario ${D.other_reclassified.by_area.INM}, laboral ${D.other_reclassified.by_area.LAB}).`,
+    colDD: "Desplegable", colTX: "Texto", other: "Otros / no jurídico",
+    h_idiomas: "Tendencias por idioma",
+    i_idiomas: "Cada tarjeta resume a quién atiende el formulario de ese idioma, qué pide y qué sobresale frente al resto. «Sobresale» compara el peso de un subtema en ese idioma con el peso en los otros dos (ES frente a FR y al revés).",
+    top: "Subtemas más frecuentes", lift: "Sobresale frente al otro idioma", rich: "Qué pide con más frecuencia",
+    cards: {
+      es: { h: "Español: residentes con asuntos del día a día", p: () => `Un ${pc(D.client.es.p, D.client.es.p + D.client.es.c)} % son particulares. ${K.esSpain} % de quienes dan país viven en España. El formulario ES también recoge a no hispanohablantes: ${D.msg_lang.es.en + D.msg_lang.es.fr + (D.msg_lang.es.ru || 0)} de ${TEXT_N("es")} mensajes llegan en inglés, francés o ruso. Predominan inmuebles (compra, notaría, alquiler), herencia, trabajo (despido, contrato, salario) y Hacienda.` },
+      fr: { h: "Francés: franceses que preparan su instalación", p: () => `Un ${pc(D.client.fr.p, D.client.fr.p + D.client.fr.c)} % son particulares y un ${pc(D.client.fr.c, D.client.fr.p + D.client.fr.c)} % empresas (el porcentaje más alto). ${K.frAbroad} % de quienes dan país viven fuera de España. Piden NIE, crear empresa o autónomo, comprar vivienda, instalarse y fiscalidad franco-española; aparecen nacionalidades argelina, belga y marroquí además de la francesa.` },
+      en: { h: "Inglés: visados, teletrabajo y fiscalidad del recién llegado", p: () => `Solo se pudo leer el texto del formulario de inmigración EN (${TEXT_N("en")} mensajes); los otros ${fmt(D.meta.by_lang.en - TEXT_N("en"))} se conocen por el desplegable: ${D.dropdown_area.en.EXT} extranjería, ${D.dropdown_area.en.FIS} fiscal. ${K.enSpain} % de quienes dan país están ya en España; destacan EE. UU./Canadá y Reino Unido. Piden nómada digital, no lucrativa, reagrupación de pareja, Beckham y el cómputo de 183 días. Tendencia al alza.` },
+      ru: { h: "Ruso: pocos y concentrados", p: () => `${D.meta.by_lang.ru} solicitudes en total (${D.dropdown_area.ru.EXT} de extranjería, ${D.dropdown_area.ru.FIS} fiscal, ${D.dropdown_area.ru.OTR} «Otro»). Casi todas llegan desde la página de extranjería o la de contacto. No se analizó el texto de los mensajes rusos.` },
+    },
+    pTitle: "Evolución de los subtemas (ES y FR, % de solicitudes analizadas)", pNote: "Tres periodos de tamaño distinto; los porcentajes comparan peso relativo, no volumen.",
+    h_arbol: "Árbol de especialidades frente a la demanda",
+    i_arbol: "Las 6 áreas y 17 hojas son las de dlvibe.delaguialuzon.fr. «Menciones» cuenta solicitudes con algún subtema de esa hoja (una solicitud puede sumar en varias). Las filas con marca naranja son hojas propuestas porque hay demanda y hoy no existen.",
+    colLeaf: "Hoja", colN: "Menciones", colPrim: "Tema principal", colLang: "ES · EN · FR", colSub: "Subespecialización que piden (subtemas con su n.º)", exists: "existe", proposed: "propuesta",
+    areaNotes: {
+      EXT: () => `Las cuatro hojas de extranjería suman ${fmt(D.leaf_stats["EXT-4"].n + D.leaf_stats["EXT-1"].n + D.leaf_stats["EXT-2"].n + D.leaf_stats["EXT-3"].n)} menciones. Propuesta de rutas para EXT-4: (1) visados de residencia: nómada digital, no lucrativa, trabajo, emprendedor; (2) reagrupación y familia; (3) nacionalidad y regularización; (4) denegaciones, requerimientos y recursos; (5) estancia irregular y 90 días. NIE y TIE, hoy el subtema más pedido, encaja mejor con la hoja de instalación (EXT-1).`,
+      INM: () => `Una sola hoja recibe ${fmt(D.leaf_stats["INM-1"].n)} menciones. Rutas: compra, notaría y registro, alquiler, obras y urbanismo, venta, comunidad de propietarios, vivienda turística, hipoteca.`,
+      LAB: () => `La demanda laboral viene de personas (despido, contrato, salario: ${K.labPeople} menciones), no de empresas (RRHH, compliance y asesoría para empresas: ${K.labCo}). Conviene replantear qué hojas se destacan.`,
+      MER: () => `MER-1 domina (${fmt(D.leaf_stats["MER-1"].n)}); MER-2, MER-3 y MER-4 apenas aparecen (${D.leaf_stats["MER-2"].n}, ${D.leaf_stats["MER-3"].n} y ${D.leaf_stats["MER-4"].n}). «Alta de autónomo» pesa tanto como crear sociedad y merece su propia ruta.`,
+      FIS: () => `FIS-2 recibe ${fmt(D.leaf_stats["FIS-2"].n)} menciones y se reparte en IVA y contabilidad, declaración de la renta, no residentes (Modelo 210), Beckham, Modelo 720 y plusvalías. FIS-1 (convenio y residencia fiscal) aparece en ${D.leaf_stats["FIS-1"].n}.`,
+      SUC: () => `Herencias y testamentos (${D.leaf_stats["SUC-0"].n}) y familia (${D.leaf_stats["SUC-2"].n}) no tienen hoja; mediación y litigios recibe ${D.leaf_stats["SUC-1"].n}.`,
+    },
+    h_combos: "Temas combinados y etiquetas",
+    i_combos: "Pares de subtemas que aparecen juntos en la misma solicitud. Cada par es una etiqueta combinada candidata, y una ruta con preguntas compartidas en el formulario. El CSV incluye el campo combo_label y la lista completa de subtemas por solicitud.",
+    colPair: "Combinación", colPairN: "Solicitudes", pkg: "Nombre propuesto", intentPairs: "Mismo patrón entre rutas del formulario",
+    pk: { "ext_empadronamiento|ext_nie_tie": "Pack llegada", "fis_convenio_doble|fis_irpf": "Fiscalidad del expatriado", "fis_iva_conta|mer_creacion": "Constitución y gestoría", "ext_nie_tie|mer_creacion": "Empresa y residencia", "ext_emprendedor|mer_creacion": "Residencia de emprendedor", "inm_registro|suc_herencia": "Herencia con inmueble", "ext_instalacion|ext_nie_tie": "Pack llegada", "fis_convenio_doble|fis_iva_conta": "Fiscalidad de empresa y expatriado", "ext_nie_tie|fis_iva_conta": "Llegada y autónomo", "ext_nie_tie|inm_compra": "Comprar y residir", "fis_iva_conta|mer_autonomo": "Autónomo y gestoría", "ext_instalacion|mer_creacion": "Mudanza con empresa", "fis_sucesiones_impuesto|suc_herencia": "Herencia y su impuesto", "fis_irpf|fis_iva_conta": "Renta y contabilidad", "fis_convenio_doble|suc_herencia": "Herencia internacional" },
+    h_form: "Formulario en 4 pasos",
+    i_form: "La propuesta sustituye el desplegable de especialidad por objetivos que la gente reconoce, acepta varias respuestas y precarga las preguntas de cada ruta. Las preguntas salen de lo que ya cuentan los mensajes y de lo que falta casi siempre; Félix y Sonia deben validarlas.",
+    steps: [
+      ["Paso 1", "¿Qué necesita?", ["Tarjetas por objetivo, no por rama del derecho", "Selección múltiple (el {MULTI} % mezcla temas)", "Etiquetas ocultas: área, hoja y subtema", "Tras elegir: hasta 3 guías del blog en el idioma de la página"]],
+      ["Paso 2", "Su situación", ["Nacionalidad y país de residencia (campos propios, hoy no existen)", "Particular o empresa", "¿Vive ya en España?", "Fecha límite si la hay"]],
+      ["Paso 3", "Detalles de su caso", ["De 4 a 6 preguntas precargadas según las rutas marcadas", "Respuestas cortas o de elección", "Adjuntar resolución o documento clave (opcional)"]],
+      ["Paso 4", "Contacto y siguiente paso", ["Nombre, correo, teléfono, canal preferido", "Resumen etiquetado antes de enviar", "Dos salidas: «Quiero una consulta» o «Solo quiero información» (guías y suscripción)"]],
+    ],
+    routesT: "Rutas del paso 1, con su demanda y las preguntas del paso 3",
+    colShare: "Solicitudes", info: "solo información", ask: "Preguntas precargadas (paso 3)", art: "Guías que el formulario mostraría hoy (selección automática por título, a curar)", noArt: "Sin guías con ese tema en este idioma",
+    ints: {
+      residencia: ["Residir, trabajar o estudiar en España", ["¿Dónde está hoy? Fuera de España · en España con permiso · en España sin permiso o con plazo vencido · ciudadano de la UE o familiar", "¿Qué quiere hacer? Vivir sin trabajar · teletrabajar para una empresa extranjera · trabajar por cuenta ajena · montar un negocio · estudiar · reagrupar a familia o pareja · nacionalidad · regularización · recurrir una denegación", "¿Quién le acompaña? Cónyuge, hijos, padres, y su nacionalidad", "Fecha clave: vencimiento de la tarjeta o visado, plazo de un requerimiento o llegada prevista", "Origen e importe aproximado de los ingresos (solo nómada, no lucrativa y emprendedor)", "¿Ha recibido una denegación o requerimiento? Subir la resolución"]],
+      llegada: ["Llegar y organizarse (NIE, padrón, sanidad, banco)", ["¿Tiene ya NIE? ¿Está empadronado?", "Fecha de llegada o mudanza y ciudad", "¿Qué necesita? NIE y TIE · padrón · tarjeta sanitaria y número de Seguridad Social · cuenta bancaria · canje de carné · homologación de títulos", "¿Viaja con familia o con niños en edad escolar?", "¿Va a abrir una empresa o darse de alta como autónomo? (si sí, proponer la ruta Empresa)"]],
+      inmueble: ["Comprar, vender o alquilar un inmueble", ["¿Qué necesita? Comprar · vender · alquilar · obras o licencias · comunidad de propietarios · vivienda turística · conflicto", "¿En qué punto está? Buscando · oferta o arras hechas · contrato firmado · problema posterior", "Provincia o municipio y tipo de inmueble", "¿Compra como persona o con sociedad? ¿Es residente fiscal en España?", "¿Necesita hipoteca o financiación? Precio aproximado", "Si hay conflicto: contrato o escritura a mano y contraparte"]],
+      empresa: ["Crear o gestionar una empresa", ["¿Qué necesita? Crear una sociedad · alta de autónomo · sucursal o filial · holding · contrato mercantil · insolvencia o reestructuración · franquicia", "¿Existe ya una empresa en otro país? País y forma jurídica", "Socios o administradores y dónde residen (¿necesitan NIE o residencia?)", "Actividad y facturación prevista; ¿necesita gestoría contable?", "Plazo de arranque"]],
+      impuestos: ["Impuestos y fiscalidad", ["Perfil fiscal: residente en España · no residente con inmueble · llega este año · duda sobre dónde es residente fiscal", "Países implicados y tipo de ingresos: salario, alquiler, autónomo, dividendos, pensión, venta de inmueble, cripto", "Tema: declaración de la renta · Modelo 210 · régimen Beckham · bienes en el extranjero · plusvalía · IVA y contabilidad · notificación de Hacienda", "Ejercicios afectados y plazo de cualquier requerimiento", "¿Tiene patrimonio relevante fuera de España?"]],
+      herencia: ["Herencia, testamento y patrimonio", ["¿Hay un fallecimiento o planifica en vida (testamento, donación)?", "País de residencia y nacionalidad del fallecido o de quien otorga", "Bienes en España y en otros países; herederos y dónde viven", "¿Existe testamento? ¿Hay conflicto entre herederos?", "Fecha del fallecimiento (hay plazos fiscales)"]],
+      trabajo: ["Trabajo y empleo", ["¿Es trabajador o empresa?", "Tema: despido · contrato · salario o finiquito · baja o accidente · acoso · alta de trabajadores o desplazados · RRHH o compliance", "Fecha del hecho (los plazos para reclamar son cortos)", "Antigüedad, tipo de contrato y país del empleador", "¿Tiene carta o documentos?"]],
+      jubilacion: ["Jubilación, pensiones y seguro médico", ["Países en los que ha cotizado y años aproximados", "Edad y fecha prevista de jubilación; ¿cobra ya pensión de otro país?", "Tema: pensión de jubilación o viudedad · seguro médico · prestaciones", "Residencia actual"]],
+      conflicto: ["Conflicto, reclamación o familia", ["Tipo: reclamación de deuda · litigio mercantil · vecinos o comunidad · familia (divorcio, custodia, adopción) · penal o denuncia", "Contraparte y país; fase: previa · demanda recibida · sentencia", "Cuantía aproximada", "Fechas límite (notificación, vista)", "¿Prefiere intentar mediación?"]],
+    },
+    h_blog: "Blog: lo que se pide frente a lo que hay publicado",
+    i_blog: () => `Recorridos registrados: ${fmt(D.journey.n)} de ${fmt(D.meta.total)} solicitudes (desde diciembre de 2024). ${fmt(D.journey.with_blog)} pasaron por algún artículo del blog antes de escribir y ${fmt(D.journey.first_kind.blog)} entraron a la web por un artículo. La tabla cruza los subtemas con más solicitudes con los artículos publicados cuyo título los trata (búsqueda automática por título y dirección, a verificar).`,
+    colSubB: "Subtema", colLeads: "Solicitudes ES · FR · EN", colPosts: "Artículos ES · EN · FR", gap: "Laguna", ok: "cubierto", gapN: "Laguna: un idioma con 8 o más solicitudes del subtema y 0 o 1 artículo en ese idioma.",
+    enNote: "EN: solo se conoce el tema de 33 de 376 solicitudes.",
+    readT: "Artículos leídos antes de escribir (más frecuentes)",
+    h_recom: "Recomendaciones",
+    recs: [
+      ["Sustituir el desplegable por objetivos con selección múltiple", "Nueve tarjetas (ver Formulario), con etiquetas ocultas de área, hoja y subtema. Resuelve el {MULTI} % de solicitudes mixtas y el «Otro(s)»."],
+      ["Crear las hojas que faltan y dividir Extranjería", "Herencias y testamentos, y Familia (propuesta). Dividir EXT-4 en cinco rutas. Subir «Alta de autónomo» a ruta propia dentro de Empresa."],
+      ["Recoger país de residencia y nacionalidad en campos propios", "Hoy hay que deducirlos; solo el {NAT} % de los mensajes analizados declara la nacionalidad."],
+      ["Precargar las preguntas de cada ruta y la fecha límite", "Un solo formulario multilingüe en lugar de nueve, con las preguntas de la sección anterior, validadas por Félix y Sonia."],
+      ["Añadir el desvío a información", "Si la persona marca «solo información», mostrar guías antes de pedir contacto. Medir clics y envíos."],
+      ["Cubrir las lagunas del blog en el idioma que más lo pide", "Empezar por las filas marcadas en la tabla de Blog (por ejemplo compra de inmueble en español, nacionalidad y estancia irregular en francés)."],
+      ["Completar el análisis de texto", "Faltan los mensajes del formulario EN general, RU e inmigración FR. El entorno bloqueó su lectura por contener datos personales; hace falta una autorización explícita de Mike para leerlos con las mismas reglas de anonimización."],
+    ],
+    h_metodo: "Método y límites",
+    metodo: () => [
+      `Fuente: 9 formularios de Formidable Forms, ${fmt(D.meta.total)} entradas, lectura de solo lectura a través de AISA.`,
+      `Texto del mensaje analizado en ${fmt(D.meta.coverage.text_analysed)} entradas (ES general ${D.meta.text_by_lang.es - 54}, extranjería ES 54, FR general ${D.meta.text_by_lang.fr}, inmigración EN 33, codificadas a mano). Las ${fmt(D.meta.coverage.structured_only)} restantes se analizaron solo con campos estructurados (desplegables, prefijo, página, recorrido): EN general 343, RU 65, inmigración FR 20.`,
+      `Clasificación: reglas multilingües (ES, FR, EN) sobre asunto y mensaje, con 62 subtemas asignados a las 17 hojas de dlvibe y 3 propuestas. Se revisó a mano una muestra de 24 casos: el tema principal es razonable en la mayoría y las etiquetas secundarias tienen más ruido.`,
+      `País: prefijo telefónico, desplegable de ubicación o país de residencia dicho en el texto. Nacionalidad: solo si se declara. Ambos son estimaciones.`,
+      `Privacidad: los CSV no contienen nombres, correos, teléfonos ni texto de los mensajes, solo campos derivados y el identificador de la entrada para localizarla en Formidable.`,
+      `Periodo: del ${dateL(D.meta.first)} al ${dateL(D.meta.last)}. El último trimestre de 2026 está incompleto.`,
+    ],
+    files: "Archivos",
+    filesList: [["data/leads/leads_es.csv, leads_en.csv, leads_fr.csv, leads_ru.csv", "una fila por solicitud, por idioma del formulario"], ["data/leads/topic_article_map.csv", "subtema y artículos publicados que lo tratan"], ["data/leads/leads_stats.json y report_data.json", "cifras de este informe"], ["tools/leads_*.py", "reglas, taxonomía y generación del informe"]],
+    foot: "Informe generado el 8 de octubre de 2026 con datos de los formularios del sitio.",
+  },
+  fr: {
+    title: "Ce que nos visiteurs demandent via le formulaire",
+    eyebrow: "Delaguía y Luzón · Analyse des formulaires web",
+    lead: () => `${fmt(D.meta.total)} demandes entre le ${dateL(D.meta.first)} et le ${dateL(D.meta.last)}, via 9 formulaires et 4 langues. Le rapport les classe par spécialité, pays, nationalité et sous-thème afin de concevoir un formulaire en 4 étapes qui pose les bonnes questions et propose des articles du blog quand une personne cherche seulement de l'information.`,
+    toc: [["esencial", "L'essentiel"], ["volumen", "Volume"], ["tipo", "Type de lead"], ["origen", "Origine"], ["areas", "Domaines"], ["idiomas", "Par langue"], ["arbol", "Arbre des spécialités"], ["combos", "Thèmes combinés"], ["form", "Formulaire en 4 étapes"], ["blog", "Blog"], ["recom", "Recommandations"], ["metodo", "Méthode et limites"]],
+    kpi: [["demandes reçues"], ["avec message analysé"], ["touchent 2 sous-thèmes ou plus"], ["demandent seulement une information"], ["ont lu un article avant d'écrire"]],
+    h_esencial: "L'essentiel",
+    find: () => [
+      [`${K.multiPct} % des demandes mélangent plusieurs thèmes`, `Ce sont des combinaisons comme NIE et création d'entreprise, déclaration de revenus et convention fiscale, ou succession et notaire. Avec une liste déroulante à choix unique, la personne en choisit un et les autres se perdent. Le formulaire doit accepter plusieurs étiquettes et les conserver.`],
+      [`« Autre(s) » cache une vraie demande`, `Sur ${fmt(K.other)} demandes cochées « Autre(s) » dans les formulaires généraux ES et FR, ${K.otherLegal} % portent sur un thème juridique clair, surtout droit des étrangers, création d'entreprise et fiscalité.`],
+      [`Successions et testaments : thème n° ${K.rank.suc_herencia}, sans page dédiée`, `${fmt(K.herencia)} demandes (${K.herenciaPct} % de celles analysées) parlent de succession. Le site ne la couvre que dans « Successions et planification patrimoniale », sous Fiscalité. Divorce, garde et adoption (${fmt(K.familia)}) n'ont pas de place non plus dans l'arbre.`],
+      [`Le droit des étrangers pèse ${K.extPct} % et sa page unique est trop large`, `« Résidence, nationalité, regroupement » réunit NIE et TIE, nomade numérique, non lucratif, travail, études, arraigo, recours et régularisation. Nous proposons cinq parcours de formulaire et de page (voir l'arbre).`],
+      [`Chaque langue a son public`, `ES : des résidents avec des sujets du quotidien (immobilier, notaire, succession, licenciement, fisc) ; ${K.esSpain} % de ceux qui indiquent un pays vivent en Espagne. FR : ${K.frAbroad} % vivent hors d'Espagne et préparent le départ (NIE, créer une société, acheter, entrepreneur). EN : visas de télétravail et de résidence, et fiscalité de l'arrivant. RU : peu de demandes, presque toutes droit des étrangers et impôts.`],
+      [`Il y a de la place pour informer avant de vendre`, `Seulement ${K.bc("fr")} % des demandes FR et ${K.bc("es")} % des demandes ES réclament de l'information. ${K.blog} % des personnes dont le parcours est enregistré ont lu un article du blog avant d'écrire (${K.frBlog} % en FR). Sur les sous-thèmes les plus demandés, il y a très peu d'articles dans la langue de la personne (voir Blog).`],
+      [`Délais et budget apparaissent dès le premier message`, `Urgence ou échéance citées dans ${K.fl("es", "u")} % des demandes ES et ${K.fl("fr", "u")} % des demandes FR ; honoraires demandés dans ${K.fl("es", "p")} % et ${K.fl("fr", "p")} %. L'étape 4 doit recueillir la date limite.`],
+    ],
+    h_volumen: "Volume et évolution par langue",
+    i_volumen: () => {
+      const q = D.quarters; const g = (l, k) => q[l][k] || 0;
+      return `Les demandes en espagnol progressent (de ${g("es", "2025-Q1")} au premier trimestre 2025 à ${g("es", "2026-Q3")} au troisième trimestre 2026) et les demandes en anglais presque doublent (de ${g("en", "2025-Q1")} à ${g("en", "2026-Q3")}). Les demandes en français reculent depuis le pic du premier trimestre 2025 (${g("fr", "2025-Q1")} ; ${g("fr", "2026-Q3")} au troisième trimestre 2026). Le russe reste autour de ${Math.round(sum(Object.values(q.ru)) / Object.keys(q.ru).length)} par trimestre. Le dernier trimestre 2026 est incomplet.`;
+    },
+    h_tipo: "Type de lead",
+    i_tipo: "Particulier ou entreprise, et ce que la personne demande dans son premier message. Les pourcentages d'intention portent uniquement sur les messages analysés (ES, FR et le formulaire d'immigration EN).",
+    client: "Particulier · Entreprise", nature: "Intention du premier message", natK: { urgente: "Urgent ou avec échéance", presupuesto: "Demande un devis", cita: "Demande un rendez-vous ou un appel", informacion: "Pose une question ou demande une information", otro: "Autres", caso_detallado: "Cas détaillé", ajeno: "Hors sujet (démarchage, emploi)", cliente_actual: "Client existant" },
+    flagsT: "Mentionnent dans le texte", fP: "honoraires ou devis", fA: "rendez-vous ou appel", fU: "urgence ou échéance", fI: "une question ou une demande d'information",
+    medLen: "Message médian", chars: "caractères",
+    h_origen: "Pays d'origine et nationalité",
+    i_origen: () => `Aucun formulaire ne demande le pays ni la nationalité. Le pays est déduit de l'indicatif téléphonique (seul le code pays est conservé), de la liste « Localisation » des formulaires d'immigration et du pays de résidence quand le texte le précise. La nationalité n'est enregistrée que si la personne la déclare (par exemple « je suis français ») : c'est le cas dans ${K.natPct} % des messages analysés, donc les chiffres de nationalité sont un plancher et non le total.`,
+    ctryT: "Pays des leads", natT: "Nationalités déclarées", inSpain: "vivent en Espagne", outSpain: "hors d'Espagne", unknown: "sans donnée", famNat: "Nationalité des proches mentionnés",
+    cNote: "+1 et +7 sont des indicatifs partagés (États-Unis/Canada, Russie/Kazakhstan).",
+    traffic: () => `Canal visible dans l'adresse de la page : ${K.chat} demandes sont arrivées avec des paramètres ChatGPT et ${K.ads} depuis des annonces Google ; le reste ne laisse aucune trace dans l'adresse.`,
+    h_areas: "Les six domaines : ce que dit la liste déroulante et ce que dit le texte",
+    i_areas: () => `Reclasser selon le contenu du message déplace les chiffres. Dans les formulaires généraux ES et FR, « Autre(s) » regroupe ${fmt(K.other)} demandes ; ${K.otherLegal} % ont un thème juridique (droit des étrangers ${D.other_reclassified.by_area.EXT}, commercial ${D.other_reclassified.by_area.MER}, fiscal ${D.other_reclassified.by_area.FIS}, successions ${D.other_reclassified.by_area.SUC}, immobilier ${D.other_reclassified.by_area.INM}, travail ${D.other_reclassified.by_area.LAB}).`,
+    colDD: "Liste", colTX: "Texte", other: "Autres / non juridique",
+    h_idiomas: "Tendances par langue",
+    i_idiomas: "Chaque carte résume le public du formulaire de cette langue, ses demandes et ce qui ressort par rapport aux autres. « Ressort » compare le poids d'un sous-thème dans cette langue avec son poids dans l'autre (ES face à FR et inversement).",
+    top: "Sous-thèmes les plus fréquents", lift: "Ressort par rapport à l'autre langue", rich: "Ce qui revient le plus",
+    cards: {
+      es: { h: "Espagnol : des résidents avec des sujets du quotidien", p: () => `${pc(D.client.es.p, D.client.es.p + D.client.es.c)} % sont des particuliers. ${K.esSpain} % de ceux qui donnent un pays vivent en Espagne. Le formulaire ES recueille aussi des non-hispanophones : ${D.msg_lang.es.en + D.msg_lang.es.fr + (D.msg_lang.es.ru || 0)} messages sur ${TEXT_N("es")} arrivent en anglais, en français ou en russe. Dominent l'immobilier (achat, notaire, location), la succession, le travail (licenciement, contrat, salaire) et le fisc.` },
+      fr: { h: "Français : des Français qui préparent leur installation", p: () => `${pc(D.client.fr.p, D.client.fr.p + D.client.fr.c)} % sont des particuliers et ${pc(D.client.fr.c, D.client.fr.p + D.client.fr.c)} % des entreprises (la part la plus élevée). ${K.frAbroad} % de ceux qui donnent un pays vivent hors d'Espagne. Ils demandent NIE, création de société ou statut d'autónomo, achat de logement, installation et fiscalité franco-espagnole ; on voit aussi des nationalités algérienne, belge et marocaine en plus de la française.` },
+      en: { h: "Anglais : visas, télétravail et fiscalité de l'arrivant", p: () => `Seul le texte du formulaire d'immigration EN a pu être lu (${TEXT_N("en")} messages) ; les ${fmt(D.meta.by_lang.en - TEXT_N("en"))} autres ne sont connus que par la liste déroulante : ${D.dropdown_area.en.EXT} droit des étrangers, ${D.dropdown_area.en.FIS} fiscal. ${K.enSpain} % de ceux qui donnent un pays sont déjà en Espagne ; les États-Unis/Canada et le Royaume-Uni ressortent. Ils demandent nomade numérique, non lucratif, regroupement du conjoint, Beckham et le calcul des 183 jours. Tendance à la hausse.` },
+      ru: { h: "Russe : peu de demandes, très concentrées", p: () => `${D.meta.by_lang.ru} demandes au total (${D.dropdown_area.ru.EXT} droit des étrangers, ${D.dropdown_area.ru.FIS} fiscal, ${D.dropdown_area.ru.OTR} « Autre »). Presque toutes viennent de la page droit des étrangers ou de la page contact. Le texte des messages russes n'a pas été analysé.` },
+    },
+    pTitle: "Évolution des sous-thèmes (ES et FR, % des demandes analysées)", pNote: "Trois périodes de taille différente ; les pourcentages comparent le poids relatif, pas le volume.",
+    h_arbol: "Arbre des spécialités face à la demande",
+    i_arbol: "Les 6 domaines et 17 pages sont ceux de dlvibe.delaguialuzon.fr. « Mentions » compte les demandes qui ont au moins un sous-thème de cette page (une demande peut compter plusieurs fois). Les lignes marquées en orange sont des pages proposées : il y a de la demande et elles n'existent pas aujourd'hui.",
+    colLeaf: "Page", colN: "Mentions", colPrim: "Thème principal", colLang: "ES · EN · FR", colSub: "Sous-spécialisation demandée (sous-thèmes avec leur n°)", exists: "existe", proposed: "proposée",
+    areaNotes: {
+      EXT: () => `Les quatre pages du droit des étrangers totalisent ${fmt(D.leaf_stats["EXT-4"].n + D.leaf_stats["EXT-1"].n + D.leaf_stats["EXT-2"].n + D.leaf_stats["EXT-3"].n)} mentions. Parcours proposés pour EXT-4 : (1) visas de résidence : nomade numérique, non lucratif, travail, entrepreneur ; (2) regroupement et famille ; (3) nationalité et régularisation ; (4) refus, demandes de pièces et recours ; (5) séjour irrégulier et 90 jours. NIE et TIE, aujourd'hui le sous-thème le plus demandé, s'accorde mieux avec la page installation (EXT-1).`,
+      INM: () => `Une seule page reçoit ${fmt(D.leaf_stats["INM-1"].n)} mentions. Parcours : achat, notaire et registre, location, travaux et urbanisme, vente, copropriété, location touristique, prêt immobilier.`,
+      LAB: () => `La demande en droit du travail vient de personnes (licenciement, contrat, salaire : ${K.labPeople} mentions), pas d'entreprises (RH, compliance et conseil aux entreprises : ${K.labCo}). Il faut repenser les pages mises en avant.`,
+      MER: () => `MER-1 domine (${fmt(D.leaf_stats["MER-1"].n)}) ; MER-2, MER-3 et MER-4 apparaissent à peine (${D.leaf_stats["MER-2"].n}, ${D.leaf_stats["MER-3"].n} et ${D.leaf_stats["MER-4"].n}). « Statut d'autónomo » pèse autant que la création de société et mérite son parcours.`,
+      FIS: () => `FIS-2 reçoit ${fmt(D.leaf_stats["FIS-2"].n)} mentions, réparties entre TVA et comptabilité, déclaration de revenus, non-résidents (Modèle 210), Beckham, Modèle 720 et plus-values. FIS-1 (convention et résidence fiscale) apparaît dans ${D.leaf_stats["FIS-1"].n}.`,
+      SUC: () => `Successions et testaments (${D.leaf_stats["SUC-0"].n}) et famille (${D.leaf_stats["SUC-2"].n}) n'ont pas de page ; médiation et litiges reçoit ${D.leaf_stats["SUC-1"].n}.`,
+    },
+    h_combos: "Thèmes combinés et étiquettes",
+    i_combos: "Paires de sous-thèmes qui apparaissent ensemble dans la même demande. Chaque paire est une étiquette combinée candidate et un parcours avec des questions partagées dans le formulaire. Le CSV contient le champ combo_label et la liste complète des sous-thèmes par demande.",
+    colPair: "Combinaison", colPairN: "Demandes", pkg: "Nom proposé", intentPairs: "Même schéma entre les parcours du formulaire",
+    pk: { "ext_empadronamiento|ext_nie_tie": "Pack arrivée", "fis_convenio_doble|fis_irpf": "Fiscalité de l'expatrié", "fis_iva_conta|mer_creacion": "Création et comptabilité", "ext_nie_tie|mer_creacion": "Société et résidence", "ext_emprendedor|mer_creacion": "Résidence d'entrepreneur", "inm_registro|suc_herencia": "Succession avec bien immobilier", "ext_instalacion|ext_nie_tie": "Pack arrivée", "fis_convenio_doble|fis_iva_conta": "Fiscalité société et expatrié", "ext_nie_tie|fis_iva_conta": "Arrivée et autónomo", "ext_nie_tie|inm_compra": "Acheter et résider", "fis_iva_conta|mer_autonomo": "Autónomo et comptabilité", "ext_instalacion|mer_creacion": "Déménagement avec société", "fis_sucesiones_impuesto|suc_herencia": "Succession et son impôt", "fis_irpf|fis_iva_conta": "Revenus et comptabilité", "fis_convenio_doble|suc_herencia": "Succession internationale" },
+    h_form: "Formulaire en 4 étapes",
+    i_form: "La proposition remplace la liste de spécialités par des objectifs que les gens reconnaissent, accepte plusieurs réponses et préremplit les questions de chaque parcours. Les questions viennent de ce que les messages disent déjà et de ce qui manque presque toujours ; Félix et Sonia doivent les valider.",
+    steps: [
+      ["Étape 1", "De quoi avez-vous besoin ?", ["Cartes par objectif, pas par branche du droit", "Choix multiple ({MULTI} % mélangent les thèmes)", "Étiquettes cachées : domaine, page et sous-thème", "Après le choix : jusqu'à 3 guides du blog dans la langue de la page"]],
+      ["Étape 2", "Votre situation", ["Nationalité et pays de résidence (champs propres, absents aujourd'hui)", "Particulier ou entreprise", "Vivez-vous déjà en Espagne ?", "Date limite s'il y en a une"]],
+      ["Étape 3", "Détails de votre cas", ["4 à 6 questions préremplies selon les parcours cochés", "Réponses courtes ou à choix", "Joindre la décision ou le document clé (facultatif)"]],
+      ["Étape 4", "Contact et suite", ["Nom, e-mail, téléphone, canal préféré", "Résumé étiqueté avant l'envoi", "Deux sorties : « Je veux une consultation » ou « Je veux seulement de l'information » (guides et abonnement)"]],
+    ],
+    routesT: "Parcours de l'étape 1, avec leur demande et les questions de l'étape 3",
+    colShare: "Demandes", info: "seulement information", ask: "Questions préremplies (étape 3)", art: "Guides que le formulaire afficherait aujourd'hui (sélection automatique par titre, à trier)", noArt: "Aucun guide sur ce thème dans cette langue",
+    ints: {
+      residencia: ["Résider, travailler ou étudier en Espagne", ["Où êtes-vous aujourd'hui ? Hors d'Espagne · en Espagne avec un titre · en Espagne sans titre ou avec un délai dépassé · citoyen de l'UE ou proche", "Que voulez-vous faire ? Vivre sans travailler · télétravailler pour une entreprise étrangère · travailler comme salarié · monter une activité · étudier · regrouper famille ou conjoint · nationalité · régularisation · contester un refus", "Qui vous accompagne ? Conjoint, enfants, parents, et leur nationalité", "Date clé : échéance de la carte ou du visa, délai d'une demande de pièces ou arrivée prévue", "Origine et montant approximatif des revenus (seulement nomade, non lucratif et entrepreneur)", "Avez-vous reçu un refus ou une demande de pièces ? Joindre la décision"]],
+      llegada: ["Arriver et s'organiser (NIE, padrón, santé, banque)", ["Avez-vous déjà un NIE ? Êtes-vous inscrit au padrón ?", "Date d'arrivée ou de déménagement et ville", "De quoi avez-vous besoin ? NIE et TIE · padrón · carte de santé et numéro de Sécurité sociale · compte bancaire · échange du permis · équivalence de diplômes", "Venez-vous en famille ou avec des enfants scolarisés ?", "Allez-vous créer une société ou vous déclarer autónomo ? (si oui, proposer le parcours Entreprise)"]],
+      inmueble: ["Acheter, vendre ou louer un bien", ["De quoi avez-vous besoin ? Acheter · vendre · louer · travaux ou permis · copropriété · location touristique · litige", "Où en êtes-vous ? Recherche · offre ou arras faites · contrat signé · problème après coup", "Province ou commune et type de bien", "Achat en nom propre ou via société (SCI) ? Êtes-vous résident fiscal en Espagne ?", "Besoin d'un prêt ou d'un financement ? Prix approximatif", "En cas de litige : contrat ou acte à portée de main et partie adverse"]],
+      empresa: ["Créer ou gérer une entreprise", ["De quoi avez-vous besoin ? Créer une société · statut d'autónomo · succursale ou filiale · holding · contrat commercial · insolvabilité ou restructuration · franchise", "Existe-t-il déjà une société dans un autre pays ? Pays et forme juridique", "Associés ou dirigeants et où ils résident (ont-ils besoin d'un NIE ou d'une résidence ?)", "Activité et chiffre d'affaires prévu ; besoin d'un cabinet comptable ?", "Délai de démarrage"]],
+      impuestos: ["Impôts et fiscalité", ["Profil fiscal : résident en Espagne · non-résident propriétaire · arrive cette année · doute sur la résidence fiscale", "Pays concernés et type de revenus : salaire, loyers, indépendant, dividendes, retraite, vente d'un bien, crypto", "Sujet : déclaration de revenus · Modèle 210 · régime Beckham · avoirs à l'étranger · plus-value · TVA et comptabilité · courrier du fisc", "Exercices concernés et délai d'une éventuelle demande de l'administration", "Avez-vous un patrimoine important hors d'Espagne ?"]],
+      herencia: ["Succession, testament et patrimoine", ["Y a-t-il un décès ou planifiez-vous de votre vivant (testament, donation) ?", "Pays de résidence et nationalité du défunt ou de la personne qui dispose", "Biens en Espagne et dans d'autres pays ; héritiers et lieu de résidence", "Existe-t-il un testament ? Y a-t-il un conflit entre héritiers ?", "Date du décès (il existe des délais fiscaux)"]],
+      trabajo: ["Travail et emploi", ["Êtes-vous salarié ou employeur ?", "Sujet : licenciement · contrat · salaire ou solde de tout compte · arrêt ou accident · harcèlement · déclaration de salariés ou détachés · RH ou compliance", "Date des faits (les délais pour agir sont courts)", "Ancienneté, type de contrat et pays de l'employeur", "Avez-vous la lettre ou des documents ?"]],
+      jubilacion: ["Retraite, pensions et assurance santé", ["Pays où vous avez cotisé et nombre d'années approximatif", "Âge et date de retraite prévue ; touchez-vous déjà une pension d'un autre pays ?", "Sujet : pension de retraite ou de réversion · assurance santé · prestations", "Résidence actuelle"]],
+      conflicto: ["Litige, réclamation ou famille", ["Type : recouvrement d'une dette · litige commercial · voisins ou copropriété · famille (divorce, garde, adoption) · pénal ou plainte", "Partie adverse et pays ; phase : amiable · assignation reçue · jugement", "Montant approximatif", "Dates limites (notification, audience)", "Préférez-vous tenter une médiation ?"]],
+    },
+    h_blog: "Blog : ce qui est demandé face à ce qui est publié",
+    i_blog: () => `Parcours enregistrés : ${fmt(D.journey.n)} demandes sur ${fmt(D.meta.total)} (depuis décembre 2024). ${fmt(D.journey.with_blog)} sont passées par un article du blog avant d'écrire et ${fmt(D.journey.first_kind.blog)} sont entrées sur le site par un article. Le tableau croise les sous-thèmes les plus demandés avec les articles publiés dont le titre les traite (recherche automatique par titre et adresse, à vérifier).`,
+    colSubB: "Sous-thème", colLeads: "Demandes ES · FR · EN", colPosts: "Articles ES · EN · FR", gap: "Manque", ok: "couvert", gapN: "Manque : une langue avec 8 demandes ou plus sur le sous-thème et 0 ou 1 article dans cette langue.",
+    enNote: "EN : le thème n'est connu que pour 33 demandes sur 376.",
+    readT: "Articles lus avant d'écrire (les plus fréquents)",
+    h_recom: "Recommandations",
+    recs: [
+      ["Remplacer la liste déroulante par des objectifs à choix multiple", "Neuf cartes (voir Formulaire), avec étiquettes cachées de domaine, page et sous-thème. Cela règle les demandes mixtes ({MULTI} %) et le « Autre(s) »."],
+      ["Créer les pages manquantes et scinder le droit des étrangers", "Successions et testaments, et Famille (proposition). Scinder EXT-4 en cinq parcours. Faire du statut d'autónomo un parcours propre dans Entreprise."],
+      ["Recueillir pays de résidence et nationalité dans des champs propres", "Aujourd'hui il faut les déduire ; seulement {NAT} % des messages analysés déclarent la nationalité."],
+      ["Préremplir les questions de chaque parcours et la date limite", "Un seul formulaire multilingue au lieu de neuf, avec les questions de la section précédente, validées par Félix et Sonia."],
+      ["Ajouter la sortie vers l'information", "Si la personne coche « seulement de l'information », afficher des guides avant de demander le contact. Mesurer clics et envois."],
+      ["Combler les manques du blog dans la langue qui le demande le plus", "Commencer par les lignes marquées dans le tableau Blog (par exemple achat immobilier en espagnol, nationalité et séjour irrégulier en français)."],
+      ["Compléter l'analyse de texte", "Les messages du formulaire EN général, RU et immigration FR manquent. L'environnement a bloqué leur lecture parce qu'ils contiennent des données personnelles ; il faut une autorisation explicite de Mike pour les lire avec les mêmes règles d'anonymisation."],
+    ],
+    h_metodo: "Méthode et limites",
+    metodo: () => [
+      `Source : 9 formulaires Formidable Forms, ${fmt(D.meta.total)} entrées, lecture seule via AISA.`,
+      `Texte du message analysé pour ${fmt(D.meta.coverage.text_analysed)} entrées (ES général ${D.meta.text_by_lang.es - 54}, immigration ES 54, FR général ${D.meta.text_by_lang.fr}, immigration EN 33, codées à la main). Les ${fmt(D.meta.coverage.structured_only)} autres ont été analysées avec les seuls champs structurés (listes, indicatif, page, parcours) : EN général 343, RU 65, immigration FR 20.`,
+      `Classement : règles multilingues (ES, FR, EN) sur l'objet et le message, avec 62 sous-thèmes rattachés aux 17 pages de dlvibe et 3 propositions. Un échantillon de 24 cas a été relu à la main : le thème principal est raisonnable dans la plupart des cas et les étiquettes secondaires sont plus bruitées.`,
+      `Pays : indicatif téléphonique, liste de localisation ou pays de résidence indiqué dans le texte. Nationalité : seulement si elle est déclarée. Les deux sont des estimations.`,
+      `Confidentialité : les CSV ne contiennent ni noms, ni e-mails, ni téléphones, ni texte des messages, seulement des champs dérivés et l'identifiant de l'entrée pour la retrouver dans Formidable.`,
+      `Période : du ${dateL(D.meta.first)} au ${dateL(D.meta.last)}. Le dernier trimestre 2026 est incomplet.`,
+    ],
+    files: "Fichiers",
+    filesList: [["data/leads/leads_es.csv, leads_en.csv, leads_fr.csv, leads_ru.csv", "une ligne par demande, par langue du formulaire"], ["data/leads/topic_article_map.csv", "sous-thème et articles publiés qui le traitent"], ["data/leads/leads_stats.json et report_data.json", "chiffres de ce rapport"], ["tools/leads_*.py", "règles, taxonomie et génération du rapport"]],
+    foot: "Rapport généré le 8 octobre 2026 à partir des formulaires du site.",
+  },
+};
+
+/* ---------------- render ---------------- */
+function quartersSVG() {
+  const qs = [...new Set(LANGS.flatMap(l => Object.keys(D.quarters[l])))].sort();
+  const W = 760, H = 250, L = 34, B = 30, T = 10, R = 8;
+  const tot = qs.map(q => sum(LANGS.map(l => D.quarters[l][q] || 0)));
+  const max = Math.ceil(Math.max(...tot) / 50) * 50;
+  const bw = (W - L - R) / qs.length;
+  const y = v => T + (H - T - B) * (1 - v / max);
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${lang === "fr" ? "Demandes par trimestre et par langue" : "Solicitudes por trimestre e idioma"}">`;
+  for (let v = 0; v <= max; v += 50) s += `<line class="ax" x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  qs.forEach((q, i) => {
+    let acc = 0; const x = L + i * bw + bw * 0.16, w = bw * 0.68;
+    ["fr", "en", "es", "ru"].forEach(l => {
+      const v = D.quarters[l][q] || 0; if (!v) return;
+      s += `<rect class="${l}" x="${x}" y="${y(acc + v)}" width="${w}" height="${y(acc) - y(acc + v)}" rx="2"><title>${LNAME[l][lang]} ${q}: ${v}</title></rect>`; acc += v;
+    });
+    s += `<text x="${x + w / 2}" y="${y(acc) - 4}" text-anchor="middle">${acc}</text>`;
+    s += `<text x="${x + w / 2}" y="${H - 10}" text-anchor="middle">T${q.slice(6)} ${q.slice(2, 4)}</text>`;
+  });
+  return s + "</svg>";
+}
+function legend() { return `<div class="legend">${["es", "fr", "en", "ru"].map(l => `<span style="--k:var(--c-${l})">${LNAME[l][lang].replace(/Formul\w+ /, "")}</span>`).join("")}</div>`; }
+
+function sectionVolume(t) {
+  return `<section id="volumen"><h2>${t.h_volumen}</h2><p class="intro">${t.i_volumen()}</p><div class="card">${legend()}<div class="scroll">${quartersSVG()}</div></div></section>`;
+}
+function sectionTipo(t) {
+  const order = ["urgente", "presupuesto", "cita", "informacion", "caso_detallado", "otro"];
+  const cols = { urgente: "--warn", presupuesto: "--c-fr", cita: "--c-en", informacion: "--bar", caso_detallado: "--c-ru", otro: "--bar-soft" };
+  const rowsN = ["es", "fr", "en"].map(l => {
+    const n = D.nature[l]; const base = sum(order.map(k => n[k] || 0));
+    return `<tr><td>${LNAME[l][lang]}</td><td class="n">${fmt(base)}</td><td style="min-width:240px">${stackBar(order.map(k => [n[k] || 0, cols[k]]))}</td><td class="n">${pct(D.client[l].p, D.client[l].p + D.client[l].c)} · ${pct(D.client[l].c, D.client[l].p + D.client[l].c)}</td><td class="n">${D.msg_len_median[l] ? fmt(D.msg_len_median[l]) : "n/d"}</td></tr>`;
+  }).join("");
+  const ru = (() => { const c = D.client.ru; return `<tr><td>${LNAME.ru[lang]}</td><td class="n">0</td><td class="note">n/d</td><td class="n">${pct(c.p, c.p + c.c)} · ${pct(c.c, c.p + c.c)}</td><td class="n">n/d</td></tr>`; })();
+  const legendN = `<div class="legend">${order.map(k => `<span style="--k:var(${cols[k]})">${t.natK[k]}</span>`).join("")}</div>`;
+  const flagRows = ["es", "fr", "en"].map(l => `<tr><td>${LNAME[l][lang]}</td><td class="n">${K.fl(l, "p")} %</td><td class="n">${K.fl(l, "a")} %</td><td class="n">${K.fl(l, "u")} %</td><td class="n">${K.fl(l, "i")} %</td></tr>`).join("");
+  return `<section id="tipo"><h2>${t.h_tipo}</h2><p class="intro">${t.i_tipo}</p>
+  <div class="card"><h3>${t.nature}</h3>${legendN}<div class="scroll"><table><thead><tr><th></th><th class="n">n</th><th>${t.nature}</th><th class="n">${t.client}</th><th class="n">${t.medLen} (${t.chars})</th></tr></thead><tbody>${rowsN}${ru}</tbody></table></div></div>
+  <div class="card"><h3>${t.flagsT}</h3><div class="scroll"><table><thead><tr><th></th><th class="n">${t.fP}</th><th class="n">${t.fA}</th><th class="n">${t.fU}</th><th class="n">${t.fI}</th></tr></thead><tbody>${flagRows}</tbody></table></div><p class="note">${lang === "fr" ? "Une demande peut cocher plusieurs cases. EN : seulement le formulaire d'immigration (33 messages)." : "Una solicitud puede marcar varias casillas. EN: solo el formulario de inmigración (33 mensajes)."}</p></div></section>`;
+}
+function sectionOrigen(t) {
+  const cards = ["es", "fr", "en", "ru"].map(l => {
+    const cs = D.country_split[l]; const items = D.country_by_lang[l].slice(0, 7).map(([k, n]) => [ctry(k), n, pct(n, cs.with_country)]);
+    return `<div class="card"><h3 style="color:var(--c-${l})">${LNAME[l][lang]}</h3>${bars(items, l)}<p class="note">${pct(cs.spain, cs.with_country)} ${t.inSpain} · ${pct(cs.other, cs.with_country)} ${t.outSpain} · ${fmt(cs.none)} ${t.unknown}</p></div>`;
+  }).join("");
+  const nat = ["fr", "es", "en"].map(l => {
+    const items = D.nat_by_lang[l].slice(0, 8).map(([k, n]) => [ctry(k), n]);
+    return `<div class="card"><h3 style="color:var(--c-${l})">${LNAME[l][lang]}</h3>${items.length ? bars(items, l) : ""}<p class="note">${fmt(D.nat_n[l])} / ${fmt(TEXT_N(l))} ${lang === "fr" ? "messages déclarent une nationalité" : "mensajes declaran nacionalidad"}</p></div>`;
+  }).join("");
+  const fam = D.fam_nat.slice(0, 8).map(([k, n]) => `<span class="chip">${esc(ctry(k))}<i>${n}</i></span>`).join("");
+  return `<section id="origen"><h2>${t.h_origen}</h2><p class="intro">${t.i_origen()}</p><h3>${t.ctryT}</h3><div class="grid">${cards}</div><p class="note">${t.cNote}</p><h3>${t.natT}</h3><div class="grid">${nat}</div><div class="card"><h3>${t.famNat}</h3><div class="chips">${fam}</div></div><p class="note">${t.traffic()}</p></section>`;
+}
+function sectionAreas(t) {
+  const AR = ["EXT", "FIS", "INM", "SUC", "MER", "LAB", "OTR"];
+  const cell = (obj, a) => { const tot = sum(Object.values(obj)); const v = obj[a] || 0; return `<td class="n">${fmt(v)} <span class="note">(${pc(v, tot)} %)</span></td>`; };
+  const rows = AR.map(a => `<tr><td>${a === "OTR" ? t.other : areaL(a)}</td>${cell(D.dropdown_area.es, a)}${cell(D.text_area.es, a)}${cell(D.dropdown_area.fr, a)}${cell(D.text_area.fr, a)}${cell(D.dropdown_area.en, a)}${cell(D.dropdown_area.ru, a)}</tr>`).join("");
+  return `<section id="areas"><h2>${t.h_areas}</h2><p class="intro">${t.i_areas()}</p><div class="card scroll"><table><thead><tr><th></th><th class="n">ES ${t.colDD}</th><th class="n">ES ${t.colTX}</th><th class="n">FR ${t.colDD}</th><th class="n">FR ${t.colTX}</th><th class="n">EN ${t.colDD}</th><th class="n">RU ${t.colDD}</th></tr></thead><tbody>${rows}</tbody></table></div><p class="note">${lang === "fr" ? "Sans texte analysé pour EN et RU : seule la liste déroulante est disponible. « Texte » classe chaque demande selon le sous-thème dominant du message." : "Sin texto analizado para EN y RU: solo se dispone del desplegable. «Texto» clasifica cada solicitud por el subtema dominante del mensaje."}</p></section>`;
+}
+function sectionIdiomas(t) {
+  const per = D.period_share;
+  const cards = ["es", "fr", "en", "ru"].map(l => {
+    const c = t.cards[l]; let body = `<h3 style="color:var(--c-${l})">${c.h}</h3><p>${c.p()}</p>`;
+    const tags = Object.entries(D.tag_langs).map(([k, v]) => [k, v[l] || 0]).filter(x => x[1] > 0 && !x[0].startsWith("x_") && !["ext_general", "fis_general", "inm_general"].includes(x[0])).sort((a, b) => b[1] - a[1]).slice(0, 8);
+    if (tags.length && l !== "ru") {
+      const nTxt = TEXT_N(l);
+      body += `<div><div class="eyebrow">${t.top} (n = ${fmt(nTxt)})</div>${bars(tags.map(([k, n]) => [tagL(k), n, pct(n, nTxt)]), l)}</div>`;
+    }
+    if (D.lift[l]) body += `<div><div class="eyebrow">${t.lift}</div><div class="chips">${D.lift[l].slice(0, 6).map(r => `<span class="chip">${esc(tagL(r[0]))}<i>×${r[4] >= 10 ? Math.round(r[4]) : r[4].toFixed(1).replace(".", lang === "fr" ? "," : ",")}</i></span>`).join("")}</div></div>`;
+    return `<div class="card">${body}</div>`;
+  }).join("");
+  const tops = Object.keys(per[D.periods[2]].tags).map(k => [k, Math.max(...D.periods.map(p => per[p].tags[k] || 0))]).sort((a, b) => b[1] - a[1]).slice(0, 12).map(x => x[0]);
+  const mx = Math.max(...tops.flatMap(k => D.periods.map(p => per[p].tags[k] || 0)));
+  const trows = tops.map(k => `<tr><td>${esc(tagL(k))}</td>${D.periods.map(p => `<td class="n">${(per[p].tags[k] || 0).toFixed(1).replace(".", ",")} %</td>`).join("")}<td><span class="spark">${D.periods.map(p => `<i style="height:${Math.max(2, 22 * (per[p].tags[k] || 0) / mx)}px"></i>`).join("")}</span></td></tr>`).join("");
+  return `<section id="idiomas"><h2>${t.h_idiomas}</h2><p class="intro">${t.i_idiomas}</p><div class="grid two">${cards}</div>
+   <div class="card"><h3>${t.pTitle}</h3><div class="scroll"><table><thead><tr><th></th>${D.periods.map(p => `<th class="n">${p.replace("..", " → ")}<br><span style="text-transform:none;letter-spacing:0">n = ${per[p].n}</span></th>`).join("")}<th></th></tr></thead><tbody>${trows}</tbody></table></div><p class="note">${t.pNote}</p></div></section>`;
+}
+function sectionArbol(t) {
+  const order = { SUC: ["SUC-0", "SUC-1", "SUC-2"], INM: ["INM-1"], LAB: ["LAB-1", "LAB-2", "LAB-3", "LAB-4"], MER: ["MER-1", "MER-2", "MER-3", "MER-4"], FIS: ["FIS-1", "FIS-2", "FIS-3"], EXT: ["EXT-1", "EXT-2", "EXT-3", "EXT-4"] };
+  const areaOrder = ["EXT", "FIS", "INM", "SUC", "MER", "LAB"];
+  let body = "";
+  areaOrder.forEach(a => {
+    const an = sum(order[a].map(k => (D.leaf_stats[k] || { n: 0 }).n));
+    body += `<tr class="area"><td colspan="5">${areaL(a)} <span class="note" style="font-weight:400"> · ${t.areaNotes[a]()}</span></td></tr>`;
+    order[a].forEach(k => {
+      const lf = D.leaves[k]; const st = D.leaf_stats[k] || { n: 0, primary: 0, langs: {}, subtopics: [] };
+      const prop = !lf.url;
+      const subs = st.subtopics.slice(0, 7).map(([c, n]) => `<span class="chip">${esc(tagL(c))}<i>${n}</i></span>`).join("");
+      body += `<tr class="${prop ? "prop" : ""}"><td>${esc(lf[lang])}<br><span class="tag ${prop ? "warn" : "good"}">${prop ? t.proposed : t.exists}</span></td><td class="n">${fmt(st.n)}</td><td class="n">${fmt(st.primary)}</td><td>${stackBar([[st.langs.es || 0, "--c-es"], [st.langs.en || 0, "--c-en"], [st.langs.fr || 0, "--c-fr"]])}<span class="note num">${st.langs.es || 0} · ${st.langs.en || 0} · ${st.langs.fr || 0}</span></td><td><div class="chips">${subs || '<span class="note">—</span>'}</div></td></tr>`;
+    });
+  });
+  return `<section id="arbol"><h2>${t.h_arbol}</h2><p class="intro">${t.i_arbol}</p><div class="card scroll"><table><thead><tr><th>${t.colLeaf}</th><th class="n">${t.colN}</th><th class="n">${t.colPrim}</th><th>${t.colLang}</th><th>${t.colSub}</th></tr></thead><tbody>${body}</tbody></table></div></section>`;
+}
+function sectionCombos(t) {
+  const rows = D.combos.slice(0, 15).map(([a, b, n]) => `<tr><td>${esc(tagL(a))} + ${esc(tagL(b))}</td><td class="n">${n}</td><td>${esc(t.pk[a + "|" + b] || "")}</td></tr>`).join("");
+  const IL = k => t.ints[k][0];
+  const prow = D.intents.pairs.slice(0, 8).map(([a, b, n]) => `<tr><td>${esc(IL(a))} + ${esc(IL(b))}</td><td class="n">${n}</td></tr>`).join("");
+  return `<section id="combos"><h2>${t.h_combos}</h2><p class="intro">${t.i_combos}</p><div class="grid two"><div class="card scroll"><table><thead><tr><th>${t.colPair}</th><th class="n">${t.colPairN}</th><th>${t.pkg}</th></tr></thead><tbody>${rows}</tbody></table></div><div class="card scroll"><h3>${t.intentPairs}</h3><table><thead><tr><th>${t.colPair}</th><th class="n">${t.colPairN}</th></tr></thead><tbody>${prow}</tbody></table></div></div></section>`;
+}
+function sectionForm(t) {
+  const steps = t.steps.map(s => `<div class="step"><span class="k">${s[0]}</span><h3>${s[1]}</h3><ul>${s[2].map(x => `<li>${x}</li>`).join("")}</ul></div>`).join("");
+  const keys = Object.keys(D.intents.stats).sort((a, b) => D.intents.stats[b].n - D.intents.stats[a].n);
+  const det = keys.map(k => {
+    const st = D.intents.stats[k]; const [name, qs] = t.ints[k];
+    const art = (D.suggest[k][lang] || []).map(a => `<a href="${a.url}" target="_blank" rel="noopener">${esc(a.title)}</a>`).join("") || `<span class="note">${t.noArt}</span>`;
+    return `<details><summary>${esc(name)} <span class="tag">${fmt(st.n)} ${t.colShare.toLowerCase()}</span> <span class="tag good">${pct(st.bc, st.bc_of)} ${t.info}</span></summary><div class="body"><div><div class="eyebrow">${t.ask}</div><ol>${qs.map(q => `<li>${esc(q)}</li>`).join("")}</ol></div><div class="sg"><div class="eyebrow">${t.art}</div>${art}</div></div></details>`;
+  }).join("");
+  return `<section id="form"><h2>${t.h_form}</h2><p class="intro">${t.i_form}</p><div class="flow">${steps}</div><h3>${t.routesT}</h3>${det}</section>`;
+}
+function sectionBlog(t) {
+  const cand = Object.keys(D.tag_langs).filter(k => !k.startsWith("x_") && !["ext_general", "fis_general", "inm_general"].includes(k)).map(k => {
+    const lg = D.tag_langs[k], ps = D.posts_by_tag[k]; const tot = (lg.es || 0) + (lg.fr || 0) + (lg.en || 0);
+    const gaps = ["es", "fr"].filter(l => (lg[l] || 0) >= 8 && ps[l] <= 1);
+    return { k, lg, ps, tot, gaps };
+  }).filter(r => r.tot >= 15).sort((a, b) => (b.gaps.length > 0) - (a.gaps.length > 0) || b.tot - a.tot).slice(0, 24);
+  const rows = cand.map(r => `<tr><td>${esc(tagL(r.k))}</td><td class="n">${r.lg.es || 0} · ${r.lg.fr || 0} · ${r.lg.en || 0}</td><td class="n">${r.ps.es} · ${r.ps.en} · ${r.ps.fr}</td><td>${r.gaps.length ? `<span class="tag warn">${t.gap} ${r.gaps.map(x => x.toUpperCase()).join(", ")}</span>` : `<span class="tag good">${t.ok}</span>`}</td></tr>`).join("");
+  const read = D.blog_read_top.filter(x => x[0] !== "/fr/blog").slice(0, 8).map(([p, n]) => [p.replace(/^\/(fr|en|ru)?\/?blog\//, ""), n]);
+  return `<section id="blog"><h2>${t.h_blog}</h2><p class="intro">${t.i_blog()}</p><div class="grid two"><div class="card scroll"><table><thead><tr><th>${t.colSubB}</th><th class="n">${t.colLeads}</th><th class="n">${t.colPosts}</th><th></th></tr></thead><tbody>${rows}</tbody></table><p class="note">${t.gapN} ${t.enNote}</p></div><div class="card"><h3>${t.readT}</h3>${bars(read, "fr")}</div></div></section>`;
+}
+function sectionRecs(t) {
+  return `<section id="recom"><h2>${t.h_recom}</h2><ol class="recs">${t.recs.map(r => `<li><strong>${r[0]}</strong><span>${r[1]}</span></li>`).join("")}</ol></section>`;
+}
+function sectionMetodo(t) {
+  return `<section id="metodo"><h2>${t.h_metodo}</h2><div class="card"><ul style="margin:0;padding-left:18px;display:grid;gap:6px">${t.metodo().map(x => `<li>${x}</li>`).join("")}</ul></div><div class="card files"><h3>${t.files}</h3><ul style="margin:0;padding-left:18px;display:grid;gap:4px">${t.filesList.map(f => `<li><code>${f[0]}</code> ${f[1]}</li>`).join("")}</ul></div><p class="note">${t.foot}</p></section>`;
+}
+function render() {
+  const t = X[lang]; document.documentElement.lang = lang;
+  document.getElementById("toc").innerHTML = t.toc.map(x => `<a href="#${x[0]}">${x[1]}</a>`).join("");
+  const kp = [fmt(D.meta.total), fmt(D.meta.coverage.text_analysed), K.multiPct + (lang === "fr" ? " %" : " %"), Math.round(100 * sum(["es", "fr"].map(l => D.blog_candidate[l].n)) / sum(["es", "fr"].map(l => D.blog_candidate[l].of))) + (lang === "fr" ? " %" : " %"), K.blog + (lang === "fr" ? " %" : " %")];
+  const fs = t.find().map(f => `<li><strong>${f[0]}</strong><span>${f[1]}</span></li>`).join("");
+  document.getElementById("app").innerHTML = (`<div class="hero"><span class="eyebrow">${t.eyebrow}</span><h1>${t.title}</h1><p class="lead">${t.lead()}</p><div class="kpis">${t.kpi.map((k, i) => `<div class="kpi"><b>${kp[i]}</b><span>${k[0]}</span></div>`).join("")}</div></div>
+   <section id="esencial"><h2>${t.h_esencial}</h2><ul class="find">${fs}</ul></section>${sectionVolume(t)}${sectionTipo(t)}${sectionOrigen(t)}${sectionAreas(t)}${sectionIdiomas(t)}${sectionArbol(t)}${sectionCombos(t)}${sectionForm(t)}${sectionBlog(t)}${sectionRecs(t)}${sectionMetodo(t)}`).replace(/\{MULTI\}/g, K.multiPct).replace(/\{NAT\}/g, K.natPct);
+  document.getElementById("b-es").setAttribute("aria-pressed", lang === "es"); document.getElementById("b-fr").setAttribute("aria-pressed", lang === "fr");
+  document.title = lang === "fr" ? "Cartographie des demandes" : "Mapa de solicitudes";
+}
+function setLang(l) { lang = l; try { localStorage.setItem("dl-leads-lang", l); } catch (e) { } render(); }
+document.getElementById("b-es").onclick = () => setLang("es");
+document.getElementById("b-fr").onclick = () => setLang("fr");
+(function init() {
+  let l = "es";
+  try { const s = localStorage.getItem("dl-leads-lang"); if (s === "fr" || s === "es") l = s; } catch (e) { }
+  if (location.hash === "#fr" || location.hash === "#es") l = location.hash.slice(1);
+  lang = l; render();
+})();
+</script>
