@@ -1,8 +1,6 @@
 # 8402 (FR) Verifactu delay and e-invoicing order update, 2026-10-07
 
-Status: **STAGED, NOT WRITTEN.** WPVibe returned Cloudflare 521 for every call to delaguialuzon.com from 2026-10-07 14:36 UTC
-(and AISA could not connect on port 443), while the site answers normally from Mike's machine (DNS 31.170.100.185, no Cloudflare
-headers). Nothing was changed on the site.
+Status: **APPLIED 2026-10-08** (content/edit, see `data/changelog/8402.csv`). Facts re-checked on 2026-10-08: no new BOE instrument on 7 or 8 Oct.
 
 - Facts: `data/staging/verifactu-update-2026-10.md` (verified 2026-10-07). Rows: `data/factcheck/8402.csv`.
 - Target: post_content (edit mode EMPTY, renders from post_content)

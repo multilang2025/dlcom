@@ -237,15 +237,10 @@ Details and cannibalisation notes: `data/content-ideas-2026-10.md`. Upgrades fir
       stay, refusals and appeals in FR; padrón and family reunification in ES and FR);
       (4) ask the form owner for structured country-of-residence and nationality fields (today both are inferred);
       (5) 16 enquiries came from ChatGPT links and 27 from Google Ads: confirm the tracking is intentional before relying on it.
-- [ ] **Verifactu update staged, NOT applied** (facts and exact old-to-new edits in `data/staging/verifactu-update-2026-10.md`
-      and `data/staging/{8402,28307,8407,8175,15895}-verifactu.json`). Finding: on 5 Oct 2026 Hacienda's press note
-      announced postponing the pending RD 1007/2023 obligations to October 2028 (alignment with e-invoicing for businesses
-      up to 8 M€), but **no legal text is published yet**: the dates in force on 7 Oct are still 1 Jan 2027 (corporate tax
-      filers) and 1 Jul 2027 (others). E-invoicing: Orden HAC/1028/2026 (BOE 5 Oct, in force 6 Oct 2026) starts the RD 238/2026
-      clocks: 12 months (turnover above 8 M€) and 24 months (others), so about Oct 2027 and Oct 2028 (computed). Apply when
-      the connectors work: FR 8402 (post_content; WPML trap with RU 8407, ES 7717, EN 8398), FR 15895, RU 8407, RU 8175, ES
-      28307. ES 28307 (created 2026-10-06 by user 29) was built around 2026/2027 dates: Elena to review its other
-      problems (Excel claim, fines per ejercicio, unsourced 10 000 € fine, Facturae 3.2.2 vs UBL, tú/usted mix).
+- [x] **Verifactu update APPLIED 2026-10-08** (Mike: go): FR 8402 and 15895, RU 8407 and 8175, ES 28307 are live with the dated announcement
+      (Hacienda note of 5 Oct 2026, report to October 2028, legal text not published; legal dates still 1 Jan / 1 Jul 2027) and the e-invoicing
+      order in force 6 Oct 2026 (Oct 2027 / Oct 2028, computed). Facts and edits: `data/staging/verifactu-update-2026-10.md`, `*-verifactu.json`,
+      changelogs. Still for Elena on ES 28307: Excel statement, unsourced 10 000 EUR B2B fine, Facturae 3.2.2 vs UBL, tu/usted mix.
 - [ ] **Verifactu re-checks**: from 2026-10-08 and weekly (after the Consejo de Ministros) for the instrument that carries the
       2028 date (Cortes dissolved: a decree-law would go through the Diputación Permanente); then change "announced" to the
       legal wording in FR 8402, 15895, RU 8407, 8175, ES 28307. 6 Oct 2027 and 6 Oct 2028: confirm e-invoicing start dates.
