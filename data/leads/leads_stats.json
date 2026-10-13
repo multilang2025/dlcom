@@ -167,12 +167,12 @@
  "primary_area_text": {
   "es": {
    "INM": 46,
-   "SUC": 24,
-   "FIS": 48,
+   "SUC": 19,
+   "FIS": 50,
    "LAB": 26,
-   "EXT": 78,
+   "EXT": 80,
    "MER": 18,
-   "OTR": 4
+   "OTR": 5
   },
   "en": {
    "EXT": 27,
@@ -194,7 +194,7 @@
   [
    "EXT",
    "EXT",
-   134
+   136
   ],
   [
    "FIS",
@@ -277,11 +277,6 @@
    9
   ],
   [
-   "EXT",
-   "SUC",
-   8
-  ],
-  [
    "FIS",
    "SUC",
    7
@@ -308,6 +303,11 @@
   ],
   [
    "INM",
+   "SUC",
+   5
+  ],
+  [
+   "EXT",
    "SUC",
    5
   ],
@@ -358,6 +358,11 @@
   ],
   [
    "FIS",
+   "OTR",
+   1
+  ],
+  [
+   "EXT",
    "OTR",
    1
   ],
@@ -402,14 +407,14 @@
  "leaf_by_lang": {
   "es": {
    "INM-1": 46,
-   "SUC-0": 20,
-   "FIS-2": 31,
+   "SUC-0": 15,
+   "FIS-2": 32,
    "LAB-1": 26,
-   "EXT-4": 65,
+   "EXT-4": 67,
    "MER-1": 14,
    "EXT-2": 9,
-   "OTR-0": 3,
-   "FIS-1": 12,
+   "OTR-0": 4,
+   "FIS-1": 13,
    "FIS-3": 5,
    "SUC-2": 2,
    "n/d": 2,
@@ -450,16 +455,16 @@
  "leaf_by_lang_all_mentions": {
   "es": {
    "INM-1": 68,
-   "EXT-4": 93,
-   "SUC-0": 29,
-   "FIS-2": 63,
+   "EXT-4": 94,
+   "SUC-0": 24,
+   "FIS-2": 58,
    "EXT-1": 19,
    "LAB-1": 29,
    "MER-1": 27,
    "SUC-2": 9,
    "EXT-2": 16,
    "FIS-3": 15,
-   "OTR-0": 3,
+   "OTR-0": 4,
    "FIS-1": 25,
    "EXT-3": 5,
    "LAB-4": 3,
@@ -485,7 +490,7 @@
    "FIS-2": 98,
    "EXT-2": 26,
    "MER-1": 67,
-   "SUC-0": 43,
+   "SUC-0": 40,
    "FIS-1": 35,
    "FIS-3": 25,
    "MER-3": 4,
@@ -504,18 +509,18 @@
  "tag_by_lang": {
   "es": {
    "inm_general": 3,
-   "ext_general": 12,
-   "suc_herencia": 29,
+   "ext_general": 13,
    "inm_registro": 28,
+   "suc_herencia": 24,
    "ext_denegacion": 14,
    "inm_turistico": 5,
-   "fis_plusvalia": 4,
    "fis_beckham": 6,
    "ext_instalacion": 7,
+   "fis_plusvalia": 4,
    "lab_contrato": 17,
    "lab_despido": 9,
-   "ext_nie_tie": 16,
    "ext_emprendedor": 3,
+   "ext_nie_tie": 16,
    "fis_cripto": 3,
    "mer_creacion": 19,
    "ext_nacionalidad": 11,
@@ -525,22 +530,22 @@
    "fis_patrimonio_720": 5,
    "inm_compra": 21,
    "ext_asilo": 3,
-   "suc_familia": 9,
    "ext_trabajo": 4,
-   "ext_jubilacion": 16,
+   "suc_familia": 9,
    "ext_renovacion_larga": 9,
-   "fis_iva_conta": 26,
+   "ext_jubilacion": 16,
+   "fis_iva_conta": 20,
    "fis_sucesiones_impuesto": 11,
    "ext_arraigo": 5,
    "x_empleo": 2,
-   "inm_alquiler": 12,
    "fis_irpf": 12,
+   "inm_alquiler": 12,
    "fis_inspeccion": 12,
    "inm_venta": 10,
    "fis_general": 9,
    "ext_reagrupacion": 11,
-   "lab_salario": 10,
    "inm_conflicto_arrend": 4,
+   "lab_salario": 10,
    "fis_convenio_doble": 25,
    "x_cliente_actual": 1,
    "inm_hipoteca": 4,
@@ -557,6 +562,7 @@
    "inm_obras": 4,
    "lab_accidente_baja": 7,
    "lab_compliance": 4,
+   "x_comercial": 1,
    "mer_franquicia": 3,
    "mer_pi_rgpd": 5,
    "ext_homologacion": 2,
@@ -572,30 +578,30 @@
    "ext_inversor": 1
   },
   "en": {
-   "ext_nomada": 6,
    "ext_reagrupacion": 10,
-   "fis_convenio_doble": 2,
+   "ext_nomada": 6,
    "fis_irpf": 3,
+   "fis_convenio_doble": 2,
    "ext_estudios": 4,
    "ext_trabajo": 6,
    "ext_nacionalidad": 2,
    "ext_denegacion": 1,
-   "ext_asilo": 3,
    "mer_creacion": 4,
+   "ext_asilo": 3,
    "ext_emprendedor": 4,
    "ext_regularizacion": 2,
    "ext_renovacion_larga": 2,
-   "ext_no_lucrativa": 3,
-   "ext_nie_tie": 3,
    "ext_empadronamiento": 4,
+   "ext_no_lucrativa": 3,
    "ext_instalacion": 4,
+   "ext_nie_tie": 3,
    "ext_irregularidad": 3,
    "fis_beckham": 4,
    "ext_seguro_salud": 1,
    "ext_general": 2,
    "ext_visado": 4,
-   "mer_autonomo": 1,
    "fis_patrimonio_720": 2,
+   "mer_autonomo": 1,
    "fis_planificacion": 1,
    "fis_general": 1,
    "ext_sanidad_ss": 1,
@@ -603,35 +609,35 @@
    "ext_jubilacion": 1
   },
   "fr": {
+   "inm_compra": 63,
    "ext_denegacion": 22,
    "fis_iva_conta": 24,
-   "inm_compra": 63,
    "ext_jubilacion": 22,
    "mer_creacion": 55,
-   "inm_turistico": 6,
-   "inm_comunidad": 7,
-   "inm_obras": 12,
    "inm_alquiler": 20,
+   "inm_turistico": 6,
+   "inm_obras": 12,
+   "inm_comunidad": 7,
    "ext_nomada": 16,
-   "suc_herencia": 43,
+   "suc_herencia": 40,
    "ext_nie_tie": 58,
    "fis_convenio_doble": 35,
    "ext_emprendedor": 20,
-   "fis_planificacion": 14,
    "mer_concurso": 4,
+   "fis_planificacion": 14,
    "ext_instalacion": 30,
    "fis_plusvalia": 4,
    "inm_venta": 5,
    "suc_litigio": 9,
-   "ext_banca": 10,
    "suc_penal": 3,
+   "ext_banca": 10,
    "ext_visado": 22,
    "ext_nacionalidad": 18,
    "suc_familia": 11,
    "ext_empadronamiento": 10,
    "fis_beckham": 11,
-   "fis_irpf": 30,
    "ext_irregularidad": 29,
+   "fis_irpf": 30,
    "lab_contrato": 13,
    "fis_sucesiones_impuesto": 11,
    "ext_trabajo": 7,
@@ -672,7 +678,7 @@
  "tag_primary_by_lang": {
   "es": {
    "inm_general": 3,
-   "suc_herencia": 20,
+   "suc_herencia": 15,
    "inm_turistico": 2,
    "inm_registro": 5,
    "fis_beckham": 2,
@@ -680,11 +686,11 @@
    "ext_nie_tie": 10,
    "fis_cripto": 1,
    "ext_nacionalidad": 4,
-   "ext_general": 11,
+   "ext_general": 12,
    "ext_estudios": 4,
    "fis_no_residente": 4,
    "mer_creacion": 9,
-   "fis_patrimonio_720": 2,
+   "fis_patrimonio_720": 3,
    "inm_compra": 13,
    "ext_asilo": 3,
    "ext_jubilacion": 9,
@@ -696,7 +702,7 @@
    "ext_reagrupacion": 6,
    "inm_alquiler": 10,
    "lab_salario": 5,
-   "fis_convenio_doble": 12,
+   "fis_convenio_doble": 13,
    "x_cliente_actual": 1,
    "inm_hipoteca": 2,
    "ext_nomada": 7,
@@ -711,8 +717,10 @@
    "inm_comunidad": 3,
    "lab_accidente_baja": 3,
    "lab_despido": 4,
+   "x_comercial": 1,
    "mer_franquicia": 3,
    "ext_homologacion": 1,
+   "ext_trabajo": 3,
    "fis_inspeccion": 3,
    "ext_denegacion": 3,
    "ext_banca": 1,
@@ -720,7 +728,6 @@
    "fis_planificacion": 1,
    "lab_acoso": 1,
    "ext_no_lucrativa": 1,
-   "ext_trabajo": 2,
    "ext_empadronamiento": 2,
    "ext_regularizacion": 1,
    "fis_plusvalia": 1,
@@ -809,18 +816,18 @@
  },
  "tag_overall": {
   "inm_general": 5,
-  "ext_general": 24,
-  "suc_herencia": 72,
+  "ext_general": 25,
   "inm_registro": 36,
+  "suc_herencia": 64,
   "ext_denegacion": 37,
   "inm_turistico": 11,
-  "fis_plusvalia": 8,
   "fis_beckham": 21,
   "ext_instalacion": 41,
+  "fis_plusvalia": 8,
   "lab_contrato": 30,
   "lab_despido": 12,
-  "ext_nie_tie": 77,
   "ext_emprendedor": 27,
+  "ext_nie_tie": 77,
   "fis_cripto": 4,
   "mer_creacion": 78,
   "ext_nacionalidad": 31,
@@ -830,22 +837,22 @@
   "fis_patrimonio_720": 11,
   "inm_compra": 84,
   "ext_asilo": 10,
-  "suc_familia": 20,
   "ext_trabajo": 17,
-  "ext_jubilacion": 39,
+  "suc_familia": 20,
   "ext_renovacion_larga": 12,
-  "fis_iva_conta": 50,
+  "ext_jubilacion": 39,
+  "fis_iva_conta": 44,
   "fis_sucesiones_impuesto": 22,
   "ext_arraigo": 7,
   "x_empleo": 5,
-  "inm_alquiler": 32,
   "fis_irpf": 45,
+  "inm_alquiler": 32,
   "fis_inspeccion": 17,
   "inm_venta": 15,
   "fis_general": 31,
   "ext_reagrupacion": 30,
-  "lab_salario": 13,
   "inm_conflicto_arrend": 6,
+  "lab_salario": 13,
   "fis_convenio_doble": 62,
   "x_cliente_actual": 2,
   "inm_hipoteca": 4,
@@ -862,6 +869,7 @@
   "inm_obras": 16,
   "lab_accidente_baja": 7,
   "lab_compliance": 4,
+  "x_comercial": 2,
   "mer_franquicia": 3,
   "mer_pi_rgpd": 6,
   "ext_homologacion": 3,
@@ -873,16 +881,15 @@
   "mer_contratos": 3,
   "suc_penal": 5,
   "ext_no_lucrativa": 8,
-  "x_comercial": 1,
   "ext_seguro_salud": 6,
   "ext_regularizacion": 7,
   "ext_inversor": 1
  },
  "multi_topic": {
   "es": {
-   "n": 90,
+   "n": 89,
    "of": 244,
-   "multi_area": 95
+   "multi_area": 93
   },
   "en": {
    "n": 14,
@@ -890,9 +897,9 @@
    "multi_area": 9
   },
   "fr": {
-   "n": 166,
+   "n": 164,
    "of": 464,
-   "multi_area": 152
+   "multi_area": 151
   },
   "ru": {
    "n": 0,
@@ -914,7 +921,7 @@
   [
    "fis_iva_conta",
    "mer_creacion",
-   14
+   13
   ],
   [
    "ext_nie_tie",
@@ -937,11 +944,6 @@
    12
   ],
   [
-   "fis_convenio_doble",
-   "fis_iva_conta",
-   11
-  ],
-  [
    "ext_nie_tie",
    "fis_iva_conta",
    11
@@ -954,6 +956,11 @@
   [
    "fis_iva_conta",
    "mer_autonomo",
+   10
+  ],
+  [
+   "fis_convenio_doble",
+   "fis_iva_conta",
    10
   ],
   [
@@ -972,11 +979,6 @@
    9
   ],
   [
-   "fis_convenio_doble",
-   "suc_herencia",
-   9
-  ],
-  [
    "mer_autonomo",
    "mer_creacion",
    9
@@ -984,6 +986,11 @@
   [
    "ext_estudios",
    "ext_visado",
+   8
+  ],
+  [
+   "fis_convenio_doble",
+   "suc_herencia",
    8
   ],
   [
@@ -1035,18 +1042,8 @@
     7
    ],
    [
-    "fis_iva_conta",
-    "lab_salario",
-    7
-   ],
-   [
     "lab_contrato",
     "lab_despido",
-    5
-   ],
-   [
-    "fis_iva_conta",
-    "mer_creacion",
     5
    ],
    [
@@ -1060,24 +1057,34 @@
     5
    ],
    [
-    "fis_iva_conta",
-    "lab_contrato",
-    5
-   ],
-   [
     "ext_jubilacion",
     "fis_convenio_doble",
-    5
-   ],
-   [
-    "fis_iva_conta",
-    "suc_litigio",
     5
    ],
    [
     "fis_inspeccion",
     "fis_iva_conta",
     5
+   ],
+   [
+    "lab_despido",
+    "suc_litigio",
+    5
+   ],
+   [
+    "inm_compra",
+    "inm_registro",
+    5
+   ],
+   [
+    "lab_contrato",
+    "lab_salario",
+    5
+   ],
+   [
+    "ext_nacionalidad",
+    "suc_familia",
+    4
    ]
   ],
   "en": [
@@ -2155,10 +2162,10 @@
    "cita": 38,
    "informacion": 32,
    "otro": 64,
-   "presupuesto": 50,
+   "presupuesto": 49,
    "caso_detallado": 10,
    "urgente": 47,
-   "ajeno": 2,
+   "ajeno": 3,
    "cliente_actual": 1
   },
   "en": {
@@ -2213,7 +2220,7 @@
  "blog_candidate_by_lang": {
   "es": {
    "n": 65,
-   "of": 239
+   "of": 238
   },
   "en": {
    "n": 6,
@@ -2234,12 +2241,12 @@
    120
   ],
   "SUC-0": [
-   17,
-   49
+   16,
+   44
   ],
   "FIS-2": [
    38,
-   98
+   99
   ],
   "LAB-1": [
    11,
@@ -2247,7 +2254,7 @@
   ],
   "EXT-4": [
    73,
-   207
+   209
   ],
   "MER-1": [
    22,
@@ -2258,8 +2265,8 @@
    19
   ],
   "FIS-1": [
-   6,
-   28
+   7,
+   29
   ],
   "FIS-3": [
    6,
@@ -2308,8 +2315,8 @@
    4
   ],
   "suc_herencia": [
-   17,
-   49
+   16,
+   44
   ],
   "inm_turistico": [
    2,
@@ -2341,7 +2348,7 @@
   ],
   "ext_general": [
    12,
-   20
+   21
   ],
   "ext_estudios": [
    4,
@@ -2357,7 +2364,7 @@
   ],
   "fis_patrimonio_720": [
    2,
-   4
+   5
   ],
   "inm_compra": [
    17,
@@ -2400,8 +2407,8 @@
    7
   ],
   "fis_convenio_doble": [
-   6,
-   28
+   7,
+   29
   ],
   "inm_hipoteca": [
    1,
@@ -2463,6 +2470,10 @@
    0,
    2
   ],
+  "ext_trabajo": [
+   3,
+   9
+  ],
   "fis_inspeccion": [
    0,
    4
@@ -2502,10 +2513,6 @@
   "ext_no_lucrativa": [
    1,
    5
-  ],
-  "ext_trabajo": [
-   3,
-   8
   ],
   "mer_inversion_ext": [
    0,
@@ -2575,25 +2582,26 @@
   "es": {
    "2024-10..2025-09": {
     "INM": 17,
-    "SUC": 8,
+    "SUC": 7,
     "FIS": 14,
     "LAB": 5,
-    "EXT": 28,
+    "EXT": 29,
     "MER": 5,
     "OTR": 4
    },
    "2025-10..2026-03": {
     "INM": 11,
     "LAB": 7,
-    "SUC": 8,
+    "OTR": 1,
     "MER": 8,
-    "EXT": 18,
+    "EXT": 19,
+    "SUC": 6,
     "FIS": 13
    },
    "2026-04..2026-10": {
-    "SUC": 8,
+    "SUC": 6,
     "EXT": 32,
-    "FIS": 21,
+    "FIS": 23,
     "INM": 18,
     "LAB": 14,
     "MER": 5
@@ -2684,18 +2692,18 @@
  "tag_by_period": {
   "2024-10..2025-09": {
    "inm_general": 3,
-   "ext_general": 8,
-   "suc_herencia": 26,
+   "ext_general": 9,
    "inm_registro": 13,
+   "suc_herencia": 24,
    "ext_denegacion": 16,
    "inm_turistico": 8,
-   "fis_plusvalia": 3,
    "fis_beckham": 10,
    "ext_instalacion": 20,
+   "fis_plusvalia": 3,
    "lab_contrato": 10,
    "lab_despido": 3,
-   "ext_nie_tie": 42,
    "ext_emprendedor": 10,
+   "ext_nie_tie": 42,
    "fis_cripto": 1,
    "mer_creacion": 33,
    "ext_nacionalidad": 18,
@@ -2705,22 +2713,22 @@
    "fis_patrimonio_720": 2,
    "inm_compra": 46,
    "ext_asilo": 3,
-   "suc_familia": 15,
    "ext_trabajo": 4,
-   "ext_jubilacion": 17,
+   "suc_familia": 15,
    "ext_renovacion_larga": 7,
+   "ext_jubilacion": 17,
    "fis_iva_conta": 16,
    "fis_sucesiones_impuesto": 10,
    "ext_arraigo": 4,
    "x_empleo": 3,
-   "inm_alquiler": 15,
    "fis_irpf": 18,
+   "inm_alquiler": 15,
    "fis_inspeccion": 3,
    "inm_venta": 3,
    "fis_general": 14,
    "ext_reagrupacion": 11,
-   "lab_salario": 1,
    "inm_conflicto_arrend": 1,
+   "lab_salario": 1,
    "fis_convenio_doble": 22,
    "x_cliente_actual": 1,
    "inm_hipoteca": 1,
@@ -2747,13 +2755,13 @@
    "ext_homologacion": 1
   },
   "2025-10..2026-03": {
-   "inm_alquiler": 8,
    "ext_empadronamiento": 6,
+   "inm_alquiler": 8,
    "inm_turistico": 2,
-   "lab_contrato": 7,
    "lab_compliance": 1,
    "lab_despido": 4,
-   "suc_herencia": 23,
+   "lab_contrato": 7,
+   "x_comercial": 2,
    "mer_franquicia": 2,
    "mer_pi_rgpd": 4,
    "suc_litigio": 7,
@@ -2766,34 +2774,34 @@
    "ext_homologacion": 2,
    "fis_patrimonio_720": 5,
    "mer_creacion": 17,
+   "suc_herencia": 20,
    "inm_compra": 17,
    "ext_trabajo": 4,
    "ext_emprendedor": 7,
    "fis_convenio_doble": 10,
+   "inm_registro": 7,
    "fis_irpf": 12,
    "fis_sucesiones_impuesto": 4,
-   "inm_registro": 7,
-   "inm_comunidad": 3,
    "ext_denegacion": 8,
    "inm_obras": 3,
+   "inm_comunidad": 3,
    "ext_nie_tie": 13,
    "ext_nacionalidad": 8,
    "ext_estudios": 2,
    "fis_iva_conta": 13,
    "fis_inspeccion": 8,
    "mer_concurso": 2,
-   "ext_asilo": 4,
    "ext_sanidad_ss": 3,
+   "ext_asilo": 4,
    "fis_general": 7,
    "ext_banca": 2,
    "fis_no_residente": 5,
    "mer_autonomo": 5,
    "fis_planificacion": 4,
-   "fis_beckham": 2,
    "fis_plusvalia": 2,
    "inm_venta": 5,
+   "fis_beckham": 2,
    "ext_irregularidad": 9,
-   "x_comercial": 1,
    "ext_instalacion": 7,
    "ext_seguro_salud": 4,
    "suc_penal": 2,
@@ -2812,34 +2820,34 @@
   },
   "2026-04..2026-10": {
    "inm_venta": 7,
-   "suc_herencia": 23,
+   "suc_herencia": 20,
    "ext_general": 13,
-   "fis_convenio_doble": 30,
    "fis_no_residente": 5,
    "mer_creacion": 28,
+   "fis_convenio_doble": 30,
    "fis_sucesiones_impuesto": 8,
    "inm_alquiler": 9,
    "fis_inspeccion": 6,
-   "ext_banca": 8,
-   "inm_registro": 16,
-   "fis_iva_conta": 21,
    "inm_hipoteca": 3,
+   "inm_registro": 16,
+   "ext_banca": 8,
    "fis_cripto": 2,
-   "fis_planificacion": 7,
    "inm_compra": 21,
+   "fis_iva_conta": 15,
+   "fis_planificacion": 7,
    "suc_litigio": 8,
    "fis_general": 10,
    "ext_renovacion_larga": 5,
    "ext_jubilacion": 12,
    "fis_irpf": 15,
    "lab_salario": 11,
+   "lab_empresa": 5,
    "fis_beckham": 9,
    "ext_nacionalidad": 5,
-   "lab_empresa": 5,
-   "mer_pi_rgpd": 2,
    "ext_emprendedor": 10,
-   "lab_despido": 5,
+   "mer_pi_rgpd": 2,
    "lab_accidente_baja": 4,
+   "lab_despido": 5,
    "lab_acoso": 3,
    "lab_contrato": 13,
    "inm_conflicto_arrend": 3,
@@ -2854,9 +2862,9 @@
    "mer_contratos": 1,
    "ext_visado": 18,
    "mer_franquicia": 1,
+   "mer_autonomo": 12,
    "ext_nie_tie": 22,
    "ext_empadronamiento": 10,
-   "mer_autonomo": 12,
    "ext_instalacion": 14,
    "mer_concurso": 3,
    "ext_trabajo": 9,
@@ -2870,8 +2878,8 @@
    "ext_no_lucrativa": 5,
    "lab_compliance": 3,
    "ext_arraigo": 2,
-   "suc_familia": 1,
    "ext_reagrupacion": 10,
+   "suc_familia": 1,
    "suc_penal": 2,
    "ext_inversor": 1,
    "ext_asilo": 3,
@@ -3076,19 +3084,19 @@
    1
   ],
   [
-   "/blog/feed",
-   1
-  ],
-  [
    "/blog/rss.xml",
    1
   ],
   [
-   "/blog/rss",
+   "/blog/feed.xml",
    1
   ],
   [
-   "/blog/feed.xml",
+   "/blog/feed",
+   1
+  ],
+  [
+   "/blog/rss",
    1
   ],
   [
@@ -3141,11 +3149,11 @@
     1
    ],
    [
-    "/blog/feed",
+    "/blog/rss.xml",
     1
    ],
    [
-    "/blog/rss.xml",
+    "/blog/feed.xml",
     1
    ]
   ],
@@ -3199,19 +3207,19 @@
   ],
   "inm_hipoteca": [
    [
-    "/blog/feed",
-    1
-   ],
-   [
     "/blog/rss.xml",
     1
    ],
    [
-    "/blog/rss",
+    "/blog/feed.xml",
     1
    ],
    [
-    "/blog/feed.xml",
+    "/blog/feed",
+    1
+   ],
+   [
+    "/blog/rss",
     1
    ]
   ],
@@ -3479,11 +3487,11 @@
   ],
   "inm_registro": [
    [
-    "/fr/blog/assurance-sante-privee-espagne-expatries",
+    "/fr/blog/cotisations-autonomos-2026-baremes-reta",
     1
    ],
    [
-    "/fr/blog/cotisations-autonomos-2026-baremes-reta",
+    "/fr/blog/assurance-sante-privee-espagne-expatries",
     1
    ]
   ],
@@ -3495,15 +3503,15 @@
   ],
   "fis_cripto": [
    [
+    "/blog/inspeccion-fiscal-en-espana",
+    1
+   ],
+   [
     "/blog/recordatorio-modelo-720",
     1
    ],
    [
     "/blog/herencias-en-espana",
-    1
-   ],
-   [
-    "/blog/inspeccion-fiscal-en-espana",
     1
    ]
   ],
@@ -3736,7 +3744,7 @@
   [
    "none",
    "FIS",
-   78
+   79
   ],
   [
    "none",
@@ -3755,13 +3763,13 @@
   ],
   [
    "none",
-   "SUC",
+   "OTR",
    30
   ],
   [
    "none",
-   "OTR",
-   30
+   "SUC",
+   29
   ],
   [
    "INM",
@@ -3791,7 +3799,7 @@
   [
    "FIS",
    "EXT",
-   7
+   8
   ],
   [
    "MER",
@@ -3815,27 +3823,22 @@
   ],
   [
    "INM",
-   "MER",
-   4
-  ],
-  [
    "FIS",
-   "MER",
-   4
+   5
   ],
   [
    "INM",
+   "MER",
+   4
+  ],
+  [
    "FIS",
+   "MER",
    4
   ],
   [
    "EXT",
    "OTR",
-   4
-  ],
-  [
-   "INM",
-   "SUC",
    4
   ],
   [
@@ -3856,6 +3859,11 @@
   [
    "MER",
    "INM",
+   3
+  ],
+  [
+   "INM",
+   "SUC",
    3
   ],
   [
@@ -4389,253 +4397,253 @@
   }
  },
  "countries": {
-  "AM": {
-   "es": "Armenia",
-   "fr": "Arménie"
-  },
-  "EC": {
-   "es": "Ecuador",
-   "fr": "Équateur"
-  },
-  "BE": {
-   "es": "Bélgica",
-   "fr": "Belgique"
-  },
   "EE": {
    "es": "Estonia",
    "fr": "Estonie"
-  },
-  "ML": {
-   "es": "Mali",
-   "fr": "Mali"
-  },
-  "DE": {
-   "es": "Alemania",
-   "fr": "Allemagne"
-  },
-  "IR": {
-   "es": "Irán",
-   "fr": "Iran"
-  },
-  "FR": {
-   "es": "Francia",
-   "fr": "France"
-  },
-  "US": {
-   "es": "Estados Unidos",
-   "fr": "États-Unis"
-  },
-  "IL": {
-   "es": "Israel",
-   "fr": "Israël"
-  },
-  "TN": {
-   "es": "Túnez",
-   "fr": "Tunisie"
-  },
-  "VE": {
-   "es": "Venezuela",
-   "fr": "Venezuela"
-  },
-  "RS": {
-   "es": "Serbia",
-   "fr": "Serbie"
-  },
-  "AR": {
-   "es": "Argentina",
-   "fr": "Argentine"
-  },
-  "PE": {
-   "es": "Perú",
-   "fr": "Pérou"
-  },
-  "PS": {
-   "es": "Palestina",
-   "fr": "Palestine"
-  },
-  "CL": {
-   "es": "Chile",
-   "fr": "Chili"
-  },
-  "GB": {
-   "es": "Reino Unido",
-   "fr": "Royaume-Uni"
-  },
-  "PL": {
-   "es": "Polonia",
-   "fr": "Pologne"
-  },
-  "BR": {
-   "es": "Brasil",
-   "fr": "Brésil"
-  },
-  "LU": {
-   "es": "Luxemburgo",
-   "fr": "Luxembourg"
-  },
-  "IE": {
-   "es": "Irlanda",
-   "fr": "Irlande"
-  },
-  "ES": {
-   "es": "España",
-   "fr": "Espagne"
-  },
-  "UA": {
-   "es": "Ucrania",
-   "fr": "Ukraine"
-  },
-  "EG": {
-   "es": "Egipto",
-   "fr": "Égypte"
-  },
-  "CZ": {
-   "es": "Rep. Checa",
-   "fr": "Rép. tchèque"
-  },
-  "RU": {
-   "es": "Rusia",
-   "fr": "Russie"
-  },
-  "PH": {
-   "es": "Filipinas",
-   "fr": "Philippines"
-  },
-  "GE": {
-   "es": "Georgia",
-   "fr": "Géorgie"
-  },
-  "NZ": {
-   "es": "Nueva Zelanda",
-   "fr": "Nouvelle-Zélande"
-  },
-  "SN": {
-   "es": "Senegal",
-   "fr": "Sénégal"
-  },
-  "BY": {
-   "es": "Bielorrusia",
-   "fr": "Biélorussie"
-  },
-  "ME": {
-   "es": "Montenegro",
-   "fr": "Monténégro"
-  },
-  "LT": {
-   "es": "Lituania",
-   "fr": "Lituanie"
-  },
-  "RO": {
-   "es": "Rumanía",
-   "fr": "Roumanie"
-  },
-  "CA": {
-   "es": "Canadá",
-   "fr": "Canada"
-  },
-  "DK": {
-   "es": "Dinamarca",
-   "fr": "Danemark"
-  },
-  "SE": {
-   "es": "Suecia",
-   "fr": "Suède"
-  },
-  "FI": {
-   "es": "Finlandia",
-   "fr": "Finlande"
-  },
-  "DZ": {
-   "es": "Argelia",
-   "fr": "Algérie"
-  },
-  "TH": {
-   "es": "Tailandia",
-   "fr": "Thaïlande"
-  },
-  "RU/KZ": {
-   "es": "Rusia / Kazajistán (+7)",
-   "fr": "Russie / Kazakhstan (+7)"
   },
   "CO": {
    "es": "Colombia",
    "fr": "Colombie"
   },
-  "CN": {
-   "es": "China",
-   "fr": "Chine"
+  "IE": {
+   "es": "Irlanda",
+   "fr": "Irlande"
+  },
+  "FI": {
+   "es": "Finlandia",
+   "fr": "Finlande"
+  },
+  "GB": {
+   "es": "Reino Unido",
+   "fr": "Royaume-Uni"
+  },
+  "RS": {
+   "es": "Serbia",
+   "fr": "Serbie"
+  },
+  "TH": {
+   "es": "Tailandia",
+   "fr": "Thaïlande"
+  },
+  "UA": {
+   "es": "Ucrania",
+   "fr": "Ukraine"
+  },
+  "BE": {
+   "es": "Bélgica",
+   "fr": "Belgique"
   },
   "IT": {
    "es": "Italia",
    "fr": "Italie"
   },
-  "TR": {
-   "es": "Turquía",
-   "fr": "Turquie"
+  "LT": {
+   "es": "Lituania",
+   "fr": "Lituanie"
   },
-  "IN": {
-   "es": "India",
-   "fr": "Inde"
-  },
-  "BG": {
-   "es": "Bulgaria",
-   "fr": "Bulgarie"
-  },
-  "HU": {
-   "es": "Hungría",
-   "fr": "Hongrie"
-  },
-  "GR": {
-   "es": "Grecia",
-   "fr": "Grèce"
-  },
-  "US/CA": {
-   "es": "EE. UU. / Canadá (+1)",
-   "fr": "États-Unis / Canada (+1)"
-  },
-  "CI": {
-   "es": "Costa de Marfil",
-   "fr": "Côte d'Ivoire"
-  },
-  "AU": {
-   "es": "Australia",
-   "fr": "Australie"
-  },
-  "AL": {
-   "es": "Albania",
-   "fr": "Albanie"
-  },
-  "PT": {
-   "es": "Portugal",
-   "fr": "Portugal"
-  },
-  "MX": {
-   "es": "México",
-   "fr": "Mexique"
-  },
-  "UY": {
-   "es": "Uruguay",
-   "fr": "Uruguay"
-  },
-  "CU": {
-   "es": "Cuba",
-   "fr": "Cuba"
-  },
-  "NO": {
-   "es": "Noruega",
-   "fr": "Norvège"
-  },
-  "NL": {
-   "es": "Países Bajos",
-   "fr": "Pays-Bas"
+  "DE": {
+   "es": "Alemania",
+   "fr": "Allemagne"
   },
   "MA": {
    "es": "Marruecos",
    "fr": "Maroc"
   },
+  "IR": {
+   "es": "Irán",
+   "fr": "Iran"
+  },
+  "TN": {
+   "es": "Túnez",
+   "fr": "Tunisie"
+  },
+  "BG": {
+   "es": "Bulgaria",
+   "fr": "Bulgarie"
+  },
+  "AL": {
+   "es": "Albania",
+   "fr": "Albanie"
+  },
+  "MX": {
+   "es": "México",
+   "fr": "Mexique"
+  },
+  "NL": {
+   "es": "Países Bajos",
+   "fr": "Pays-Bas"
+  },
+  "CU": {
+   "es": "Cuba",
+   "fr": "Cuba"
+  },
+  "GR": {
+   "es": "Grecia",
+   "fr": "Grèce"
+  },
+  "AR": {
+   "es": "Argentina",
+   "fr": "Argentine"
+  },
+  "AU": {
+   "es": "Australia",
+   "fr": "Australie"
+  },
   "CH": {
    "es": "Suiza",
    "fr": "Suisse"
+  },
+  "AM": {
+   "es": "Armenia",
+   "fr": "Arménie"
+  },
+  "PL": {
+   "es": "Polonia",
+   "fr": "Pologne"
+  },
+  "EG": {
+   "es": "Egipto",
+   "fr": "Égypte"
+  },
+  "PS": {
+   "es": "Palestina",
+   "fr": "Palestine"
+  },
+  "RO": {
+   "es": "Rumanía",
+   "fr": "Roumanie"
+  },
+  "SN": {
+   "es": "Senegal",
+   "fr": "Sénégal"
+  },
+  "VE": {
+   "es": "Venezuela",
+   "fr": "Venezuela"
+  },
+  "PT": {
+   "es": "Portugal",
+   "fr": "Portugal"
+  },
+  "RU": {
+   "es": "Rusia",
+   "fr": "Russie"
+  },
+  "NZ": {
+   "es": "Nueva Zelanda",
+   "fr": "Nouvelle-Zélande"
+  },
+  "BR": {
+   "es": "Brasil",
+   "fr": "Brésil"
+  },
+  "TR": {
+   "es": "Turquía",
+   "fr": "Turquie"
+  },
+  "ME": {
+   "es": "Montenegro",
+   "fr": "Monténégro"
+  },
+  "HU": {
+   "es": "Hungría",
+   "fr": "Hongrie"
+  },
+  "UY": {
+   "es": "Uruguay",
+   "fr": "Uruguay"
+  },
+  "GE": {
+   "es": "Georgia",
+   "fr": "Géorgie"
+  },
+  "RU/KZ": {
+   "es": "Rusia / Kazajistán (+7)",
+   "fr": "Russie / Kazakhstan (+7)"
+  },
+  "PH": {
+   "es": "Filipinas",
+   "fr": "Philippines"
+  },
+  "ES": {
+   "es": "España",
+   "fr": "Espagne"
+  },
+  "CA": {
+   "es": "Canadá",
+   "fr": "Canada"
+  },
+  "PE": {
+   "es": "Perú",
+   "fr": "Pérou"
+  },
+  "CI": {
+   "es": "Costa de Marfil",
+   "fr": "Côte d'Ivoire"
+  },
+  "IL": {
+   "es": "Israel",
+   "fr": "Israël"
+  },
+  "DK": {
+   "es": "Dinamarca",
+   "fr": "Danemark"
+  },
+  "US/CA": {
+   "es": "EE. UU. / Canadá (+1)",
+   "fr": "États-Unis / Canada (+1)"
+  },
+  "DZ": {
+   "es": "Argelia",
+   "fr": "Algérie"
+  },
+  "BY": {
+   "es": "Bielorrusia",
+   "fr": "Biélorussie"
+  },
+  "FR": {
+   "es": "Francia",
+   "fr": "France"
+  },
+  "NO": {
+   "es": "Noruega",
+   "fr": "Norvège"
+  },
+  "CL": {
+   "es": "Chile",
+   "fr": "Chili"
+  },
+  "LU": {
+   "es": "Luxemburgo",
+   "fr": "Luxembourg"
+  },
+  "EC": {
+   "es": "Ecuador",
+   "fr": "Équateur"
+  },
+  "CZ": {
+   "es": "Rep. Checa",
+   "fr": "Rép. tchèque"
+  },
+  "SE": {
+   "es": "Suecia",
+   "fr": "Suède"
+  },
+  "US": {
+   "es": "Estados Unidos",
+   "fr": "États-Unis"
+  },
+  "ML": {
+   "es": "Mali",
+   "fr": "Mali"
+  },
+  "IN": {
+   "es": "India",
+   "fr": "Inde"
+  },
+  "CN": {
+   "es": "China",
+   "fr": "Chine"
   }
  },
  "leaf_stats": {
@@ -4686,26 +4694,26 @@
    ]
   },
   "SUC-0": {
-   "n": 72,
-   "primary": 49,
+   "n": 64,
+   "primary": 44,
    "langs": {
-    "es": 29,
-    "fr": 43
+    "es": 24,
+    "fr": 40
    },
    "subtopics": [
     [
      "suc_herencia",
-     72
+     64
     ]
    ],
-   "blog_candidate": 25,
-   "price": 17,
-   "appt": 19,
-   "urgent": 8,
+   "blog_candidate": 23,
+   "price": 15,
+   "appt": 17,
+   "urgent": 7,
    "top_nat": [
     [
      "FR",
-     9
+     8
     ],
     [
      "ES",
@@ -4727,7 +4735,7 @@
     ],
     [
      "ES",
-     22
+     20
     ],
     [
      "BE",
@@ -4735,7 +4743,7 @@
     ],
     [
      "CH",
-     3
+     2
     ]
    ]
   },
@@ -5235,7 +5243,7 @@
   },
   "FIS-1": {
    "n": 62,
-   "primary": 28,
+   "primary": 29,
    "langs": {
     "es": 25,
     "fr": 35,
@@ -5289,21 +5297,21 @@
    ]
   },
   "FIS-2": {
-   "n": 168,
-   "primary": 98,
+   "n": 163,
+   "primary": 99,
    "langs": {
-    "es": 63,
+    "es": 58,
     "fr": 98,
     "en": 7
    },
    "subtopics": [
     [
-     "fis_iva_conta",
-     50
-    ],
-    [
      "fis_irpf",
      45
+    ],
+    [
+     "fis_iva_conta",
+     44
     ],
     [
      "fis_general",
@@ -5336,8 +5344,8 @@
    ],
    "blog_candidate": 47,
    "price": 61,
-   "appt": 51,
-   "urgent": 28,
+   "appt": 47,
+   "urgent": 24,
    "top_nat": [
     [
      "FR",
@@ -5359,7 +5367,7 @@
    "top_country": [
     [
      "ES",
-     69
+     65
     ],
     [
      "FR",
@@ -5611,10 +5619,10 @@
    ]
   },
   "EXT-4": {
-   "n": 306,
-   "primary": 207,
+   "n": 307,
+   "primary": 209,
    "langs": {
-    "es": 93,
+    "es": 94,
     "fr": 185,
     "en": 28
    },
@@ -5653,7 +5661,7 @@
     ],
     [
      "ext_general",
-     24
+     25
     ],
     [
      "ext_estudios",
@@ -5670,7 +5678,7 @@
    ],
    "blog_candidate": 97,
    "price": 82,
-   "appt": 83,
+   "appt": 84,
    "urgent": 65,
    "top_nat": [
     [
@@ -5710,10 +5718,10 @@
    ]
   },
   "OTR-0": {
-   "n": 8,
-   "primary": 8,
+   "n": 9,
+   "primary": 9,
    "langs": {
-    "es": 3,
+    "es": 4,
     "fr": 5
    },
    "subtopics": [
@@ -5727,11 +5735,11 @@
     ],
     [
      "x_comercial",
-     1
+     2
     ]
    ],
    "blog_candidate": 0,
-   "price": 0,
+   "price": 1,
    "appt": 2,
    "urgent": 1,
    "top_nat": [
@@ -5826,11 +5834,11 @@
     2.32
    ],
    [
-    "fis_iva_conta",
-    26,
-    10.7,
-    5.2,
-    2.06
+    "fis_sucesiones_impuesto",
+    11,
+    4.5,
+    2.4,
+    1.9
    ]
   ],
   "fr": [
@@ -5925,7 +5933,7 @@
     "ext_visado": 6.0,
     "ext_denegacion": 4.8,
     "ext_irregularidad": 4.5,
-    "ext_general": 2.4,
+    "ext_general": 2.7,
     "ext_empadronamiento": 2.1,
     "ext_sanidad_ss": 0.9,
     "ext_homologacion": 0.3,
@@ -5942,7 +5950,7 @@
     "inm_obras": 3.0,
     "inm_registro": 3.9,
     "inm_general": 0.9,
-    "suc_herencia": 7.8,
+    "suc_herencia": 7.2,
     "suc_litigio": 2.1,
     "suc_familia": 4.5,
     "suc_penal": 0.3,
@@ -6005,7 +6013,7 @@
     "inm_obras": 1.7,
     "inm_registro": 4.0,
     "inm_general": 0.6,
-    "suc_herencia": 13.0,
+    "suc_herencia": 11.3,
     "suc_litigio": 4.0,
     "suc_familia": 2.3,
     "suc_penal": 1.1,
@@ -6070,7 +6078,7 @@
     "inm_obras": 1.5,
     "inm_registro": 8.0,
     "inm_general": 0.5,
-    "suc_herencia": 11.6,
+    "suc_herencia": 10.1,
     "suc_litigio": 4.0,
     "suc_familia": 0.5,
     "suc_penal": 1.0,
@@ -6084,7 +6092,7 @@
     "fis_plusvalia": 1.5,
     "fis_cripto": 1.0,
     "fis_inspeccion": 3.0,
-    "fis_iva_conta": 10.6,
+    "fis_iva_conta": 7.5,
     "fis_general": 4.5,
     "mer_creacion": 12.1,
     "mer_autonomo": 5.5,
@@ -6287,7 +6295,7 @@
   },
   "suc_herencia": {
    "es": 4,
-   "en": 5,
+   "en": 3,
    "fr": 5
   },
   "suc_litigio": {
@@ -6553,7 +6561,7 @@
    "en": 3
   },
   "ext_general": {
-   "es": 12,
+   "es": 13,
    "fr": 10,
    "en": 2
   },
@@ -6648,8 +6656,8 @@
    "en": 0
   },
   "suc_herencia": {
-   "es": 29,
-   "fr": 43,
+   "es": 24,
+   "fr": 40,
    "en": 0
   },
   "suc_litigio": {
@@ -6718,7 +6726,7 @@
    "en": 0
   },
   "fis_iva_conta": {
-   "es": 26,
+   "es": 20,
    "fr": 24,
    "en": 0
   },
@@ -6808,7 +6816,7 @@
    "en": 0
   },
   "x_comercial": {
-   "es": 0,
+   "es": 1,
    "fr": 1,
    "en": 0
   },

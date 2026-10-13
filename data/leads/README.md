@@ -20,6 +20,7 @@ personales de consultas de formularios.
 | `leads_stats.json`, `report_data.json` | cifras agregadas del informe |
 | `manual_form10_coding.json` | codificación manual (sin datos personales) del formulario de inmigración EN (33 entradas), cuyo texto se leyó a mano |
 | `informe-leads.html` | informe ES/FR (artefacto) |
+| `respuesta-taxonomia-es.md` | respuesta a las preguntas del cliente sobre la taxonomía: algoritmo, reglas por subtema, inglés, ruso y combinaciones (sin datos de solicitudes) |
 | `informe-leads-es.pptx`, `informe-leads-fr.pptx` | el mismo informe en PowerPoint (22 diapositivas, gráficos y tablas editables), uno por idioma |
 
 ## Columnas de los CSV
@@ -37,7 +38,7 @@ personales de consultas de formularios.
 ## Taxonomía
 
 `tools/leads_taxonomy.py`: 6 áreas y 17 hojas de https://dlvibe.delaguialuzon.fr/ (leídas el 2026-10-08) más 3 hojas propuestas
-(SUC-0 herencias y testamentos, SUC-2 familia, OTR-0 fuera de ámbito) y 62 subtemas con reglas multilingües (ES, FR, EN, y algo de RU).
+(SUC-0 herencias y testamentos, SUC-2 familia, OTR-0 fuera de ámbito) y 72 subtemas con reglas multilingües (ES, FR, EN, y algo de RU).
 Un subtema pertenece a una hoja; una solicitud puede tener varios.
 
 ## Límites

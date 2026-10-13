@@ -271,7 +271,7 @@ const X = {
     metodo: () => [
       `Fuente: 9 formularios de Formidable Forms, ${fmt(D.meta.total)} entradas, lectura de solo lectura a través de AISA.`,
       `Texto del mensaje analizado en ${fmt(D.meta.coverage.text_analysed)} entradas (ES general ${D.meta.text_by_lang.es - 54}, extranjería ES 54, FR general ${D.meta.text_by_lang.fr}, inmigración EN 33, codificadas a mano). Las ${fmt(D.meta.coverage.structured_only)} restantes se analizaron solo con campos estructurados (desplegables, prefijo, página, recorrido): EN general 343, RU 65, inmigración FR 20.`,
-      `Clasificación: reglas multilingües (ES, FR, EN) sobre asunto y mensaje, con 62 subtemas asignados a las 17 hojas de dlvibe y 3 propuestas. Se revisó a mano una muestra de 24 casos: el tema principal es razonable en la mayoría y las etiquetas secundarias tienen más ruido.`,
+      `Clasificación: reglas multilingües (ES, FR, EN) sobre asunto y mensaje, con ${Object.keys(D.tags).length} subtemas asignados a las 17 hojas de dlvibe y 3 propuestas. Se revisó a mano una muestra de 24 casos: el tema principal es razonable en la mayoría y las etiquetas secundarias tienen más ruido.`,
       `País: prefijo telefónico, desplegable de ubicación o país de residencia dicho en el texto. Nacionalidad: solo si se declara. Ambos son estimaciones.`,
       `Privacidad: los CSV no contienen nombres, correos, teléfonos ni texto de los mensajes, solo campos derivados y el identificador de la entrada para localizarla en Formidable.`,
       `Periodo: del ${dateL(D.meta.first)} al ${dateL(D.meta.last)}. El último trimestre de 2026 está incompleto.`,
@@ -379,7 +379,7 @@ const X = {
     metodo: () => [
       `Source : 9 formulaires Formidable Forms, ${fmt(D.meta.total)} entrées, lecture seule via AISA.`,
       `Texte du message analysé pour ${fmt(D.meta.coverage.text_analysed)} entrées (ES général ${D.meta.text_by_lang.es - 54}, immigration ES 54, FR général ${D.meta.text_by_lang.fr}, immigration EN 33, codées à la main). Les ${fmt(D.meta.coverage.structured_only)} autres ont été analysées avec les seuls champs structurés (listes, indicatif, page, parcours) : EN général 343, RU 65, immigration FR 20.`,
-      `Classement : règles multilingues (ES, FR, EN) sur l'objet et le message, avec 62 sous-thèmes rattachés aux 17 pages de dlvibe et 3 propositions. Un échantillon de 24 cas a été relu à la main : le thème principal est raisonnable dans la plupart des cas et les étiquettes secondaires sont plus bruitées.`,
+      `Classement : règles multilingues (ES, FR, EN) sur l'objet et le message, avec ${Object.keys(D.tags).length} sous-thèmes rattachés aux 17 pages de dlvibe et 3 propositions. Un échantillon de 24 cas a été relu à la main : le thème principal est raisonnable dans la plupart des cas et les étiquettes secondaires sont plus bruitées.`,
       `Pays : indicatif téléphonique, liste de localisation ou pays de résidence indiqué dans le texte. Nationalité : seulement si elle est déclarée. Les deux sont des estimations.`,
       `Confidentialité : les CSV ne contiennent ni noms, ni e-mails, ni téléphones, ni texte des messages, seulement des champs dérivés et l'identifiant de l'entrée pour la retrouver dans Formidable.`,
       `Période : du ${dateL(D.meta.first)} au ${dateL(D.meta.last)}. Le dernier trimestre 2026 est incomplet.`,

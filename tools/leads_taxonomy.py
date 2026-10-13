@@ -155,7 +155,7 @@ _t("inm_general", "INM-1", "Inmobiliario (consulta general)", "Immobilier (gén�
 # ---------------------------------------------------------------- SUC
 _t("suc_herencia", "SUC-0", "Herencia, testamento y declaración de herederos", "Succession, testament et dévolution",
    r"herencia|heredero|testamento|sucesion|inheritance|\bprobate\b|\bsuccession|heritage|heritier|testament|legs\b|declaracion de herederos|usufructo|usufruit|quotite|reserve hereditaire|"
-   r"reglamento .{0,15}sucesiones|reglement .{0,10}successions|notaire.{0,20}succession|fallecimiento|fallecido|deces|decede|deceased|heir\b|\bwill\b|estate of|partage|particion|legitima|\bcausante|fallecio|murio|falleci|died|passed away|le defunt|defunt")
+   r"reglamento .{0,15}sucesiones|reglement .{0,10}successions|notaire.{0,20}succession|fallecimiento|fallecido|deces|decede|deceased|heir\b|last will|my will\b|a will\b|the will\b|will and testament|estate of|partage|particion|legitima|\bcausante|fallecio|murio|falleci|died|passed away|le defunt|defunt")
 _t("suc_litigio", "SUC-1", "Litigio, reclamación y mediación", "Litige, réclamation et médiation",
    r"demanda\b|litigio|litige|tribunal|juzgado|procedimiento judicial|lawsuit|\bsue\b|dispute|disputa|reclamacion|reclamation|arbitraje|arbitrage|mediaci|mediation|conflicto|"
    r"avocat pour un proces|proces\b|court case|legal action|accion legal|demandar|poursuites|assignation|huissier|\bprocurador|monitorio|sentencia|jugement|recouvrement|impagado|unpaid invoice|facture impayee|cobro de deuda|debt recovery|recuperar (el )?dinero|scam|estafa|arnaque|fraud|fraude")
@@ -186,7 +186,7 @@ _t("fis_cripto", "FIS-2", "Criptomonedas", "Cryptomonnaies",
 _t("fis_inspeccion", "FIS-2", "Requerimiento, inspección o sanción de Hacienda", "Contrôle, requête ou pénalité fiscale",
    r"regularisation fiscale|regularizacion fiscal|regularizar.{0,30}(hacienda|impuestos|fiscal)|regulariser.{0,30}(impots|fiscal|revenus)|requerimiento de hacienda|notificacion de hacienda|inspeccion (de )?hacienda|inspeccion fiscal|sancion tributaria|agencia tributaria|\baeat\b|\bhacienda\b|redressement|controle fiscal|tax audit|\bcarta de hacienda|recargo|prescripcion tributaria|paralela|declaracion complementaria|tax authorit|fisc\b|\bdgfip\b|impots\.gouv|tax notice")
 _t("fis_iva_conta", "FIS-2", "IVA, contabilidad, gestoría e impuesto de sociedades", "TVA, comptabilité, gestion et IS",
-   r"\biva\b|\bvat\b|\btva\b|contabilidad|comptabilit|accounting|bookkeeping|gestoria|modelo 303|modelo 130|libros contables|cuentas anuales|impuesto (de|sobre) sociedades|corporate tax|impot sur les societes|facturaci|facturation|\binvoic|verifactu|nominas?\b|expert.?comptable|accountant|contable|contador|annual accounts|\bcomptes annuels|bilan")
+   r"\biva\b|\bvat\b|\btva\b|contabilidad|comptabilit|accounting|bookkeeping|gestoria|modelo 303|modelo 130|libros contables|cuentas anuales|impuesto (de|sobre) sociedades|corporate tax|impot sur les societes|facturaci|facturation|\binvoic|verifactu|expert.?comptable|accountant|contable|contador|annual accounts|\bcomptes annuels|bilan")
 _t("fis_general", "FIS-2", "Fiscalidad (consulta general)", "Fiscalité (général)",
    r"\bimpuestos?\b|\btax(es|ation)?\b|fiscal|fiscalidad|fiscalite|tributa|\bimpots?\b|tributar|asesoria fiscal|conseil fiscal|taxation|taxable|haciendas?\b")
 # ---------------------------------------------------------------- MER
